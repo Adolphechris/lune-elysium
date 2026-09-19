@@ -1,0 +1,33 @@
+{
+  "name": "lune-elysium",
+  "version": "0.1.0",
+  "private": true,
+  "description": "LUNE — satellite de mémoire, d’audit, de surveillance et de gouvernance du projet ELLYSIUM.",
+  "scripts": {
+    "scan": "node src/scan-project.js",
+    "build-state": "node src/build-lune-state.js",
+    "init-db": "node src/init-lune-v2.js",
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "prod:start": "pm2 start ecosystem.config.js",
+    "prod:stop": "pm2 stop ecosystem.config.js",
+    "prod:restart": "pm2 restart ecosystem.config.js",
+    "prod:status": "pm2 status",
+    "prod:logs": "pm2 logs lune-elysium --lines 50"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "express": "^4.21.2",
+    "localtunnel": "^2.0.2"
+  },
+  "keywords": [
+    "elysium",
+    "lune",
+    "project-governance",
+    "audit",
+    "monitoring",
+    "memory",
+    "satellite"
+  ],
+  "author": "LUNE / ELLYSIUM"
+}

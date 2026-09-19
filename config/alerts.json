@@ -1,0 +1,7 @@
+{
+  "enableWebhook": false,
+  "webhookUrl": "",
+  "sensitivePaths": ["infra", "packages", "apps"],
+  "riskThresholdPercent": 30,
+  "notifyOnUncommitted": true
+}

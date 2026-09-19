@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conseiller Stratégique (Advisor) — Satellite LUNE</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- BANDEAU SUPÉRIEUR RÉGALIEN -->
+  <div class="top-regal-bar">
+    <span>🇨🇩 RÉPUBLIQUE DÉMOCRATIQUE DU CONGO · ORGANE DE CONTRÔLE ET D’AUDIT PERMANENT</span>
+    <span>SATELLITE LUNE v2.1 · SURVEILLANCE DU CHANTIER NATIONAL ELLYSIUM · <a href="https://cnel-elysium-rdc.web.app/" target="_blank">ACCÉDER AU PORTAIL NATIONAL ELLYSIUM &rarr;</a></span>
+  </div>
+
+  <!-- NAVIGATION OFFICIELLE -->
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-symbol">L</div>
+        <div>
+          <div class="brand-title">LUNE <span>· ELLYSIUM</span></div>
+          <div class="brand-sub">Conseiller Stratégique IA</div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Cockpit Général</a></li>
+        <li><a href="audit-conformite.html">Audit & Qualité</a></li>
+        <li><a href="memoire-taches.html">Mémoire & Tâches</a></li>
+        <li><a href="conseiller-direction.html" class="active">Conseiller IA</a></li>
+        <li><a href="surveillance-risques.html">Risques & Alertes</a></li>
+        <li><a href="tracabilite-contributeurs.html">Contributeurs</a></li>
+        <li><a href="passerelle-elysium.html">Domaine ELLYSIUM</a></li>
+        <li><a href="https://cnel-elysium-rdc.web.app/" target="_blank" class="nav-cta">🏛️ Portail ELLYSIUM</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-page">
+    <div class="hero-content">
+      <div class="page-badge">🧠 Intelligence Stratégique & Conseil Décisionnel</div>
+      <h1>Conseiller de Direction <span>LUNE (Advisor)</span></h1>
+      <p class="hero-lead">
+        Interrogez le satellite en langage naturel. L'Advisor s'appuie sur la base de connaissances et les snapshots réels du chantier ELLYSIUM pour vous fournir une vérité factuelle, chiffrée et orientée vers l'action.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="section-wrap">
+
+    <div class="grid-2">
+      <!-- Zone de Conversation Principale -->
+      <div>
+        <div class="chat-container">
+          <div class="chat-stream" id="chat-stream">
+            <div class="chat-bubble bubble-advisor">
+              <strong style="color: var(--primary);">🛰️ Conseiller LUNE :</strong><br>
+              Bonjour. Je surveille le chantier ELLYSIUM en permanence. Je peux vous éclairer sur l'état d'avancement, les blocages techniques, les dépendances critiques ou les priorités immédiates de déploiement.<br><br>
+              <em>Cliquez sur l'une des questions d'orientation ci-contre ou saisissez votre demande ci-dessous.</em>
+            </div>
+          </div>
+          <div class="chat-controls">
+            <input type="text" id="chat-input" class="chat-input-text" placeholder="Posez votre question au Conseiller LUNE..." />
+            <button class="btn btn-primary" id="chat-submit">Interroger</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panneau d'Orientation & Questions Clés -->
+      <div>
+        <div class="kpi-card" style="margin-bottom: 24px;">
+          <span class="section-tag">QUESTIONS FRÉQUENTES DES DÉCIDEURS</span>
+          <h3 style="color: var(--primary); margin-bottom: 16px;">Requêtes d'Audit Instantanées</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <button class="btn btn-outline" style="color: var(--primary); border-color: var(--border); justify-content: flex-start; text-align: left;" onclick="sendQuickPrompt('Quels sont les points bloquants ?')">
+              ⚠️ Quels sont les points bloquants et verrous ?
+            </button>
+            <button class="btn btn-outline" style="color: var(--primary); border-color: var(--border); justify-content: flex-start; text-align: left;" onclick="sendQuickPrompt('Où en est la mise en production ?')">
+              🚀 Quel est le statut réel de mise en production ?
+            </button>
+            <button class="btn btn-outline" style="color: var(--primary); border-color: var(--border); justify-content: flex-start; text-align: left;" onclick="sendQuickPrompt('Quelles sont les priorités immédiates ?')">
+              🎯 Quelles sont les priorités pour les prochaines 48h ?
+            </button>
+            <button class="btn btn-outline" style="color: var(--primary); border-color: var(--border); justify-content: flex-start; text-align: left;" onclick="sendQuickPrompt('Qui sont les contributeurs actifs ?')">
+              👥 Qui a contribué récemment et avec quels outils ?
+            </button>
+            <button class="btn btn-outline" style="color: var(--primary); border-color: var(--border); justify-content: flex-start; text-align: left;" onclick="sendQuickPrompt('Quel est le score de santé global ?')">
+              📊 Quel est le score de santé et le diagnostic global ?
+            </button>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <span class="section-tag">DOCTRINE DE CONSEIL LUNE</span>
+          <h4 style="color: var(--primary); margin-bottom: 8px;">Principes Directeurs</h4>
+          <ul style="padding-left: 18px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
+            <li>Pas d'affirmation sans trace écrite ou preuve de code.</li>
+            <li>Priorité absolue à la souveraineté et à l'infrastructure nationale.</li>
+            <li>Distinguer ce qui est rédigé de ce qui tourne réellement en machine.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Satellite LUNE</h4>
+        <p style="color: #94A3B8;">Système de conseil et d'arbitrage stratégique du projet ELLYSIUM.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Accès Rapide</h4>
+        <ul>
+          <li><a href="index.html">Cockpit Général</a></li>
+          <li><a href="audit-conformite.html">Audit & Conformité</a></li>
+          <li><a href="memoire-taches.html">Mémoire du Chantier</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 LUNE · Satellite de Gouvernance ELLYSIUM.</div>
+      <div><a href="index.html" style="color: var(--gold);">Retour au Cockpit Général &rarr;</a></div>
+    </div>
+  </footer>
+
+  <script>
+    function formatAnswerToHtml(text) {
+      if (!text) return '';
+      // Convert markdown bold to strong
+      let html = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      // Convert markdown italics to em
+      html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+      // Convert markdown bullet points to HTML list
+      html = html.replace(/^[•\-\*]\s+(.*)$/gm, '<li style="margin-bottom: 4px;">$1</li>');
+      // Wrap groups of <li> in <ul>
+      html = html.replace(/(<li.*<\/li>)/s, '<ul style="margin: 8px 0 12px 20px;">$1</ul>');
+      // Replace line breaks
+      html = html.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
+      return html;
+    }
+
+    async function sendQuestion(question) {
+      if (!question || !question.trim()) return;
+      const stream = document.getElementById('chat-stream');
+
+      // User Bubble
+      const userBubble = document.createElement('div');
+      userBubble.className = 'chat-bubble bubble-user';
+      userBubble.textContent = question;
+      stream.appendChild(userBubble);
+      stream.scrollTop = stream.scrollHeight;
+
+      // Loading bubble
+      const loadingBubble = document.createElement('div');
+      loadingBubble.className = 'chat-bubble bubble-advisor';
+      loadingBubble.innerHTML = '<em>Analyse des données du satellite en cours...</em>';
+      stream.appendChild(loadingBubble);
+      stream.scrollTop = stream.scrollHeight;
+
+      try {
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: question })
+        });
+        const data = await res.json();
+        loadingBubble.innerHTML = formatAnswerToHtml(data.reply);
+      } catch (err) {
+        loadingBubble.innerHTML = '<span style="color: var(--accent-red);">Erreur lors de la communication avec le serveur de l\'Advisor.</span>';
+      }
+      stream.scrollTop = stream.scrollHeight;
+    }
+
+    function sendQuickPrompt(prompt) {
+      document.getElementById('chat-input').value = prompt;
+      sendQuestion(prompt);
+      document.getElementById('chat-input').value = '';
+    }
+
+    document.getElementById('chat-submit').addEventListener('click', () => {
+      const input = document.getElementById('chat-input');
+      sendQuestion(input.value);
+      input.value = '';
+    });
+
+    document.getElementById('chat-input').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const input = document.getElementById('chat-input');
+        sendQuestion(input.value);
+        input.value = '';
+      }
+    });
+  </script>
+</body>
+</html>

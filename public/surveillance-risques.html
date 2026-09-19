@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surveillance & Risques — Satellite LUNE</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="top-regal-bar">
+    <span>🇨🇩 RÉPUBLIQUE DÉMOCRATIQUE DU CONGO · ORGANE DE CONTRÔLE ET D'AUDIT PERMANENT</span>
+    <span>SATELLITE LUNE v2.1 · SURVEILLANCE DU CHANTIER NATIONAL ELLYSIUM · <a href="https://cnel-elysium-rdc.web.app/" target="_blank">ACCÉDER AU PORTAIL NATIONAL ELLYSIUM &rarr;</a></span>
+  </div>
+
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-symbol">L</div>
+        <div>
+          <div class="brand-title">LUNE <span>· ELLYSIUM</span></div>
+          <div class="brand-sub">Surveillance des Risques & Alertes</div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Cockpit Général</a></li>
+        <li><a href="audit-conformite.html">Audit & Qualité</a></li>
+        <li><a href="memoire-taches.html">Mémoire & Tâches</a></li>
+        <li><a href="conseiller-direction.html">Conseiller IA</a></li>
+        <li><a href="surveillance-risques.html" class="active">Risques & Alertes</a></li>
+        <li><a href="tracabilite-contributeurs.html">Contributeurs</a></li>
+        <li><a href="passerelle-elysium.html">Domaine ELLYSIUM</a></li>
+        <li><a href="https://cnel-elysium-rdc.web.app/" target="_blank" class="nav-cta">🏛️ Portail ELLYSIUM</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero-page">
+    <div class="hero-content">
+      <div class="page-badge">🛡️ Contrôle de Sécurité & Gestion des Risques</div>
+      <h1>Matrice de Surveillance <span>& Risques Critiques</span></h1>
+      <p class="hero-lead">
+        LUNE surveille en permanence les écarts entre les spécifications de sécurité et l'état réel de l'infrastructure ELLYSIUM. Chaque risque est classifié, tracé et soumis à une recommandation d'action formelle.
+      </p>
+    </div>
+  </section>
+
+  <main class="section-wrap">
+
+    <!-- KPIs Risques -->
+    <div class="grid-4">
+      <div class="kpi-card">
+        <div class="kpi-num" id="stat-risks-total" style="color: var(--accent-red);">--</div>
+        <div class="kpi-label">Risques Identifiés</div>
+        <div class="kpi-sub">Surveillés en continu par LUNE</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num" id="stat-alerts-total" style="color: var(--accent-amber);">--</div>
+        <div class="kpi-label">Alertes Actives</div>
+        <div class="kpi-sub">Anomalies détectées dans le cycle courant</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num" style="color: var(--accent-red);">1</div>
+        <div class="kpi-label">Blocages Structurels</div>
+        <div class="kpi-sub">Infrastructure production non validée</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num" style="color: var(--accent-green);">3</div>
+        <div class="kpi-label">Actions Recommandées</div>
+        <div class="kpi-sub">Prêtes à exécuter immédiatement</div>
+      </div>
+    </div>
+
+    <!-- Matrice des Risques -->
+    <div class="section-head">
+      <span class="section-tag">MATRICE OFFICIELLE</span>
+      <h2>Registre des Risques Classifiés</h2>
+      <p>Analyse de criticité par domaine et niveau d'impact sur la mission nationale ELLYSIUM.</p>
+    </div>
+
+    <div class="table-wrap" style="margin-bottom: 40px;">
+      <table class="regal-table" id="risks-table">
+        <thead>
+          <tr>
+            <th>Domaine Concerné</th>
+            <th>Description du Risque</th>
+            <th>Impact Estimé</th>
+            <th>Niveau</th>
+          </tr>
+        </thead>
+        <tbody id="risks-tbody">
+          <tr><td colspan="4" style="text-align:center; padding: 30px; color: var(--text-muted);">Chargement de la matrice des risques...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Journal des Alertes -->
+    <div class="section-head">
+      <span class="section-tag">JOURNAL DES ÉVÉNEMENTS</span>
+      <h2>Alertes & Anomalies Détectées</h2>
+      <p>Enregistrements chronologiques des anomalies relevées lors des cycles d'audit automatiques.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="regal-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Domaine / Fichier</th>
+            <th>Description</th>
+            <th>Horodatage</th>
+          </tr>
+        </thead>
+        <tbody id="alerts-tbody">
+          <tr><td colspan="4" style="text-align:center; padding: 30px; color: var(--text-muted);">Chargement du journal des alertes...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Satellite LUNE</h4>
+        <p style="color: #94A3B8;">Surveillance continue et gestion des risques du chantier ELLYSIUM.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Accès Rapide</h4>
+        <ul>
+          <li><a href="index.html">Cockpit Général</a></li>
+          <li><a href="audit-conformite.html">Audit & Conformité</a></li>
+          <li><a href="conseiller-direction.html">Conseiller IA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 LUNE · Satellite de Gouvernance ELLYSIUM.</div>
+      <div><a href="index.html" style="color: var(--gold);">Retour au Cockpit Général &rarr;</a></div>
+    </div>
+  </footer>
+
+  <script>
+    function formatDate(iso) {
+      if (!iso) return '—';
+      try { return new Date(iso).toLocaleString('fr-FR'); } catch { return iso; }
+    }
+
+    function getLevelBadge(level) {
+      const l = (level || 'élevé').toLowerCase();
+      if (l.includes('crit')) return '<span class="badge-status badge-blocked">CRITIQUE</span>';
+      if (l.includes('haut') || l.includes('élevé') || l.includes('eleve')) return '<span class="badge-status badge-blocked">ÉLEVÉ</span>';
+      if (l.includes('moyen')) return '<span class="badge-status badge-in_progress">MOYEN</span>';
+      return '<span class="badge-status badge-ready">FAIBLE</span>';
+    }
+
+    Promise.all([
+      fetch('/api/risks').then(r => r.json()),
+      fetch('/api/alerts').then(r => r.json())
+    ]).then(([risksData, alerts]) => {
+      const risks = risksData.risks || [];
+      document.getElementById('stat-risks-total').textContent = risks.length;
+      document.getElementById('stat-alerts-total').textContent = alerts.length;
+
+      const risksTbody = document.getElementById('risks-tbody');
+      if (!risks.length) {
+        risksTbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 30px; color: var(--accent-green);">Aucun risque critique enregistré dans ce cycle.</td></tr>';
+      } else {
+        risksTbody.innerHTML = risks.map(r => `
+          <tr>
+            <td><strong>${r.domain || '—'}</strong></td>
+            <td>${r.note || '—'}</td>
+            <td>${r.impact || 'Retard de mise en production'}</td>
+            <td>${getLevelBadge(r.level)}</td>
+          </tr>
+        `).join('');
+      }
+
+      const alertsTbody = document.getElementById('alerts-tbody');
+      if (!alerts.length) {
+        alertsTbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 30px; color: var(--accent-green);">Aucune alerte dans le journal courant.</td></tr>';
+      } else {
+        alertsTbody.innerHTML = alerts.map(a => `
+          <tr>
+            <td><span class="badge-status badge-blocked">${(a.type || 'alerte').toUpperCase()}</span></td>
+            <td>${a.domain || a.path || '—'}</td>
+            <td>${a.note || '—'}</td>
+            <td style="font-size: 0.82rem; color: var(--text-muted);">${formatDate(a.when)}</td>
+          </tr>
+        `).join('');
+      }
+    }).catch(err => console.error(err));
+  </script>
+</body>
+</html>

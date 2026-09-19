@@ -1,0 +1,44 @@
+[
+  {
+    "type": "risk",
+    "domain": "Infrastructure réelle",
+    "level": "high",
+    "note": "Infrastructure réelle montre une progression faible (24%). Risque sur jalon.",
+    "when": "2026-09-19T20:35:10.553Z"
+  },
+  {
+    "type": "risk",
+    "domain": "Production / pilotage",
+    "level": "high",
+    "note": "Production / pilotage montre une progression faible (15%). Risque sur jalon.",
+    "when": "2026-09-19T20:35:10.553Z"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/web-portal/dist/index.html",
+    "when": "2026-09-19T19:51:44.707Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/web-portal/dist/index.html",
+    "when": "2026-09-19T19:51:44.707Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/web-portal/dist/index.html",
+    "when": "2026-09-19T19:51:44.707Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/web-portal/dist/index.html",
+    "when": "2026-09-19T19:51:44.707Z",
+    "note": "Fichier sensible modifié mais non commité"
+  }
+]

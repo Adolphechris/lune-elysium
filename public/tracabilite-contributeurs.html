@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traçabilité des Contributeurs — Satellite LUNE</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="top-regal-bar">
+    <span>🇨🇩 RÉPUBLIQUE DÉMOCRATIQUE DU CONGO · ORGANE DE CONTRÔLE ET D'AUDIT PERMANENT</span>
+    <span>SATELLITE LUNE v2.1 · SURVEILLANCE DU CHANTIER NATIONAL ELLYSIUM · <a href="https://cnel-elysium-rdc.web.app/" target="_blank">ACCÉDER AU PORTAIL NATIONAL ELLYSIUM &rarr;</a></span>
+  </div>
+
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-symbol">L</div>
+        <div>
+          <div class="brand-title">LUNE <span>· ELLYSIUM</span></div>
+          <div class="brand-sub">Traçabilité des Contributeurs</div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Cockpit Général</a></li>
+        <li><a href="audit-conformite.html">Audit & Qualité</a></li>
+        <li><a href="memoire-taches.html">Mémoire & Tâches</a></li>
+        <li><a href="conseiller-direction.html">Conseiller IA</a></li>
+        <li><a href="surveillance-risques.html">Risques & Alertes</a></li>
+        <li><a href="tracabilite-contributeurs.html" class="active">Contributeurs</a></li>
+        <li><a href="passerelle-elysium.html">Domaine ELLYSIUM</a></li>
+        <li><a href="https://cnel-elysium-rdc.web.app/" target="_blank" class="nav-cta">🏛️ Portail ELLYSIUM</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero-page">
+    <div class="hero-content">
+      <div class="page-badge">👥 Registre des Intervenants & Outils Utilisés</div>
+      <h1>Traçabilité <span>des Contributeurs</span></h1>
+      <p class="hero-lead">
+        LUNE consigne l'historique complet de chaque intervenant : auteur, nombre de commits, outils d'édition utilisés, fichiers récemment modifiés et travaux non encore commités. La chaîne de responsabilité est inaltérable.
+      </p>
+    </div>
+  </section>
+
+  <main class="section-wrap">
+
+    <div class="grid-4">
+      <div class="kpi-card">
+        <div class="kpi-num" id="contrib-total">--</div>
+        <div class="kpi-label">Contributeurs Identifiés</div>
+        <div class="kpi-sub">Enregistrés dans l'historique Git</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num" id="contrib-commits">--</div>
+        <div class="kpi-label">Commits Cumulés</div>
+        <div class="kpi-sub">Ensemble de l'historique du projet</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num" id="contrib-recent">--</div>
+        <div class="kpi-label">Contributions sur 7 Jours</div>
+        <div class="kpi-sub">Activité récente mesurée</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num" id="contrib-tools">--</div>
+        <div class="kpi-label">Outils Distincts Tracés</div>
+        <div class="kpi-sub">IA, éditeurs, scripts détectés</div>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <span class="section-tag">FICHES D'ACTIVITÉ</span>
+      <h2>Historique Détaillé par Intervenant</h2>
+      <p>Chaque fiche recense les interventions, les outils utilisés et les fichiers impactés.</p>
+    </div>
+
+    <div id="contributors-container"></div>
+
+    <!-- Fallback Tableau -->
+    <div class="table-wrap" id="contrib-table-wrap" style="display: none;">
+      <table class="regal-table">
+        <thead>
+          <tr>
+            <th>Contributeur</th>
+            <th>Email</th>
+            <th>Commits Totaux</th>
+            <th>7 Derniers Jours</th>
+            <th>Outils Identifiés</th>
+          </tr>
+        </thead>
+        <tbody id="contrib-tbody"></tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Satellite LUNE</h4>
+        <p style="color: #94A3B8;">Registre d'interventions et traçabilité du chantier national ELLYSIUM.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Accès Rapide</h4>
+        <ul>
+          <li><a href="index.html">Cockpit Général</a></li>
+          <li><a href="audit-conformite.html">Audit & Conformité</a></li>
+          <li><a href="memoire-taches.html">Mémoire du Chantier</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 LUNE · Satellite de Gouvernance ELLYSIUM.</div>
+      <div><a href="index.html" style="color: var(--gold);">Retour au Cockpit Général &rarr;</a></div>
+    </div>
+  </footer>
+
+  <script>
+    fetch('/api/contributors')
+      .then(r => r.json())
+      .then(data => {
+        const contributors = data.contributors || [];
+        document.getElementById('contrib-total').textContent = contributors.length;
+        const totalCommits = contributors.reduce((s, c) => s + (c.commits || 0), 0);
+        document.getElementById('contrib-commits').textContent = totalCommits;
+        const recentCommits = contributors.reduce((s, c) => s + (c.commitsLast7 || 0), 0);
+        document.getElementById('contrib-recent').textContent = recentCommits;
+        const allTools = new Set();
+        contributors.forEach(c => (c.tools || []).forEach(t => allTools.add(t)));
+        document.getElementById('contrib-tools').textContent = allTools.size;
+
+        const container = document.getElementById('contributors-container');
+        if (!contributors.length) {
+          container.innerHTML = `
+            <div class="kpi-card" style="border-left: 6px solid var(--accent-amber); text-align: center; padding: 40px;">
+              <div style="font-size: 2rem; margin-bottom: 12px;">👥</div>
+              <h3 style="color: var(--primary); margin-bottom: 8px;">Aucun contributeur tracé dans ce cycle</h3>
+              <p style="color: var(--text-muted);">LUNE analyse l'historique Git du dépôt ELLYSIUM. Si le dépôt ne contient pas encore de commits signés, cette section restera vide jusqu'à la première contribution formelle.</p>
+            </div>`;
+          return;
+        }
+
+        container.innerHTML = contributors.map(c => `
+          <div class="kpi-card" style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border);">
+              <div>
+                <h3 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 4px;">${c.name}</h3>
+                <div style="font-size: 0.88rem; color: var(--text-muted);">${c.email ? c.email : 'Email non renseigné'}</div>
+              </div>
+              <div style="display: flex; gap: 16px; flex-wrap: wrap; text-align: center;">
+                <div>
+                  <div style="font-size: 1.6rem; font-weight: 800; color: var(--primary);">${c.commits}</div>
+                  <div style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Commits</div>
+                </div>
+                <div>
+                  <div style="font-size: 1.6rem; font-weight: 800; color: var(--accent-blue);">${c.commitsLast7 || 0}</div>
+                  <div style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Sur 7 jours</div>
+                </div>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 6px;">Outils Utilisés</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                  ${(c.tools || []).map(t => `<span style="background: var(--gold-light); color: var(--gold-dark); padding: 3px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 600;">${t}</span>`).join('') || '<span style="color: var(--text-light);">Non détectés</span>'}
+                </div>
+              </div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 6px;">Fichiers Récents</div>
+                <div style="color: var(--text-muted); font-size: 0.88rem;">${(c.recentFiles || []).slice(0, 3).join(', ') || '—'}</div>
+              </div>
+              ${c.recentCommits && c.recentCommits.length ? `
+              <div style="grid-column: 1 / -1;">
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 6px;">Commits Récents</div>
+                <ul style="padding-left: 18px; color: var(--text-muted); font-size: 0.88rem;">
+                  ${c.recentCommits.slice(0, 3).map(rc => `<li>${rc.date} — ${rc.message}</li>`).join('')}
+                </ul>
+              </div>` : ''}
+            </div>
+          </div>
+        `).join('');
+      })
+      .catch(err => console.error(err));
+  </script>
+</body>
+</html>

@@ -1,0 +1,1084 @@
+{
+  "generatedAt": "2026-09-19T20:35:10.553Z",
+  "projectName": "ELLYSIUM — Centre National d’Étude en Ligne (CNEL)",
+  "targetProject": "/home/adolphe/CNEL -ELYSIUM/clenel-elysium",
+  "overallHealth": 78,
+  "status": "surveillance active",
+  "snapshot": {
+    "documents": 336,
+    "packages": 17,
+    "apps": 6,
+    "tests": 20,
+    "productionReady": false,
+    "state": "architecture solide, production encore à sécuriser"
+  },
+  "domains": [
+    {
+      "name": "Corpus documentaire",
+      "progress": 92,
+      "status": "validé"
+    },
+    {
+      "name": "Architecture fonctionnelle",
+      "progress": 88,
+      "status": "stable"
+    },
+    {
+      "name": "Code applicatif",
+      "progress": 66,
+      "status": "actif"
+    },
+    {
+      "name": "Infrastructure réelle",
+      "progress": 24,
+      "status": "à consolider"
+    },
+    {
+      "name": "Production / pilotage",
+      "progress": 15,
+      "status": "en préparation"
+    }
+  ],
+  "observations": [
+    "Le dépôt principal contient un socle documentaire massif et cohérent.",
+    "Le code métier et le monorepo existent déjà et sont testés localement.",
+    "L’infrastructure réelle de production n’est pas encore matérialisée dans le dépôt.",
+    "Le projet doit être gouverné par une mémoire dédiée afin d’éviter la dispersion et les faux terminés.",
+    "Le rôle de LUNE est de surveiller, classer, orienter et conserver la vérité du chantier."
+  ],
+  "recommendations": [
+    "Prioriser la gouvernance du chantier via un système de mémoire et de suivi.",
+    "Rendre la progression visible par phase, dépendance et validité.",
+    "Tracabiliser les contributeurs et leurs outils de production.",
+    "Sécuriser les dépendances infrastructure / production avant de poursuivre les modules de haut niveau.",
+    "Créer une interface consultative qui réponde en langue naturelle et donne des orientations."
+  ],
+  "questions": [
+    "Où en est le projet aujourd’hui ?",
+    "Qu’est-ce qui est déjà fait ?",
+    "Qu’est-ce qui reste à faire ?",
+    "Qu’est-ce qui est bloqué ?",
+    "Quel est le prochain jalon ?",
+    "Qui a contribué à ce module ?",
+    "Qu’est-ce qu’il faut faire maintenant ?"
+  ],
+  "keys": [
+    "Mémoire du projet",
+    "Classement automatique",
+    "Audit de conformité",
+    "Suivi de progression",
+    "Contribution traçable",
+    "Conseil consultatif"
+  ],
+  "memory": {
+    "taskCount": 25,
+    "readyCount": 3,
+    "blockedCount": 1,
+    "tasks": [
+      {
+        "title": "Fondation LUNE",
+        "status": "completed",
+        "progress": 100,
+        "priority": "haute",
+        "dependency": "aucune",
+        "validation": "validée"
+      },
+      {
+        "title": "Scan automatique du dépôt principal",
+        "status": "completed",
+        "progress": 100,
+        "priority": "haute",
+        "dependency": "fondation",
+        "validation": "validée"
+      },
+      {
+        "title": "Architecture et modules LUNE",
+        "status": "completed",
+        "progress": 88,
+        "priority": "haute",
+        "dependency": "fondation",
+        "validation": "partiellement validée"
+      },
+      {
+        "title": "Gouvernance de progression",
+        "status": "in_progress",
+        "progress": 62,
+        "priority": "haute",
+        "dependency": "scan automatique",
+        "validation": "à confirmer"
+      },
+      {
+        "title": "Traçabilité des contributeurs",
+        "status": "waiting_dependency",
+        "progress": 26,
+        "priority": "moyenne",
+        "dependency": "gouvernance",
+        "validation": "non démarrée"
+      },
+      {
+        "title": "Conseil conversationnel avancé",
+        "status": "waiting_dependency",
+        "progress": 34,
+        "priority": "moyenne",
+        "dependency": "gouvernance",
+        "validation": "non validée"
+      },
+      {
+        "title": "Production et infrastructure réelle",
+        "status": "blocked",
+        "progress": 15,
+        "priority": "critique",
+        "dependency": "validation technique",
+        "validation": "bloquée"
+      },
+      {
+        "title": "Dépôt des statuts ASBL + RCCM + compte bancaire",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "4. CHECKLIST PISTE HUMAINE (votre domaine — rien n'est accompli)",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "Compte Google Cloud organisationnel + moyen de paiement",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "4. CHECKLIST PISTE HUMAINE (votre domaine — rien n'est accompli)",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "Recrutement de l'équipe cœur (fiches de poste disponibles dans Tome 14)",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "4. CHECKLIST PISTE HUMAINE (votre domaine — rien n'est accompli)",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "Convention avec 10 écoles pilotes de Kinshasa",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "4. CHECKLIST PISTE HUMAINE (votre domaine — rien n'est accompli)",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "Contacts EPST / ESU / Ministère *(Tome 15)* — sans blocage du pilote privé",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "4. CHECKLIST PISTE HUMAINE (votre domaine — rien n'est accompli)",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "Laboratoire physique : 50 postes hétérogènes + simulateur réseau + onduleurs",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "4. CHECKLIST PISTE HUMAINE (votre domaine — rien n'est accompli)",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "Auteurs/validateurs didactiques pour la chaîne éditoriale",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "4. CHECKLIST PISTE HUMAINE (votre domaine — rien n'est accompli)",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "PGI-E001 Monorepo + CI Cloud Build (lint, tests, build) — T13/232 · 5 SP",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "E0 — Fondations techniques (34 SP) *(IA : squelettes fournis)*",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "PGI-E002 Terraform GCP : projets, Cloud Run, Cloud SQL HA, GCS, Memorystore, Pub/Sub — T13/230–232 · 10 SP",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "E0 — Fondations techniques (34 SP) *(IA : squelettes fournis)*",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "PGI-E003 Envs dev/staging/prod + secrets Secret Manager — T13/232, T7/127 · 5 SP",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "E0 — Fondations techniques (34 SP) *(IA : squelettes fournis)*",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "PGI-E004 Observabilité (Cloud Monitoring/Logging/Trace, alertes SLO) — T13/234 · 8 SP",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "E0 — Fondations techniques (34 SP) *(IA : squelettes fournis)*",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "PGI-E005 Posture sécurité : CMEK, WORM, journalisation immuable — T9/158,161 · 6 SP",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "E0 — Fondations techniques (34 SP) *(IA : squelettes fournis)*",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "Tests d'intrusion basiques IAM + audit des accès (T9) · 6 SP",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "E1 — Identité, accès, RBAC/ABAC (46 SP) *(M58, M80, T7/117)*",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "Multi-tenant création/configuration établissement (M61) · 12 SP",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "E2 — Établissements & scolarité (58 SP) *(M59–M64)*",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "Module caisse : frais, reçus, échéancier (M71) · 16 SP",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "E5 — Caisse étanche (28 SP) *(M71, Art. 5)*",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "Messagerie interne + notifications FCM (M70) · 14 SP",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "E6 — Communication (22 SP) *(M70)*",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "Mode avion : consultation 10 modules + passation 5 évaluations déconnectées (M281) · 16 SP",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "E7 — Clients : PWA hors-ligne + Android (86 SP) *(T12, T7/112–113)*",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      },
+      {
+        "title": "Tests charge/stress (objectif pilote : 1 000 req/s ; cible produit 65 000) (M240) · 12 SP",
+        "status": "planned",
+        "progress": 25,
+        "priority": "moyenne",
+        "dependency": "E10 — SRE & continuité (36 SP) *(T13)*",
+        "validation": "à vérifier",
+        "source": "auto",
+        "autoDetected": true
+      }
+    ]
+  },
+  "contributors": {
+    "totalUniqueContributors": 4,
+    "source": "git shortlog --all",
+    "list": [
+      {
+        "name": "Adolphe",
+        "email": "adolphe@localhost",
+        "commits": 19,
+        "commitsLast7": 15,
+        "lastCommit": "Sat Sep 19 21:17:08 2026 +0200",
+        "recentCommits": [
+          {
+            "hash": "7fda009100526d8e17d1a347a00bee9f39d4281e",
+            "date": "Sat Sep 19 21:17:08 2026 +0200",
+            "message": "feat: Vague 1 contenus pedagogiques (6 fiches + 6 syllabus 7e/8e annee, sources DIPROMAD/MEPST) + plan de redaction + verify-contenus.sh",
+            "files": [
+              "README.md",
+              "contenus/00-CADRE-LEGAL-ET-SOURCES.md",
+              "contenus/01-REFERENTIELS/_registre-sources.md",
+              "contenus/02-FICHES-MATIERES/ELL-CEB-7-MATH.md",
+              "contenus/02-FICHES-MATIERES/ELL-CEB-7-SPTTIC.md",
+              "contenus/02-FICHES-MATIERES/ELL-CEB-7-SVT.md",
+              "contenus/02-FICHES-MATIERES/ELL-CEB-8-MATH.md",
+              "contenus/02-FICHES-MATIERES/ELL-CEB-8-SPTTIC.md",
+              "contenus/02-FICHES-MATIERES/ELL-CEB-8-SVT.md",
+              "contenus/03-SYLLABUS/ELL-CEB-7-MATH.md",
+              "contenus/03-SYLLABUS/ELL-CEB-7-SPTTIC.md",
+              "contenus/03-SYLLABUS/ELL-CEB-7-SVT.md",
+              "contenus/03-SYLLABUS/ELL-CEB-8-MATH.md",
+              "contenus/03-SYLLABUS/ELL-CEB-8-SPTTIC.md",
+              "contenus/03-SYLLABUS/ELL-CEB-8-SVT.md",
+              "contenus/README.md",
+              "contenus/_tableaux-de-bord/avancement.md",
+              "contenus/_templates/TEMPLATE-N1-FICHE-MATIERE.md",
+              "contenus/_templates/TEMPLATE-N2-SYLLABUS.md",
+              "contenus/_templates/TEMPLATE-N3-LECON.md",
+              "contenus/_templates/TEMPLATE-N4-EVALUATION.md",
+              "docs/PLAN-REDACTION-MATIERES.md",
+              "tools/verify-contenus.sh",
+              "tools/verify-corpus.sh"
+            ]
+          },
+          {
+            "hash": "4753b750bf837644097e5b2c68445868dce222cb",
+            "date": "Sat Sep 19 17:45:45 2026 +0200",
+            "message": "feat: Professionnalisation complète des 20 landing pages",
+            "files": [
+              "apps/web-portal/dist/assiduite-presence.html",
+              "apps/web-portal/dist/banc-essai-performance.html",
+              "apps/web-portal/dist/bibliotheque-oer.html",
+              "apps/web-portal/dist/bulletin-securise.html",
+              "apps/web-portal/dist/caisse-etanche.html",
+              "apps/web-portal/dist/contact-support.html",
+              "apps/web-portal/dist/curriculum-epst-esu.html",
+              "apps/web-portal/dist/devenir-ecole-pilote.html",
+              "apps/web-portal/dist/ead-universite.html",
+              "apps/web-portal/dist/eleves-etudiants.html",
+              "apps/web-portal/dist/enseignants.html",
+              "apps/web-portal/dist/etablissements.html",
+              "apps/web-portal/dist/gouvernance-asbl.html",
+              "apps/web-portal/dist/index.html",
+              "apps/web-portal/dist/licence-informatique.html",
+              "apps/web-portal/dist/offline-first.html",
+              "apps/web-portal/dist/parents.html",
+              "apps/web-portal/dist/souverainete-cloud.html",
+              "apps/web-portal/dist/styles.css",
+              "apps/web-portal/dist/tuteur-gemini.html",
+              "apps/web-portal/dist/verification-diplomes.html",
+              "tools/enhance-portal.py",
+              "tools/portal-v2.css",
+              "tools/verify-corpus.sh"
+            ]
+          },
+          {
+            "hash": "8d046306177d86b3e1a8db55f3afe01deaaca6f7",
+            "date": "Sat Sep 19 17:17:25 2026 +0200",
+            "message": "fix: Application des 6 correctifs de l'audit qualité",
+            "files": [
+              ".gitignore",
+              "apps/api-gateway/dist/server.d.ts",
+              "apps/api-gateway/dist/server.js",
+              "apps/api-gateway/package.json",
+              "apps/api-gateway/tests/firestore-rules.test.js",
+              "apps/pwa-offline/dist/index.d.ts",
+              "apps/pwa-offline/dist/index.js",
+              "apps/pwa-offline/dist/lib/offline-db.d.ts",
+              "apps/pwa-offline/dist/lib/offline-db.js",
+              "apps/pwa-offline/package.json",
+              "apps/verify-portal/dist/index.html",
+              "apps/web-portal/dist/assiduite-presence.html",
+              "apps/web-portal/dist/banc-essai-performance.html",
+              "apps/web-portal/dist/bibliotheque-oer.html",
+              "apps/web-portal/dist/bulletin-securise.html",
+              "apps/web-portal/dist/caisse-etanche.html",
+              "apps/web-portal/dist/contact-support.html",
+              "apps/web-portal/dist/curriculum-epst-esu.html",
+              "apps/web-portal/dist/devenir-ecole-pilote.html",
+              "apps/web-portal/dist/ead-universite.html",
+              "apps/web-portal/dist/eleves-etudiants.html",
+              "apps/web-portal/dist/enseignants.html",
+              "apps/web-portal/dist/etablissements.html",
+              "apps/web-portal/dist/gouvernance-asbl.html",
+              "apps/web-portal/dist/index.html",
+              "apps/web-portal/dist/licence-informatique.html",
+              "apps/web-portal/dist/offline-first.html",
+              "apps/web-portal/dist/parents.html",
+              "apps/web-portal/dist/souverainete-cloud.html",
+              "apps/web-portal/dist/tuteur-gemini.html",
+              "apps/web-portal/dist/verification-diplomes.html",
+              "package-lock.json",
+              "packages/academic-engine/dist/calculator.d.ts",
+              "packages/academic-engine/dist/calculator.js",
+              "packages/academic-engine/dist/index.d.ts",
+              "packages/academic-engine/dist/index.js",
+              "packages/academic-engine/dist/seal.d.ts",
+              "packages/academic-engine/dist/seal.js",
+              "packages/academic-engine/dist/types.d.ts",
+              "packages/academic-engine/dist/types.js",
+              "packages/academic-engine/package.json",
+              "packages/ai-tutor/dist/index.d.ts",
+              "packages/ai-tutor/dist/index.js",
+              "packages/ai-tutor/dist/tutor.d.ts",
+              "packages/ai-tutor/dist/tutor.js",
+              "packages/ai-tutor/dist/types.d.ts",
+              "packages/ai-tutor/dist/types.js",
+              "packages/ai-tutor/package.json",
+              "packages/attendance-service/dist/attendance.d.ts",
+              "packages/attendance-service/dist/attendance.js",
+              "packages/attendance-service/dist/index.d.ts",
+              "packages/attendance-service/dist/index.js",
+              "packages/attendance-service/dist/types.d.ts",
+              "packages/attendance-service/dist/types.js",
+              "packages/attendance-service/package.json",
+              "packages/audit-trail/dist/audit.d.ts",
+              "packages/audit-trail/dist/audit.js",
+              "packages/audit-trail/dist/index.d.ts",
+              "packages/audit-trail/dist/index.js",
+              "packages/audit-trail/package.json",
+              "packages/diploma-registry/dist/index.d.ts",
+              "packages/diploma-registry/dist/index.js",
+              "packages/diploma-registry/dist/registry.d.ts",
+              "packages/diploma-registry/dist/registry.js",
+              "packages/diploma-registry/dist/types.d.ts",
+              "packages/diploma-registry/dist/types.js",
+              "packages/diploma-registry/package.json",
+              "packages/exam-service/dist/exam.d.ts",
+              "packages/exam-service/dist/exam.js",
+              "packages/exam-service/dist/index.d.ts",
+              "packages/exam-service/dist/index.js",
+              "packages/exam-service/dist/types.d.ts",
+              "packages/exam-service/dist/types.js",
+              "packages/exam-service/package.json",
+              "packages/finance-service/dist/finance.d.ts",
+              "packages/finance-service/dist/finance.js",
+              "packages/finance-service/dist/index.d.ts",
+              "packages/finance-service/dist/index.js",
+              "packages/finance-service/dist/types.d.ts",
+              "packages/finance-service/dist/types.js",
+              "packages/finance-service/package.json",
+              "packages/homework-service/dist/homework.d.ts",
+              "packages/homework-service/dist/homework.js",
+              "packages/homework-service/dist/index.d.ts",
+              "packages/homework-service/dist/index.js",
+              "packages/homework-service/dist/types.d.ts",
+              "packages/homework-service/dist/types.js",
+              "packages/homework-service/package.json",
+              "packages/notification-service/dist/index.d.ts",
+              "packages/notification-service/dist/index.js",
+              "packages/notification-service/dist/notification.d.ts",
+              "packages/notification-service/dist/notification.js",
+              "packages/notification-service/dist/types.d.ts",
+              "packages/notification-service/dist/types.js",
+              "packages/notification-service/package.json",
+              "packages/oer-library/dist/index.d.ts",
+              "packages/oer-library/dist/index.js",
+              "packages/oer-library/dist/library.d.ts",
+              "packages/oer-library/dist/library.js",
+              "packages/oer-library/dist/types.d.ts",
+              "packages/oer-library/dist/types.js",
+              "packages/oer-library/package.json",
+              "packages/rbac-engine/dist/index.d.ts",
+              "packages/rbac-engine/dist/index.js",
+              "packages/rbac-engine/dist/rbac.d.ts",
+              "packages/rbac-engine/dist/rbac.js",
+              "packages/rbac-engine/dist/types.d.ts",
+              "packages/rbac-engine/dist/types.js",
+              "packages/rbac-engine/package.json",
+              "packages/report-card-generator/dist/generator.d.ts",
+              "packages/report-card-generator/dist/generator.js",
+              "packages/report-card-generator/dist/index.d.ts",
+              "packages/report-card-generator/dist/index.js",
+              "packages/report-card-generator/dist/template.d.ts",
+              "packages/report-card-generator/dist/template.js",
+              "packages/report-card-generator/package.json",
+              "packages/scheduling-service/dist/index.d.ts",
+              "packages/scheduling-service/dist/index.js",
+              "packages/scheduling-service/dist/scheduling.d.ts",
+              "packages/scheduling-service/dist/scheduling.js",
+              "packages/scheduling-service/dist/types.d.ts",
+              "packages/scheduling-service/dist/types.js",
+              "packages/scheduling-service/package.json",
+              "packages/shared-types/dist/index.d.ts",
+              "packages/shared-types/dist/index.js",
+              "packages/shared-types/package.json",
+              "packages/sre-monitoring/dist/index.d.ts",
+              "packages/sre-monitoring/dist/index.js",
+              "packages/sre-monitoring/dist/monitoring.d.ts",
+              "packages/sre-monitoring/dist/monitoring.js",
+              "packages/sre-monitoring/dist/types.d.ts",
+              "packages/sre-monitoring/dist/types.js",
+              "packages/sre-monitoring/package.json",
+              "packages/student-service/dist/index.d.ts",
+              "packages/student-service/dist/index.js",
+              "packages/student-service/dist/student.d.ts",
+              "packages/student-service/dist/student.js",
+              "packages/student-service/dist/types.d.ts",
+              "packages/student-service/dist/types.js",
+              "packages/student-service/package.json",
+              "tools/build-all-pages.py",
+              "tools/build-portal.py",
+              "tools/build_all_rich_pages.py",
+              "tools/generate-enriched-landing-pages.py",
+              "tools/generate-landing-pages.py",
+              "tools/generate_all_20_rich_pages.py",
+              "tools/verify-corpus.sh"
+            ]
+          },
+          {
+            "hash": "846f45d5b24a98234ec1e97461124222c20fc186",
+            "date": "Sat Sep 19 16:46:11 2026 +0200",
+            "message": "feat: Déploiement officiel en ligne sur Google Firebase Hosting (cnel-elysium-rdc.web.app) — 20 landing pages exhaustives et enrichies",
+            "files": [
+              ".firebase/hosting.YXBwcy93ZWItcG9ydGFsL2Rpc3Q.cache",
+              ".firebaserc",
+              "apps/web-portal/dist/assiduite-presence.html",
+              "apps/web-portal/dist/banc-essai-performance.html",
+              "apps/web-portal/dist/bibliotheque-oer.html",
+              "apps/web-portal/dist/bulletin-securise.html",
+              "apps/web-portal/dist/caisse-etanche.html",
+              "apps/web-portal/dist/contact-support.html",
+              "apps/web-portal/dist/curriculum-epst-esu.html",
+              "apps/web-portal/dist/devenir-ecole-pilote.html",
+              "apps/web-portal/dist/ead-universite.html",
+              "apps/web-portal/dist/eleves-etudiants.html",
+              "apps/web-portal/dist/enseignants.html",
+              "apps/web-portal/dist/etablissements.html",
+              "apps/web-portal/dist/gouvernance-asbl.html",
+              "apps/web-portal/dist/index.html",
+              "apps/web-portal/dist/licence-informatique.html",
+              "apps/web-portal/dist/offline-first.html",
+              "apps/web-portal/dist/parents.html",
+              "apps/web-portal/dist/souverainete-cloud.html",
+              "apps/web-portal/dist/styles.css",
+              "apps/web-portal/dist/tuteur-gemini.html",
+              "apps/web-portal/dist/verification-diplomes.html",
+              "firebase.json",
+              "tools/build-all-pages.py",
+              "tools/build_all_rich_pages.py",
+              "tools/generate-enriched-landing-pages.py",
+              "tools/generate_all_20_rich_pages.py"
+            ]
+          },
+          {
+            "hash": "341e587a260de702a4e564d26dd2df32d48e8d64",
+            "date": "Sat Sep 19 16:36:39 2026 +0200",
+            "message": "feat: Site web officiel ELLYSIUM complet — 20 landing pages professionnelles interconnectées, charte régalienne (#0B2545/#D4AF37), responsive et indexées pour Firebase Hosting",
+            "files": [
+              "apps/web-portal/dist/assiduite-presence.html",
+              "apps/web-portal/dist/banc-essai-performance.html",
+              "apps/web-portal/dist/bibliotheque-oer.html",
+              "apps/web-portal/dist/bulletin-securise.html",
+              "apps/web-portal/dist/caisse-etanche.html",
+              "apps/web-portal/dist/contact-support.html",
+              "apps/web-portal/dist/curriculum-epst-esu.html",
+              "apps/web-portal/dist/devenir-ecole-pilote.html",
+              "apps/web-portal/dist/ead-universite.html",
+              "apps/web-portal/dist/eleves-etudiants.html",
+              "apps/web-portal/dist/enseignants.html",
+              "apps/web-portal/dist/etablissements.html",
+              "apps/web-portal/dist/gouvernance-asbl.html",
+              "apps/web-portal/dist/index.html",
+              "apps/web-portal/dist/licence-informatique.html",
+              "apps/web-portal/dist/offline-first.html",
+              "apps/web-portal/dist/parents.html",
+              "apps/web-portal/dist/souverainete-cloud.html",
+              "apps/web-portal/dist/styles.css",
+              "apps/web-portal/dist/tuteur-gemini.html",
+              "apps/web-portal/dist/verification-diplomes.html",
+              "tools/generate-landing-pages.py"
+            ]
+          },
+          {
+            "hash": "411fafbfc1ad5442cf4932b3b5472232ff32618f",
+            "date": "Sat Sep 19 16:15:28 2026 +0200",
+            "message": "feat: PGI ELLYSIUM complet (59 tests unitaires/intégration, banc de charge 240k ops/sec, registre diplômes M76, bibliothèque OER M73, monitoring SRE Tome 13, portail parent, suite globale validée)",
+            "files": [
+              "apps/api-gateway/dist/server.js",
+              "apps/api-gateway/package.json",
+              "apps/api-gateway/src/server.ts",
+              "apps/api-gateway/tests/server.test.js",
+              "apps/parent-portal/src/index.html",
+              "package-lock.json",
+              "packages/diploma-registry/dist/index.d.ts",
+              "packages/diploma-registry/dist/index.js",
+              "packages/diploma-registry/dist/registry.d.ts",
+              "packages/diploma-registry/dist/registry.js",
+              "packages/diploma-registry/dist/types.d.ts",
+              "packages/diploma-registry/dist/types.js",
+              "packages/diploma-registry/package.json",
+              "packages/diploma-registry/src/index.ts",
+              "packages/diploma-registry/src/registry.ts",
+              "packages/diploma-registry/src/types.ts",
+              "packages/diploma-registry/tests/registry.test.js",
+              "packages/diploma-registry/tsconfig.json",
+              "packages/oer-library/dist/index.d.ts",
+              "packages/oer-library/dist/index.js",
+              "packages/oer-library/dist/library.d.ts",
+              "packages/oer-library/dist/library.js",
+              "packages/oer-library/dist/types.d.ts",
+              "packages/oer-library/dist/types.js",
+              "packages/oer-library/package.json",
+              "packages/oer-library/src/index.ts",
+              "packages/oer-library/src/library.ts",
+              "packages/oer-library/src/types.ts",
+              "packages/oer-library/tests/library.test.js",
+              "packages/oer-library/tsconfig.json",
+              "packages/sre-monitoring/dist/index.d.ts",
+              "packages/sre-monitoring/dist/index.js",
+              "packages/sre-monitoring/dist/monitoring.d.ts",
+              "packages/sre-monitoring/dist/monitoring.js",
+              "packages/sre-monitoring/dist/types.d.ts",
+              "packages/sre-monitoring/dist/types.js",
+              "packages/sre-monitoring/package.json",
+              "packages/sre-monitoring/src/index.ts",
+              "packages/sre-monitoring/src/monitoring.ts",
+              "packages/sre-monitoring/src/types.ts",
+              "packages/sre-monitoring/tests/monitoring.test.js",
+              "packages/sre-monitoring/tsconfig.json",
+              "tools/benchmark-10k.js",
+              "tools/run-all-tests.sh"
+            ]
+          }
+        ],
+        "recentFiles": [
+          "README.md",
+          "contenus/00-CADRE-LEGAL-ET-SOURCES.md",
+          "contenus/01-REFERENTIELS/_registre-sources.md",
+          "contenus/02-FICHES-MATIERES/ELL-CEB-7-MATH.md",
+          "contenus/02-FICHES-MATIERES/ELL-CEB-7-SPTTIC.md",
+          "contenus/02-FICHES-MATIERES/ELL-CEB-7-SVT.md",
+          "contenus/02-FICHES-MATIERES/ELL-CEB-8-MATH.md",
+          "contenus/02-FICHES-MATIERES/ELL-CEB-8-SPTTIC.md",
+          "contenus/02-FICHES-MATIERES/ELL-CEB-8-SVT.md",
+          "contenus/03-SYLLABUS/ELL-CEB-7-MATH.md",
+          "contenus/03-SYLLABUS/ELL-CEB-7-SPTTIC.md",
+          "contenus/03-SYLLABUS/ELL-CEB-7-SVT.md",
+          "contenus/03-SYLLABUS/ELL-CEB-8-MATH.md",
+          "contenus/03-SYLLABUS/ELL-CEB-8-SPTTIC.md",
+          "contenus/03-SYLLABUS/ELL-CEB-8-SVT.md",
+          "contenus/README.md",
+          "contenus/_tableaux-de-bord/avancement.md",
+          "contenus/_templates/TEMPLATE-N1-FICHE-MATIERE.md",
+          "contenus/_templates/TEMPLATE-N2-SYLLABUS.md",
+          "contenus/_templates/TEMPLATE-N3-LECON.md"
+        ],
+        "tools": [
+          "inconnu"
+        ],
+        "uncommittedFiles": [
+          {
+            "path": "apps/web-portal/dist/index.html",
+            "mtime": "2026-09-19T19:51:44.707Z"
+          }
+        ]
+      },
+      {
+        "name": "VS Code",
+        "email": "vscode@users.noreply.github.com",
+        "commits": 61,
+        "commitsLast7": 0,
+        "lastCommit": "Mon Jul 27 12:34:39 2026 +0200",
+        "recentCommits": [
+          {
+            "hash": "105c0fe3d52734a12158b61e63c4057146ffb3b3",
+            "date": "Mon Jul 27 12:34:39 2026 +0200",
+            "message": "Session a12ec945-8872-4e1d-abe1-40d687e7490b - checkpoint turn 60",
+            "files": []
+          },
+          {
+            "hash": "35fca435ec08d67bd0bad1dbd3dc9afa750e856a",
+            "date": "Mon Jul 27 12:30:34 2026 +0200",
+            "message": "Session a12ec945-8872-4e1d-abe1-40d687e7490b - checkpoint turn 59",
+            "files": []
+          },
+          {
+            "hash": "f2a6177ed1babc718a3b92a1e9c0468e3cf84bc1",
+            "date": "Mon Jul 27 12:25:48 2026 +0200",
+            "message": "Session a12ec945-8872-4e1d-abe1-40d687e7490b - checkpoint turn 58",
+            "files": []
+          },
+          {
+            "hash": "0f36625baaa6a83c28a3cb3c693c69edfc7380e6",
+            "date": "Mon Jul 27 12:24:19 2026 +0200",
+            "message": "Session a12ec945-8872-4e1d-abe1-40d687e7490b - checkpoint turn 57",
+            "files": []
+          },
+          {
+            "hash": "e8ec239fb9665021c66357305a565d60a440a7e5",
+            "date": "Mon Jul 27 01:32:12 2026 +0200",
+            "message": "Session a12ec945-8872-4e1d-abe1-40d687e7490b - checkpoint turn 56",
+            "files": [
+              "tome-5/55/README.md",
+              "tome-5/56/README.md",
+              "tome-5/57/README.md",
+              "tome-5/58/README.md",
+              "tome-5/59/README.md",
+              "tome-5/60/README.md",
+              "tome-5/61/README.md",
+              "tome-5/62/README.md",
+              "tome-5/63/README.md",
+              "tome-5/64/README.md",
+              "tome-5/65/README.md",
+              "tome-5/66/README.md",
+              "tome-5/67/README.md",
+              "tome-5/68/README.md",
+              "tome-5/69/README.md",
+              "tome-5/70/README.md",
+              "tome-5/71/README.md",
+              "tome-5/72/README.md",
+              "tome-5/73/README.md",
+              "tome-5/74/README.md",
+              "tome-5/75/README.md",
+              "tome-5/76/README.md",
+              "tome-5/77/README.md",
+              "tome-5/78/README.md",
+              "tome-5/79/README.md",
+              "tome-5/80/README.md",
+              "tome-5/81/README.md",
+              "tome-5/82/README.md",
+              "tome-5/83/README.md",
+              "tome-5/README.md"
+            ]
+          },
+          {
+            "hash": "2da1c6e4d52bb13dcb238e0e31068ea11257dbf5",
+            "date": "Mon Jul 27 01:25:10 2026 +0200",
+            "message": "Session a12ec945-8872-4e1d-abe1-40d687e7490b - checkpoint turn 55",
+            "files": []
+          }
+        ],
+        "recentFiles": [
+          "tome-5/55/README.md",
+          "tome-5/56/README.md",
+          "tome-5/57/README.md",
+          "tome-5/58/README.md",
+          "tome-5/59/README.md",
+          "tome-5/60/README.md",
+          "tome-5/61/README.md",
+          "tome-5/62/README.md",
+          "tome-5/63/README.md",
+          "tome-5/64/README.md",
+          "tome-5/65/README.md",
+          "tome-5/66/README.md",
+          "tome-5/67/README.md",
+          "tome-5/68/README.md",
+          "tome-5/69/README.md",
+          "tome-5/70/README.md",
+          "tome-5/71/README.md",
+          "tome-5/72/README.md",
+          "tome-5/73/README.md",
+          "tome-5/74/README.md"
+        ],
+        "tools": [
+          "inconnu"
+        ],
+        "uncommittedFiles": [
+          {
+            "path": "apps/web-portal/dist/index.html",
+            "mtime": "2026-09-19T19:51:44.707Z"
+          }
+        ]
+      },
+      {
+        "name": "Adolphe Christopher Mukendi",
+        "email": "adolphechristopher@yahoo.com",
+        "commits": 42,
+        "commitsLast7": 0,
+        "lastCommit": "Mon Jul 27 12:34:33 2026 +0200",
+        "recentCommits": [
+          {
+            "hash": "3272a8d84df5428a43acbf4cae264c52d3ddef87",
+            "date": "Mon Jul 27 12:34:33 2026 +0200",
+            "message": "Supprimer l'ancien emplacement du Tome 4",
+            "files": [
+              "tome-4/4.7-11/README.md"
+            ]
+          },
+          {
+            "hash": "bfff2cdf99c1e943bc55dda3ebfc689dcc07fa48",
+            "date": "Mon Jul 27 12:34:31 2026 +0200",
+            "message": "Supprimer l'ancien emplacement du Tome 4",
+            "files": [
+              "tome-4/4.6/README.md"
+            ]
+          },
+          {
+            "hash": "0aa5f6ad56a63b06140b614b54f94f564653c8ae",
+            "date": "Mon Jul 27 12:34:29 2026 +0200",
+            "message": "Supprimer l'ancien emplacement du Tome 4",
+            "files": [
+              "tome-4/4.4/README.md"
+            ]
+          },
+          {
+            "hash": "8b73a1d3de9d2136931c75b67ced4241c030f982",
+            "date": "Mon Jul 27 12:34:27 2026 +0200",
+            "message": "Supprimer l'ancien emplacement du Tome 4",
+            "files": [
+              "tome-4/4.3/README.md"
+            ]
+          },
+          {
+            "hash": "1d6be90d4ba39a8a864fd509872e1565963879f6",
+            "date": "Mon Jul 27 12:34:25 2026 +0200",
+            "message": "Supprimer l'ancien emplacement du Tome 4",
+            "files": [
+              "tome-4/4.12-16/README.md"
+            ]
+          },
+          {
+            "hash": "125d510d0b1abe82d8a0a49e4473ecf8a441be46",
+            "date": "Mon Jul 27 12:34:23 2026 +0200",
+            "message": "Supprimer l'ancien emplacement du Tome 4",
+            "files": [
+              "tome-4/4.5/README.md"
+            ]
+          }
+        ],
+        "recentFiles": [
+          "tome-4/4.7-11/README.md",
+          "tome-4/4.6/README.md",
+          "tome-4/4.4/README.md",
+          "tome-4/4.3/README.md",
+          "tome-4/4.12-16/README.md",
+          "tome-4/4.5/README.md",
+          "tome-4/4.1/README.md",
+          "tome-4/4.8/README.md",
+          "tome-4/4.9-23/README.md",
+          "tome-4/README.md",
+          "tome-5/55/README.md",
+          "tome-5/56/README.md",
+          "tome-5/57/README.md",
+          "tome-5/58/README.md",
+          "tome-5/59/README.md",
+          "tome-5/60/README.md",
+          "tome-5/61/README.md",
+          "tome-5/62/README.md",
+          "tome-5/63/README.md",
+          "tome-5/64/README.md"
+        ],
+        "tools": [
+          "inconnu"
+        ],
+        "uncommittedFiles": [
+          {
+            "path": "apps/web-portal/dist/index.html",
+            "mtime": "2026-09-19T19:51:44.707Z"
+          }
+        ]
+      },
+      {
+        "name": "Jordi",
+        "email": "jordikasongo95@gmail.com",
+        "commits": 6,
+        "commitsLast7": 0,
+        "lastCommit": "Sun Jul 26 00:28:44 2026 +0200",
+        "recentCommits": [
+          {
+            "hash": "c4d42291915e36cba05f5c79c1ec8abe29fc99f5",
+            "date": "Sun Jul 26 00:28:44 2026 +0200",
+            "message": "Renforcement des fondations et liaison explicite des tomes 3.3 à 3.10",
+            "files": [
+              "README.md",
+              "foundations/04-conventions-de-depot-et-d-ecriture.md",
+              "foundations/05-integration-des-tomes-3.md",
+              "foundations/06-roadmap-et-prerequis-pour-les-tomes-3-3-a-3-10.md",
+              "foundations/README.md"
+            ]
+          },
+          {
+            "hash": "14ea67211707a2e21bcdf390a6cf3356abb603e4",
+            "date": "Sun Jul 26 00:23:40 2026 +0200",
+            "message": "Ajout de la feuille de route de fondation et de l’intégration des tomes 3.1/3.2",
+            "files": [
+              "README.md",
+              "foundations/05-integration-des-tomes-3.md",
+              "foundations/06-roadmap-et-prerequis-pour-les-tomes-3-3-a-3-10.md",
+              "foundations/README.md"
+            ]
+          },
+          {
+            "hash": "6652d5b465ddfc8e34a996ddb33d5313aa7782a9",
+            "date": "Sun Jul 26 00:03:08 2026 +0200",
+            "message": "Structurer les fondations du projet",
+            "files": [
+              "README.md",
+              "foundations/02-architecture-fonctionnelle-de-reference.md",
+              "foundations/03-gouvernance-securite-et-tracabilite.md",
+              "foundations/04-conventions-de-depot-et-d-ecriture.md",
+              "foundations/README.md"
+            ]
+          },
+          {
+            "hash": "ac3898ba63109ce728ee9588a7a3990879eef31b",
+            "date": "Sat Jul 25 23:57:36 2026 +0200",
+            "message": "Poser les fondations du projet",
+            "files": [
+              "README.md",
+              "foundations/01-fondements-de-reference.md",
+              "foundations/README.md"
+            ]
+          },
+          {
+            "hash": "e943cd1047ed27c5d0511a67c6bd8b01605c1ee3",
+            "date": "Sat Jul 25 22:54:03 2026 +0200",
+            "message": "Support GitHub token auth in sync helper",
+            "files": [
+              "sync-to-github.sh"
+            ]
+          },
+          {
+            "hash": "7299b86bbbaf0b70ed4a4f6f6dd26b6ee981c21e",
+            "date": "Sat Jul 25 22:52:51 2026 +0200",
+            "message": "Add GitHub sync helper script",
+            "files": [
+              "sync-to-github.sh"
+            ]
+          }
+        ],
+        "recentFiles": [
+          "README.md",
+          "foundations/04-conventions-de-depot-et-d-ecriture.md",
+          "foundations/05-integration-des-tomes-3.md",
+          "foundations/06-roadmap-et-prerequis-pour-les-tomes-3-3-a-3-10.md",
+          "foundations/README.md",
+          "foundations/02-architecture-fonctionnelle-de-reference.md",
+          "foundations/03-gouvernance-securite-et-tracabilite.md",
+          "foundations/01-fondements-de-reference.md",
+          "sync-to-github.sh"
+        ],
+        "tools": [
+          "inconnu"
+        ],
+        "uncommittedFiles": [
+          {
+            "path": "apps/web-portal/dist/index.html",
+            "mtime": "2026-09-19T19:51:44.707Z"
+          }
+        ]
+      }
+    ]
+  },
+  "projectPhases": [
+    {
+      "name": "Corpus documentaire",
+      "progress": 92,
+      "status": "validé"
+    },
+    {
+      "name": "Conception et architecture",
+      "progress": 88,
+      "status": "stable"
+    },
+    {
+      "name": "Implémentation logicielle",
+      "progress": 16,
+      "status": "à démarrer"
+    },
+    {
+      "name": "Déploiement pilote",
+      "progress": 8,
+      "status": "préparation"
+    },
+    {
+      "name": "Gouvernance LUNE",
+      "progress": 62,
+      "status": "en cours"
+    }
+  ],
+  "dependencyGraph": [
+    {
+      "from": "Fondation LUNE",
+      "to": "Scan automatique du dépôt principal"
+    },
+    {
+      "from": "Fondation LUNE",
+      "to": "Architecture et modules LUNE"
+    },
+    {
+      "from": "Scan automatique du dépôt principal",
+      "to": "Gouvernance de progression"
+    },
+    {
+      "from": "Gouvernance de progression",
+      "to": "Traçabilité des contributeurs"
+    },
+    {
+      "from": "Gouvernance de progression",
+      "to": "Conseil conversationnel avancé"
+    }
+  ],
+  "risks": [
+    {
+      "domain": "Infrastructure réelle",
+      "level": "high",
+      "note": "Infrastructure réelle montre une progression faible (24%). Risque sur jalon."
+    },
+    {
+      "domain": "Production / pilotage",
+      "level": "high",
+      "note": "Production / pilotage montre une progression faible (15%). Risque sur jalon."
+    }
+  ],
+  "nextMilestone": "Construire la couche de gouvernance, de traçabilité et de conseil conversationnel.",
+  "alerts": [
+    {
+      "type": "risk",
+      "domain": "Infrastructure réelle",
+      "level": "high",
+      "note": "Infrastructure réelle montre une progression faible (24%). Risque sur jalon.",
+      "when": "2026-09-19T20:35:10.553Z"
+    },
+    {
+      "type": "risk",
+      "domain": "Production / pilotage",
+      "level": "high",
+      "note": "Production / pilotage montre une progression faible (15%). Risque sur jalon.",
+      "when": "2026-09-19T20:35:10.553Z"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/web-portal/dist/index.html",
+      "when": "2026-09-19T19:51:44.707Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/web-portal/dist/index.html",
+      "when": "2026-09-19T19:51:44.707Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/web-portal/dist/index.html",
+      "when": "2026-09-19T19:51:44.707Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/web-portal/dist/index.html",
+      "when": "2026-09-19T19:51:44.707Z",
+      "note": "Fichier sensible modifié mais non commité"
+    }
+  ]
+}

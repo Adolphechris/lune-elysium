@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-09-19T20:35:09.587Z",
+  "targetProject": "/home/adolphe/CNEL -ELYSIUM/clenel-elysium",
+  "projectName": "ELLYSIUM — Centre National d’Étude en Ligne (CNEL)",
+  "mission": "Système éducatif numérique national",
+  "stats": {
+    "markdown": 358,
+    "ts": 49,
+    "js": 22,
+    "json": 43,
+    "packages": 17,
+    "apps": 6,
+    "docs": 4,
+    "tests": 20
+  },
+  "status": {
+    "corpus": "documenté",
+    "code": "actif",
+    "build": "à vérifier",
+    "production": "non prêt",
+    "purpose": "gouvernance et suivi du chantier"
+  },
+  "priorities": [
+    "Sécuriser l’infrastructure réelle et la crédibilité du déploiement",
+    "Classer le projet selon des phases, dépendances et jalons clairs",
+    "Créer un système de mémoire de projet autonome et consultable",
+    "Tracabiliser les contributeurs et leurs outils de travail",
+    "Mettre en place l’audit permanent et le conseil d’orientation"
+  ]
+}

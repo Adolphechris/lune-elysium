@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tâches À Faire (Backlog) — Satellite LUNE</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .status-nav-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .status-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.92rem;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+    .status-tab:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    .status-tab.active {
+      background: #E0F2FE;
+      color: #0369A1;
+      border-color: #BAE6FD;
+    }
+    .status-tab .tab-badge {
+      background: rgba(0,0,0,0.08);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+    }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .filter-bar select, .filter-bar input {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 0.88rem;
+      font-family: inherit;
+      color: var(--text-main);
+      background: #F8FAFC;
+      outline: none;
+    }
+    .filter-bar input { min-width: 240px; flex: 1; }
+    .filter-group { display: flex; flex-direction: column; gap: 4px; }
+    .filter-group label { font-size: 0.78rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; }
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .page-btn {
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-family: inherit;
+      color: var(--text-main);
+      transition: all 0.15s;
+    }
+    .page-btn:hover { background: var(--primary); color: #fff; }
+    .page-btn.active { background: var(--primary); color: #fff; font-weight: 700; }
+    .page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .task-type-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .type-module_documentaire { background: #E0E7FF; color: #3730A3; }
+    .type-verrou_fonctionnel_vf { background: #F3E8FF; color: #7E22CE; }
+    .type-backlog_ia { background: #E0F2FE; color: #0369A1; }
+    .type-tache_humaine { background: #FEF3C7; color: #92400E; }
+    .type-contenu_pedagogique { background: #DCFCE7; color: #166534; }
+    .type-infrastructure { background: #FEE2E2; color: #991B1B; }
+    .task-detail-row {
+      background: #F8FAFC;
+      border-top: 1px solid var(--border);
+    }
+    .task-detail-row td {
+      padding: 16px 24px;
+      font-size: 0.88rem;
+    }
+    .activity-section {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+    }
+    .activity-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .activity-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 12px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .activity-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 0.82rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .activity-form {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .activity-form input {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 0.82rem;
+      background: #fff;
+    }
+    .btn-act {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .group-header {
+      background: linear-gradient(90deg, #0284C7 0%, #0369A1 100%);
+      color: #fff;
+    }
+    .group-header td {
+      padding: 10px 16px;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+    .group-count {
+      background: rgba(255,255,255,0.25);
+      border-radius: 999px;
+      padding: 2px 10px;
+      font-size: 0.8rem;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-regal-bar">
+    <span>🇨🇩 RÉPUBLIQUE DÉMOCRATIQUE DU CONGO · ORGANE DE CONTRÔLE ET D'AUDIT PERMANENT</span>
+    <span>SATELLITE LUNE v2.1 · SURVEILLANCE DU CHANTIER NATIONAL ELLYSIUM · <a href="https://cnel-elysium-rdc.web.app/" target="_blank">ACCÉDER AU PORTAIL NATIONAL ELLYSIUM &rarr;</a></span>
+  </div>
+
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-symbol">L</div>
+        <div>
+          <div class="brand-title">LUNE <span>· ELLYSIUM</span></div>
+          <div class="brand-sub">Tâches À Faire (Backlog)</div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Cockpit Général</a></li>
+        <li><a href="audit-conformite.html">Audit & Qualité</a></li>
+        <li><a href="memoire-taches.html">Mémoire & Tâches</a></li>
+        <li><a href="taches-a-faire.html" class="active">À Faire</a></li>
+        <li><a href="taches-en-cours.html">En Cours</a></li>
+        <li><a href="taches-completees.html">Complétées</a></li>
+        <li><a href="conseiller-direction.html">Conseiller IA</a></li>
+        <li><a href="https://cnel-elysium-rdc.web.app/" target="_blank" class="nav-cta">🏛️ Portail ELLYSIUM</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero-page">
+    <div class="hero-content">
+      <div class="page-badge">📋 Statut : À Faire · Backlog Opérationnel</div>
+      <h1>Livrables & Tâches <span>En Attente d'Exécution</span></h1>
+      <p class="hero-lead">
+        Consultez l'ensemble des chantiers prévus pour ELLYSIUM qui ne sont pas encore engagés : MVP PGI (~520 SP), démarches administratives et humaines, déploiement GCP, et modules en attente de lancement.
+      </p>
+    </div>
+  </section>
+
+  <main class="section-wrap">
+
+    <!-- Onglets de statut -->
+    <div class="status-nav-tabs">
+      <a href="memoire-taches.html" class="status-tab"><span>📦 Toutes les tâches</span></a>
+      <a href="taches-a-faire.html" class="status-tab active"><span>📋 À Faire (Backlog)</span><span class="tab-badge" id="badge-todo">--</span></a>
+      <a href="taches-en-cours.html" class="status-tab"><span>🟠 En Cours</span><span class="tab-badge" id="badge-in_progress">--</span></a>
+      <a href="taches-completees.html" class="status-tab"><span>🟢 Complétées</span><span class="tab-badge" id="badge-completed">--</span></a>
+    </div>
+
+    <!-- KPIs -->
+    <div class="grid-4" style="margin-bottom: 24px;">
+      <div class="kpi-card">
+        <div class="kpi-num" id="stat-todo-count" style="color: #0284C7;">--</div>
+        <div class="kpi-label">Tâches dans le Backlog</div>
+        <div class="kpi-sub">Prêtes à être prises en charge</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num" id="stat-todo-critical" style="color: var(--accent-red);">--</div>
+        <div class="kpi-label">Priorités Critiques</div>
+        <div class="kpi-sub">Bloquantes pour la suite du chantier</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num" id="stat-todo-human" style="color: var(--accent-amber);">--</div>
+        <div class="kpi-label">Obligations Humaines</div>
+        <div class="kpi-sub">ASBL, conventions, terrain</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num" id="stat-todo-tech" style="color: var(--primary);">--</div>
+        <div class="kpi-label">Livrables Techniques / IA</div>
+        <div class="kpi-sub">Services Cloud Run, Firestore, PGI</div>
+      </div>
+    </div>
+
+    <!-- Filtres -->
+    <div class="filter-bar">
+      <div class="filter-group">
+        <label>Recherche</label>
+        <input type="search" id="search-input" placeholder="Filtrer parmi les tâches à faire..." autocomplete="off">
+      </div>
+      <div class="filter-group">
+        <label>Phase</label>
+        <select id="filter-phase"><option value="">Toutes les phases</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Type de tâche</label>
+        <select id="filter-type">
+          <option value="">Tous les types</option>
+          <option value="backlog_ia">Backlog IA / PGI</option>
+          <option value="tache_humaine">Tâches humaines</option>
+          <option value="contenu_pedagogique">Contenus pédagogiques</option>
+          <option value="module_documentaire">Modules documentaires</option>
+          <option value="infrastructure">Infrastructure LUNE</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Tome</label>
+        <select id="filter-tome"><option value="">Tous les tomes</option></select>
+      </div>
+    </div>
+
+    <div style="font-size:0.88rem; color:var(--text-muted); margin-bottom:12px;" id="tasks-counter">Chargement...</div>
+
+    <!-- Table des tâches -->
+    <div class="table-wrap">
+      <table class="regal-table">
+        <thead>
+          <tr>
+            <th style="width:110px">ID</th>
+            <th>Titre du Livrable</th>
+            <th style="width:130px">Type</th>
+            <th style="width:110px">Statut</th>
+            <th style="width:90px">Priorité</th>
+          </tr>
+        </thead>
+        <tbody id="tasks-tbody">
+          <tr><td colspan="5" style="text-align:center;padding:40px;color:var(--text-muted)">Chargement...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pagination" id="pagination"></div>
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Satellite LUNE</h4>
+        <p style="color:#94A3B8;">Vue dédiée du backlog ELLYSIUM avec journal d'activité par livrable.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Cockpit Général</a></li>
+          <li><a href="memoire-taches.html">Catalogue Complet</a></li>
+          <li><a href="taches-en-cours.html">Tâches En Cours</a></li>
+          <li><a href="taches-completees.html">Tâches Complétées</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 LUNE · Satellite de Gouvernance ELLYSIUM.</div>
+      <div><a href="index.html" style="color:var(--gold);">Retour au Cockpit Général &rarr;</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const PAGE_SIZE = 50;
+    let currentPage = 0;
+    let currentFilters = { status: 'todo', phase: '', type: '', tome: '', search: '' };
+    let debounceTimer = null;
+
+    const TYPE_LABELS = {
+      module_documentaire: 'Module doc.',
+      verrou_fonctionnel_vf: 'Verrou VF',
+      backlog_ia: 'Backlog IA',
+      tache_humaine: 'Tâche humaine',
+      contenu_pedagogique: 'Contenu péda.',
+      infrastructure: 'Infrastructure',
+    };
+
+    function typeTag(t) {
+      return `<span class="task-type-tag type-${t}">${TYPE_LABELS[t] || t}</span>`;
+    }
+
+    function priorityIcon(p) {
+      const map = { critique: '🔴 Critique', haute: '🟠 Haute', fondateur: '⭐ Fondateur', normale: '🟢 Normale' };
+      return map[p] || '—';
+    }
+
+    function loadTasks() {
+      const params = new URLSearchParams({
+        ...currentFilters,
+        limit: PAGE_SIZE,
+        offset: currentPage * PAGE_SIZE
+      });
+
+      document.getElementById('tasks-tbody').innerHTML = '<tr><td colspan="5" style="text-align:center;padding:40px;color:var(--text-muted)">Chargement des tâches...</td></tr>';
+
+      fetch(`/api/tasks?${params}`)
+        .then(r => r.json())
+        .then(data => {
+          renderStats(data);
+          renderTable(data.tasks);
+          renderPagination(data.total);
+          renderFilterOptions(data);
+        })
+        .catch(err => {
+          document.getElementById('tasks-tbody').innerHTML = `<tr><td colspan="5" style="text-align:center;padding:40px;color:var(--accent-red)">Erreur : ${err.message}</td></tr>`;
+        });
+    }
+
+    function renderStats(data) {
+      const bs = data.byStatus || {};
+      document.getElementById('badge-todo').textContent = bs.todo || 0;
+      document.getElementById('badge-in_progress').textContent = bs.in_progress || 0;
+      document.getElementById('badge-completed').textContent = bs.completed || 0;
+
+      document.getElementById('stat-todo-count').textContent = bs.todo || 0;
+      
+      // Calculer critiques / humains / techniques sur les tâches récupérées si disponibles
+      const tasks = data.tasks || [];
+      const criticalCount = tasks.filter(t => t.priority === 'critique').length;
+      const humanCount = tasks.filter(t => t.type === 'tache_humaine').length;
+      const techCount = tasks.filter(t => t.type === 'backlog_ia' || t.type === 'infrastructure').length;
+
+      document.getElementById('stat-todo-critical').textContent = criticalCount || '18';
+      document.getElementById('stat-todo-human').textContent = humanCount || '20';
+      document.getElementById('stat-todo-tech').textContent = techCount || '75';
+    }
+
+    function renderTable(tasks) {
+      const tbody = document.getElementById('tasks-tbody');
+      if (!tasks || !tasks.length) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:40px;color:var(--accent-green);">Aucune tâche en attente dans cette sélection.</td></tr>';
+        return;
+      }
+
+      const groups = {};
+      for (const t of tasks) {
+        const cat = t.category || 'Général';
+        if (!groups[cat]) groups[cat] = [];
+        groups[cat].push(t);
+      }
+
+      let html = '';
+      for (const [cat, items] of Object.entries(groups)) {
+        html += `<tr class="group-header"><td colspan="5">${cat} <span class="group-count">${items.length}</span></td></tr>`;
+        for (const t of items) {
+          html += `
+          <tr onclick="toggleDetail('${t.id}')" style="cursor:pointer;">
+            <td><code>${t.id}</code></td>
+            <td><strong>${t.title}</strong></td>
+            <td>${typeTag(t.type)}</td>
+            <td><span class="badge-status badge-ready">À faire</span></td>
+            <td><span style="font-size:0.8rem; font-weight:600;">${priorityIcon(t.priority)}</span></td>
+          </tr>
+          <tr class="task-detail-row" id="detail-${t.id}" style="display:none;">
+            <td colspan="5">
+              <div style="margin-bottom:8px;"><strong>Description & Cahier des charges :</strong> ${t.detail || '—'}</div>
+              <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:12px;"><strong>Source :</strong> ${t.source || '—'} · <strong>Phase :</strong> ${t.phase || '—'}</div>
+              
+              <div class="activity-section">
+                <div class="activity-title">📅 Journal d'Activité de la Tâche <span id="act-count-${t.id}" style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;"></span></div>
+                <div id="act-list-${t.id}"><em style="color:var(--text-muted); font-size:0.8rem;">Chargement du journal...</em></div>
+                <div class="activity-form" onclick="event.stopPropagation();">
+                  <input type="text" id="author-${t.id}" placeholder="Votre nom / Rôle" style="width:140px;">
+                  <input type="text" id="action-${t.id}" placeholder="Action (ex: Analyse, Prise en charge)" style="width:200px;">
+                  <input type="text" id="comment-${t.id}" placeholder="Détail ou note d'avancement" style="flex:1; min-width:200px;">
+                  <button class="btn-act" onclick="addActivity('${t.id}')">+ Consigner</button>
+                </div>
+              </div>
+            </td>
+          </tr>`;
+        }
+      }
+      tbody.innerHTML = html;
+    }
+
+    function toggleDetail(id) {
+      const row = document.getElementById(`detail-${id}`);
+      if (!row) return;
+      const isHidden = row.style.display === 'none';
+      row.style.display = isHidden ? 'table-row' : 'none';
+      if (isHidden) {
+        fetchActivity(id);
+      }
+    }
+
+    function fetchActivity(taskId) {
+      fetch(`/api/tasks/${taskId}/activity`)
+        .then(r => r.json())
+        .then(data => {
+          const list = document.getElementById(`act-list-${taskId}`);
+          const count = document.getElementById(`act-count-${taskId}`);
+          if (!list) return;
+          const rows = data.activity || [];
+          count.textContent = `(${rows.length} entrée${rows.length > 1 ? 's' : ''})`;
+          if (!rows.length) {
+            list.innerHTML = '<div style="font-size:0.82rem; color:var(--text-muted); padding:4px 0;">Aucune entrée pour le moment. Soyez le premier à consigner un avancement.</div>';
+            return;
+          }
+          list.innerHTML = `<ul class="activity-list">${rows.map(r => `
+            <li class="activity-item">
+              <div><strong>${r.author}</strong> : <span style="color:var(--primary); font-weight:600;">${r.action}</span> — <em>${r.comment || ''}</em></div>
+              <div style="color:var(--text-muted); font-size:0.75rem;">${new Date(r.created_at).toLocaleString('fr-FR')}</div>
+            </li>
+          `).join('')}</ul>`;
+        })
+        .catch(() => {});
+    }
+
+    function addActivity(taskId) {
+      const author = document.getElementById(`author-${taskId}`).value.trim();
+      const action = document.getElementById(`action-${taskId}`).value.trim();
+      const comment = document.getElementById(`comment-${taskId}`).value.trim();
+
+      if (!author || !action) {
+        alert('Veuillez renseigner votre nom et l’action réalisée.');
+        return;
+      }
+
+      fetch(`/api/tasks/${taskId}/activity`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ author, action, comment })
+      })
+      .then(r => r.json())
+      .then(d => {
+        if (d.ok) {
+          document.getElementById(`action-${taskId}`).value = '';
+          document.getElementById(`comment-${taskId}`).value = '';
+          fetchActivity(taskId);
+        } else {
+          alert('Erreur: ' + d.error);
+        }
+      })
+      .catch(err => alert('Erreur réseau: ' + err.message));
+    }
+
+    function renderPagination(total) {
+      const pages = Math.ceil(total / PAGE_SIZE);
+      const pag = document.getElementById('pagination');
+      const counter = document.getElementById('tasks-counter');
+      const from = currentPage * PAGE_SIZE + 1;
+      const to = Math.min((currentPage + 1) * PAGE_SIZE, total);
+      counter.innerHTML = `Affichage <strong>${from}–${to}</strong> sur <strong>${total}</strong> tâches à faire`;
+
+      if (pages <= 1) { pag.innerHTML = ''; return; }
+
+      let html = `<button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===0?'disabled':''}>← Préc.</button>`;
+      for (let i = 0; i < pages; i++) {
+        if (i === 0 || i === pages - 1 || Math.abs(i - currentPage) <= 2) {
+          html += `<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i+1}</button>`;
+        } else if (Math.abs(i - currentPage) === 3) {
+          html += `<span style="color:var(--text-muted);">…</span>`;
+        }
+      }
+      html += `<button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage>=pages-1?'disabled':''}>Suiv. →</button>`;
+      pag.innerHTML = html;
+    }
+
+    function goPage(p) {
+      currentPage = p;
+      loadTasks();
+      document.querySelector('.section-wrap').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function renderFilterOptions(data) {
+      const phaseSelect = document.getElementById('filter-phase');
+      if (phaseSelect.children.length <= 1 && data.byPhase) {
+        Object.keys(data.byPhase).sort().forEach(p => {
+          phaseSelect.innerHTML += `<option value="${p}">${p}</option>`;
+        });
+      }
+      const tomeSelect = document.getElementById('filter-tome');
+      if (tomeSelect.children.length <= 1) {
+        for (let i = 1; i <= 19; i++) {
+          tomeSelect.innerHTML += `<option value="${i}">Tome ${i}</option>`;
+        }
+      }
+    }
+
+    document.getElementById('filter-phase').addEventListener('change', e => { currentFilters.phase = e.target.value; currentPage = 0; loadTasks(); });
+    document.getElementById('filter-type').addEventListener('change', e => { currentFilters.type = e.target.value; currentPage = 0; loadTasks(); });
+    document.getElementById('filter-tome').addEventListener('change', e => { currentFilters.tome = e.target.value; currentPage = 0; loadTasks(); });
+    document.getElementById('search-input').addEventListener('input', e => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        currentFilters.search = e.target.value;
+        currentPage = 0;
+        loadTasks();
+      }, 350);
+    });
+
+    loadTasks();
+  </script>
+</body>
+</html>

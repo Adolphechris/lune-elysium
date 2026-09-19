@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T20:35:10.553Z",
+  "generatedAt": "2026-09-19T20:54:49.230Z",
   "projectName": "ELLYSIUM — Centre National d’Étude en Ligne (CNEL)",
   "targetProject": "/home/adolphe/CNEL -ELYSIUM/clenel-elysium",
   "overallHealth": 78,
@@ -319,11 +319,20 @@
     "list": [
       {
         "name": "Adolphe",
-        "email": "adolphe@localhost",
-        "commits": 19,
-        "commitsLast7": 15,
-        "lastCommit": "Sat Sep 19 21:17:08 2026 +0200",
+        "email": "adolphechristopher@gmail.com",
+        "commits": 20,
+        "commitsLast7": 16,
+        "lastCommit": "Sat Sep 19 22:46:07 2026 +0200",
         "recentCommits": [
+          {
+            "hash": "d455a75d802708b12162ae2208ec645ee4f51eea",
+            "date": "Sat Sep 19 22:46:07 2026 +0200",
+            "message": "feat(portal): interconnexion navigation et footer avec Satellite LUNE v2.1",
+            "files": [
+              "apps/web-portal/dist/index.html",
+              "contenus/02-FICHES-MATIERES/ELL-HS-1-MATH.md"
+            ]
+          },
           {
             "hash": "7fda009100526d8e17d1a347a00bee9f39d4281e",
             "date": "Sat Sep 19 21:17:08 2026 +0200",
@@ -603,60 +612,11 @@
               "apps/web-portal/dist/verification-diplomes.html",
               "tools/generate-landing-pages.py"
             ]
-          },
-          {
-            "hash": "411fafbfc1ad5442cf4932b3b5472232ff32618f",
-            "date": "Sat Sep 19 16:15:28 2026 +0200",
-            "message": "feat: PGI ELLYSIUM complet (59 tests unitaires/intégration, banc de charge 240k ops/sec, registre diplômes M76, bibliothèque OER M73, monitoring SRE Tome 13, portail parent, suite globale validée)",
-            "files": [
-              "apps/api-gateway/dist/server.js",
-              "apps/api-gateway/package.json",
-              "apps/api-gateway/src/server.ts",
-              "apps/api-gateway/tests/server.test.js",
-              "apps/parent-portal/src/index.html",
-              "package-lock.json",
-              "packages/diploma-registry/dist/index.d.ts",
-              "packages/diploma-registry/dist/index.js",
-              "packages/diploma-registry/dist/registry.d.ts",
-              "packages/diploma-registry/dist/registry.js",
-              "packages/diploma-registry/dist/types.d.ts",
-              "packages/diploma-registry/dist/types.js",
-              "packages/diploma-registry/package.json",
-              "packages/diploma-registry/src/index.ts",
-              "packages/diploma-registry/src/registry.ts",
-              "packages/diploma-registry/src/types.ts",
-              "packages/diploma-registry/tests/registry.test.js",
-              "packages/diploma-registry/tsconfig.json",
-              "packages/oer-library/dist/index.d.ts",
-              "packages/oer-library/dist/index.js",
-              "packages/oer-library/dist/library.d.ts",
-              "packages/oer-library/dist/library.js",
-              "packages/oer-library/dist/types.d.ts",
-              "packages/oer-library/dist/types.js",
-              "packages/oer-library/package.json",
-              "packages/oer-library/src/index.ts",
-              "packages/oer-library/src/library.ts",
-              "packages/oer-library/src/types.ts",
-              "packages/oer-library/tests/library.test.js",
-              "packages/oer-library/tsconfig.json",
-              "packages/sre-monitoring/dist/index.d.ts",
-              "packages/sre-monitoring/dist/index.js",
-              "packages/sre-monitoring/dist/monitoring.d.ts",
-              "packages/sre-monitoring/dist/monitoring.js",
-              "packages/sre-monitoring/dist/types.d.ts",
-              "packages/sre-monitoring/dist/types.js",
-              "packages/sre-monitoring/package.json",
-              "packages/sre-monitoring/src/index.ts",
-              "packages/sre-monitoring/src/monitoring.ts",
-              "packages/sre-monitoring/src/types.ts",
-              "packages/sre-monitoring/tests/monitoring.test.js",
-              "packages/sre-monitoring/tsconfig.json",
-              "tools/benchmark-10k.js",
-              "tools/run-all-tests.sh"
-            ]
           }
         ],
         "recentFiles": [
+          "apps/web-portal/dist/index.html",
+          "contenus/02-FICHES-MATIERES/ELL-HS-1-MATH.md",
           "README.md",
           "contenus/00-CADRE-LEGAL-ET-SOURCES.md",
           "contenus/01-REFERENTIELS/_registre-sources.md",
@@ -674,19 +634,12 @@
           "contenus/03-SYLLABUS/ELL-CEB-8-SVT.md",
           "contenus/README.md",
           "contenus/_tableaux-de-bord/avancement.md",
-          "contenus/_templates/TEMPLATE-N1-FICHE-MATIERE.md",
-          "contenus/_templates/TEMPLATE-N2-SYLLABUS.md",
-          "contenus/_templates/TEMPLATE-N3-LECON.md"
+          "contenus/_templates/TEMPLATE-N1-FICHE-MATIERE.md"
         ],
         "tools": [
           "inconnu"
         ],
-        "uncommittedFiles": [
-          {
-            "path": "apps/web-portal/dist/index.html",
-            "mtime": "2026-09-19T19:51:44.707Z"
-          }
-        ]
+        "uncommittedFiles": []
       },
       {
         "name": "VS Code",
@@ -788,12 +741,7 @@
         "tools": [
           "inconnu"
         ],
-        "uncommittedFiles": [
-          {
-            "path": "apps/web-portal/dist/index.html",
-            "mtime": "2026-09-19T19:51:44.707Z"
-          }
-        ]
+        "uncommittedFiles": []
       },
       {
         "name": "Adolphe Christopher Mukendi",
@@ -876,12 +824,7 @@
         "tools": [
           "inconnu"
         ],
-        "uncommittedFiles": [
-          {
-            "path": "apps/web-portal/dist/index.html",
-            "mtime": "2026-09-19T19:51:44.707Z"
-          }
-        ]
+        "uncommittedFiles": []
       },
       {
         "name": "Jordi",
@@ -966,12 +909,7 @@
         "tools": [
           "inconnu"
         ],
-        "uncommittedFiles": [
-          {
-            "path": "apps/web-portal/dist/index.html",
-            "mtime": "2026-09-19T19:51:44.707Z"
-          }
-        ]
+        "uncommittedFiles": []
       }
     ]
   },
@@ -1043,42 +981,14 @@
       "domain": "Infrastructure réelle",
       "level": "high",
       "note": "Infrastructure réelle montre une progression faible (24%). Risque sur jalon.",
-      "when": "2026-09-19T20:35:10.553Z"
+      "when": "2026-09-19T20:54:49.230Z"
     },
     {
       "type": "risk",
       "domain": "Production / pilotage",
       "level": "high",
       "note": "Production / pilotage montre une progression faible (15%). Risque sur jalon.",
-      "when": "2026-09-19T20:35:10.553Z"
-    },
-    {
-      "type": "uncommitted",
-      "contributor": "Adolphe",
-      "path": "apps/web-portal/dist/index.html",
-      "when": "2026-09-19T19:51:44.707Z",
-      "note": "Fichier sensible modifié mais non commité"
-    },
-    {
-      "type": "uncommitted",
-      "contributor": "VS Code",
-      "path": "apps/web-portal/dist/index.html",
-      "when": "2026-09-19T19:51:44.707Z",
-      "note": "Fichier sensible modifié mais non commité"
-    },
-    {
-      "type": "uncommitted",
-      "contributor": "Adolphe Christopher Mukendi",
-      "path": "apps/web-portal/dist/index.html",
-      "when": "2026-09-19T19:51:44.707Z",
-      "note": "Fichier sensible modifié mais non commité"
-    },
-    {
-      "type": "uncommitted",
-      "contributor": "Jordi",
-      "path": "apps/web-portal/dist/index.html",
-      "when": "2026-09-19T19:51:44.707Z",
-      "note": "Fichier sensible modifié mais non commité"
+      "when": "2026-09-19T20:54:49.230Z"
     }
   ]
 }

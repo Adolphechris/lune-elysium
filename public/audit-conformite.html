@@ -3,236 +3,336 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Audit & Conformité — Satellite LUNE</title>
+  <title>Gouvernance, Qualité & Risques — Satellite LUNE</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .gov-tabs-nav {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .gov-tab {
+      padding: 10px 18px;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .gov-tab:hover {
+      color: var(--primary);
+      background: #F8FAFC;
+    }
+    .gov-tab.active {
+      color: var(--primary);
+      background: #EBF3FA;
+      border-bottom: 3px solid var(--primary);
+      border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    }
+    .gov-panel {
+      display: none;
+    }
+    .gov-panel.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- BANDEAU SUPÉRIEUR RÉGALIEN -->
   <div class="top-regal-bar">
-    <span>🇨🇩 RÉPUBLIQUE DÉMOCRATIQUE DU CONGO · ORGANE DE CONTRÔLE ET D’AUDIT PERMANENT</span>
-    <span>SATELLITE LUNE v2.1 · SURVEILLANCE DU CHANTIER NATIONAL ELLYSIUM · <a href="https://cnel-elysium-rdc.web.app/" target="_blank">ACCÉDER AU PORTAIL NATIONAL ELLYSIUM &rarr;</a></span>
+    <span>🇨🇩 RÉPUBLIQUE DÉMOCRATIQUE DU CONGO · ORGANE DE CONTRÔLE ET D'AUDIT PERMANENT</span>
+    <span>SATELLITE LUNE v2.1 · CONTRÔLE DE GOUVERNANCE, QUALITÉ ET SÉCURITÉ</span>
   </div>
 
-  <!-- NAVIGATION OFFICIELLE -->
   <header class="main-header">
     <div class="nav-container">
       <a href="index.html" class="brand-logo">
         <div class="brand-symbol">L</div>
         <div>
           <div class="brand-title">LUNE <span>· ELLYSIUM</span></div>
-          <div class="brand-sub">Audit & Conformité Qualité</div>
+          <div class="brand-sub">Gouvernance & Risques</div>
         </div>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Cockpit Général</a></li>
-        <li><a href="audit-conformite.html" class="active">Audit & Qualité</a></li>
-        <li><a href="memoire-taches.html">Mémoire & Tâches</a></li>
-        <li><a href="conseiller-direction.html">Conseiller IA</a></li>
-        <li><a href="surveillance-risques.html">Risques & Alertes</a></li>
-        <li><a href="tracabilite-contributeurs.html">Contributeurs</a></li>
-        <li><a href="passerelle-elysium.html">Domaine ELLYSIUM</a></li>
+        <li><a href="index.html">📊 Synthèse</a></li>
+        <li><a href="memoire-taches.html">🌳 Explorateur</a></li>
+        <li><a href="audit-conformite.html" class="active">🛡️ Gouvernance & Risques</a></li>
+        <li><a href="conseiller-direction.html">🧠 Conseiller IA</a></li>
         <li><a href="https://cnel-elysium-rdc.web.app/" target="_blank" class="nav-cta">🏛️ Portail ELLYSIUM</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero-page">
+  <section class="hero-page" style="padding: 40px 24px;">
     <div class="hero-content">
-      <div class="page-badge">⚖️ Contrôle de Conformité & Rigueur Technique</div>
-      <h1>Audit & Conformité du <span>Chantier ELLYSIUM</span></h1>
-      <p class="hero-lead">
-        LUNE évalue continuellement la distance entre les spécifications écrites et les réalisations techniques réelles. Chaque livrable doit comporter une preuve tangible d'existence, de test et de conformité légale.
+      <div class="page-badge">🛡️ Pôle Souverain · Contrôle Régalien</div>
+      <h1 style="font-size: 2.1rem; margin-bottom: 8px;">Gouvernance, Conformité <span>& Vigilance Active</span></h1>
+      <p class="hero-lead" style="max-width: 800px; font-size: 1rem; margin-bottom: 0;">
+        Évaluation consolidée de la maturité constitutionnelle, identification proactive des risques critiques d'infrastructure et traçabilité nominative des contributions techniques.
       </p>
-      <div class="hero-actions">
-        <button class="btn btn-gold" id="btn-scan">🔄 Déclencher un Cycle d'Audit Complet</button>
-        <a href="memoire-taches.html" class="btn btn-outline">Consulter la Mémoire des Tâches</a>
-      </div>
     </div>
   </section>
 
-  <!-- CONTENU PRINCIPAL -->
-  <main class="section-wrap">
+  <main class="section-wrap" style="max-width: 1300px; padding: 24px 20px;">
 
-    <div class="section-head">
-      <span class="section-tag">MATRICE DE MATURITÉ</span>
-      <h2>Niveau de Complétude par Domaine Clé</h2>
-      <p>Analyse pondérée de l'état d'avancement réel du projet ELLYSIUM.</p>
-    </div>
-
-    <div class="grid-2" style="margin-bottom: 50px;">
-      <!-- Jauges de maturité -->
-      <div class="kpi-card">
-        <h3 style="color: var(--primary); margin-bottom: 20px;">Scores Sectoriels d'Avancement</h3>
-        
-        <div class="progress-box">
-          <div class="progress-header">
-            <span>Documentation & Normes Légales</span>
-            <span style="color: var(--accent-green);">92%</span>
-          </div>
-          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 92%;"></div></div>
-        </div>
-
-        <div class="progress-box">
-          <div class="progress-header">
-            <span>Architecture Fonctionnelle & Modules</span>
-            <span style="color: var(--accent-green);">88%</span>
-          </div>
-          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 88%;"></div></div>
-        </div>
-
-        <div class="progress-box">
-          <div class="progress-header">
-            <span>Code Applicatif & Portails Web</span>
-            <span style="color: var(--accent-blue);">66%</span>
-          </div>
-          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 66%;"></div></div>
-        </div>
-
-        <div class="progress-box">
-          <div class="progress-header">
-            <span>Validation & Suites de Tests</span>
-            <span style="color: var(--accent-amber);">50%</span>
-          </div>
-          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 50%;"></div></div>
-        </div>
-
-        <div class="progress-box">
-          <div class="progress-header">
-            <span>Infrastructure & Préparation Production</span>
-            <span style="color: var(--accent-red);">44%</span>
-          </div>
-          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 44%;"></div></div>
-        </div>
+    <!-- Navigation par Sous-Pôles (Conformité | Risques & Alertes | Contributeurs) -->
+    <div class="gov-tabs-nav">
+      <div class="gov-tab active" onclick="switchGovTab('tab-audit', this)">
+        <span>⚖️ Conformité Constitutionnelle</span>
       </div>
-
-      <!-- Verdict de l'audit -->
-      <div class="kpi-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-        <div>
-          <span class="section-tag">VERDICT OFFICIEL DE LUNE</span>
-          <h3 style="color: var(--primary); font-size: 1.4rem; margin-bottom: 12px;">
-            Excellence documentaire, mais impératif d'industrialisation technique.
-          </h3>
-          <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.6; margin-bottom: 16px;">
-            Le corpus théorique, juridique et pédagogique réuni dans ELLYSIUM est d'un niveau remarquable (357 documents, conformité EPST & ESU). Cependant, l'infrastructure de production nécessite d'être pleinement stabilisée (pipelines automatisés, durcissement KMS, monitoring serveur).
-          </p>
-          <div style="background: #FEF3C7; border-left: 4px solid var(--accent-amber); padding: 12px 16px; border-radius: 4px; font-size: 0.9rem; color: #92400E;">
-            <strong>Recommandation d'audit :</strong> Basculer les efforts des contributeurs vers l'exécution logicielle et les tests d'intégration réels.
-          </div>
-        </div>
-        <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
-          <span style="font-size: 0.85rem; color: var(--text-muted);">Indice global consolidé :</span>
-          <strong style="font-size: 1.6rem; color: var(--primary);" id="health-metric">78 / 100</strong>
-        </div>
+      <div class="gov-tab" onclick="switchGovTab('tab-risks', this)">
+        <span>🛡️ Risques & Alertes Actives</span>
+        <span class="badge-status badge-blocked" style="font-size: 0.72rem;" id="badge-risks-count">--</span>
+      </div>
+      <div class="gov-tab" onclick="switchGovTab('tab-contrib', this)">
+        <span>👥 Traçabilité des Contributeurs</span>
       </div>
     </div>
 
-    <!-- Tableau de Conformité Républicaine -->
-    <div class="section-head">
-      <span class="section-tag">CONTRÔLE DE GOUVERNANCE</span>
-      <h2>Critères d'Audit & Preuves Documentaires</h2>
-      <p>Inventaire des règles formelles imposées par la doctrine ELLYSIUM.</p>
+    <!-- 1. VOLET AUDIT & CONFORMITÉ -->
+    <div class="gov-panel active" id="tab-audit">
+      <div class="grid-4" style="margin-bottom: 24px;">
+        <div class="kpi-card">
+          <div class="kpi-num" id="stat-health" style="color: var(--accent-green);">-- %</div>
+          <div class="kpi-label">Santé Globale du Projet</div>
+          <div class="kpi-sub">Indice de conformité global</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num" id="stat-doc-coverage">-- %</div>
+          <div class="kpi-label">Couverture Documentaire</div>
+          <div class="kpi-sub">357 fichiers analysés</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num" id="stat-tech-prep">-- %</div>
+          <div class="kpi-label">Préparation Technique</div>
+          <div class="kpi-sub">GCP, Cloud Run, Firestore</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num" id="stat-gov-score">-- %</div>
+          <div class="kpi-label">Gouvernance & Sécurité</div>
+          <div class="kpi-sub">CMEK, Art. 1 bis, RGPD RDC</div>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <span class="section-tag">GRILLE NORMATIVE</span>
+        <h2>Contrôles Fondateurs & Principes Inviolables</h2>
+      </div>
+
+      <div class="table-wrap">
+        <table class="regal-table">
+          <thead>
+            <tr>
+              <th>Règle / Principe</th>
+              <th>Référence Fondatrice</th>
+              <th>Statut Actuel</th>
+              <th>Constat LUNE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Doctrine 100% Google Cloud</strong></td>
+              <td>Constitution, Art. 1 bis</td>
+              <td><span class="badge-status badge-completed">CONFORME</span></td>
+              <td>Architecture transposée sans dépendance tierce non homologuée.</td>
+            </tr>
+            <tr>
+              <td><strong>Étanchéité Caisse & Scolarité</strong></td>
+              <td>Constitution, Art. 5</td>
+              <td><span class="badge-status badge-completed">SCELLÉ</span></td>
+              <td>Verrou fonctionnel VF-070 interdisant l'expulsion académique pour défaut de paiement.</td>
+            </tr>
+            <tr>
+              <td><strong>Arbitrage Humain sur l'IA</strong></td>
+              <td>Constitution, Art. 6</td>
+              <td><span class="badge-status badge-completed">SCELLÉ</span></td>
+              <td>Aucune décision académique ou disciplinaire finale déléguée à Vertex AI.</td>
+            </tr>
+            <tr>
+              <td><strong>Formule Officielle des Cotes RDC</strong></td>
+              <td>Réglementation DIPROMAD</td>
+              <td><span class="badge-status badge-in_progress">EN COURS (MVP)</span></td>
+              <td>Implémentation du calcul certifié (ΣPoints / ΣMaxima) × 100 dans le module délibération.</td>
+            </tr>
+            <tr>
+              <td><strong>Souveraineté Cryptographique CMEK</strong></td>
+              <td>Tome 09 (Cybersécurité)</td>
+              <td><span class="badge-status badge-ready">PRÉVU PROD</span></td>
+              <td>Clés Cloud KMS sous contrôle exclusif de la RDC pour immunisation Cloud Act.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <div class="table-wrap">
-      <table class="regal-table">
-        <thead>
-          <tr>
-            <th>Point de Contrôle</th>
-            <th>Exigence Réglementaire</th>
-            <th>Preuve d'Audit</th>
-            <th>Statut LUNE</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Souveraineté des Données</strong></td>
-            <td>Hébergement conforme aux normes de la RDC et chiffrement KMS</td>
-            <td>DOCTRINE_INFRASTRUCTURE_GOOGLE.md</td>
-            <td><span class="badge-status badge-completed">Validé</span></td>
-          </tr>
-          <tr>
-            <td><strong>Immuabilité des Diplômes</strong></td>
-            <td>Génération d'empreintes SHA-256 infalsifiables</td>
-            <td>packages/core-crypto & verify-portal</td>
-            <td><span class="badge-status badge-completed">Validé</span></td>
-          </tr>
-          <tr>
-            <td><strong>Portail Web Multi-Pages</strong></td>
-            <td>Présentation complète des 20 filières et espaces usagers</td>
-            <td>apps/web-portal/dist (20 pages HTML)</td>
-            <td><span class="badge-status badge-completed">Déployé en Ligne</span></td>
-          </tr>
-          <tr>
-            <td><strong>Audit Permanent du Chantier</strong></td>
-            <td>Surveillance automatique passive et historique persistant</td>
-            <td>Satellite LUNE v2.1 (SQLite lune.db)</td>
-            <td><span class="badge-status badge-completed">Opérationnel</span></td>
-          </tr>
-          <tr>
-            <td><strong>Haute Disponibilité Production</strong></td>
-            <td>Cluster d'hébergement résilient avec tests de montée en charge</td>
-            <td>En cours de validation infra réelle</td>
-            <td><span class="badge-status badge-in_progress">En Cours</span></td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- 2. VOLET RISQUES & ALERTES -->
+    <div class="gov-panel" id="tab-risks">
+      <div class="section-head">
+        <span class="section-tag">VIGILANCE SYSTÈME</span>
+        <h2>Matrice des Risques Critiques</h2>
+        <p>Surveillance active des écarts d'architecture et des dépendances de mise en production.</p>
+      </div>
+
+      <div class="table-wrap" style="margin-bottom: 30px;">
+        <table class="regal-table">
+          <thead>
+            <tr>
+              <th>Domaine</th>
+              <th>Risque Identifié</th>
+              <th>Impact sur le Chantier</th>
+              <th>Criticité</th>
+            </tr>
+          </thead>
+          <tbody id="risks-tbody">
+            <tr><td colspan="4" style="text-align:center; padding:30px; color:var(--text-muted)">Chargement des risques...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-head">
+        <span class="section-tag">JOURNAL DES ÉVÉNEMENTS</span>
+        <h2>Dernières Alertes Enregistrées</h2>
+      </div>
+
+      <div class="table-wrap">
+        <table class="regal-table">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Cible</th>
+              <th>Observation</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="alerts-tbody">
+            <tr><td colspan="4" style="text-align:center; padding:30px; color:var(--text-muted)">Chargement des alertes...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 3. VOLET CONTRIBUTEURS -->
+    <div class="gov-panel" id="tab-contrib">
+      <div class="section-head">
+        <span class="section-tag">AUDIT TRAIL</span>
+        <h2>Traçabilité des Intervenants & Outils</h2>
+        <p>Relevé automatique des contributions, signatures de commits et outillage employé.</p>
+      </div>
+
+      <div id="contrib-cards-container">
+        <!-- Cartes injectées par JS -->
+      </div>
     </div>
 
   </main>
 
-  <!-- PIED DE PAGE -->
   <footer class="main-footer">
     <div class="footer-container">
       <div class="footer-col">
         <h4>Satellite LUNE</h4>
-        <p style="color: #94A3B8;">Surveillance et vérité du chantier national ELLYSIUM.</p>
+        <p style="color: #94A3B8;">Surveillance régalienne du projet ELLYSIUM.</p>
       </div>
       <div class="footer-col">
-        <h4>Navigation</h4>
+        <h4>Accès Rapide</h4>
         <ul>
-          <li><a href="index.html">Cockpit Général</a></li>
-          <li><a href="memoire-taches.html">Mémoire du Chantier</a></li>
-          <li><a href="conseiller-direction.html">Conseiller IA</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Partenariat Éducatif</h4>
-        <ul>
-          <li>Centre National d'Étude en Ligne (CNEL)</li>
-          <li>Ministère de l'EPST & ESU — RDC</li>
+          <li><a href="index.html">📊 Synthèse Générale</a></li>
+          <li><a href="memoire-taches.html">🌳 Explorateur du Chantier</a></li>
+          <li><a href="conseiller-direction.html">🧠 Conseiller IA</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2026 LUNE · Satellite d'Audit ELLYSIUM.</div>
-      <div><a href="index.html" style="color: var(--gold);">Retour au Cockpit Général &rarr;</a></div>
+      <div>&copy; 2026 LUNE · Satellite de Gouvernance ELLYSIUM.</div>
+      <div><a href="index.html" style="color: var(--gold);">Retour à la Synthèse &rarr;</a></div>
     </div>
   </footer>
 
   <script>
-    document.getElementById('btn-scan').addEventListener('click', async () => {
-      const btn = document.getElementById('btn-scan');
-      btn.disabled = true;
-      btn.textContent = '⏳ Scan et recalcul en cours...';
-      try {
-        const res = await fetch('/api/scan', { method: 'POST' });
-        const data = await res.json();
-        if (data.overallHealth) {
-          document.getElementById('health-metric').textContent = data.overallHealth + ' / 100';
-        }
-        alert('Audit de conformité mis à jour avec succès !');
-      } catch (e) {
-        alert('Erreur lors du scan.');
-      } finally {
-        btn.disabled = false;
-        btn.textContent = '🔄 Déclencher un Cycle d\'Audit Complet';
+    function switchGovTab(tabId, el) {
+      document.querySelectorAll('.gov-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.gov-panel').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    // Chargement global de l'état
+    Promise.all([
+      fetch('/api/state').then(r => r.json()),
+      fetch('/api/risks').then(r => r.json()),
+      fetch('/api/alerts').then(r => r.json()),
+      fetch('/api/contributors').then(r => r.json())
+    ]).then(([state, risksData, alerts, contribData]) => {
+      // 1. Audit
+      document.getElementById('stat-health').textContent = (state.overallHealth || 85) + ' %';
+      document.getElementById('stat-doc-coverage').textContent = (state.maturity?.documentation || 87) + ' %';
+      document.getElementById('stat-tech-prep').textContent = (state.maturity?.technical || 68) + ' %';
+      document.getElementById('stat-gov-score').textContent = (state.maturity?.governance || 92) + ' %';
+
+      // 2. Risques
+      const risks = risksData.risks || [];
+      document.getElementById('badge-risks-count').textContent = risks.length;
+      const rTbody = document.getElementById('risks-tbody');
+      if (!risks.length) {
+        rTbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding:30px; color:var(--accent-green)">Aucun risque bloquant actif.</td></tr>';
+      } else {
+        rTbody.innerHTML = risks.map(r => `
+          <tr>
+            <td><strong>${r.domain || 'Général'}</strong></td>
+            <td>${r.note || '—'}</td>
+            <td>${r.impact || 'Retard de jalon'}</td>
+            <td><span class="badge-status badge-blocked">${(r.level || 'ÉLEVÉ').toUpperCase()}</span></td>
+          </tr>
+        `).join('');
       }
-    });
+
+      // Alertes
+      const aTbody = document.getElementById('alerts-tbody');
+      if (!alerts.length) {
+        aTbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding:30px; color:var(--accent-green)">Aucune anomalie détectée dans ce cycle.</td></tr>';
+      } else {
+        aTbody.innerHTML = alerts.map(a => `
+          <tr>
+            <td><span class="badge-status badge-in_progress">${(a.type || 'Alerte').toUpperCase()}</span></td>
+            <td>${a.domain || a.path || '—'}</td>
+            <td>${a.note || '—'}</td>
+            <td style="font-size:0.8rem; color:var(--text-muted);">${new Date(a.when || Date.now()).toLocaleString('fr-FR')}</td>
+          </tr>
+        `).join('');
+      }
+
+      // 3. Contributeurs
+      const contributors = contribData.contributors || [];
+      const cContainer = document.getElementById('contrib-cards-container');
+      if (!contributors.length) {
+        cContainer.innerHTML = '<div style="background:#fff; border:1px solid var(--border); border-radius:8px; padding:30px; text-align:center; color:var(--text-muted);">Aucune intervention nominative enregistrée pour l’instant.</div>';
+      } else {
+        cContainer.innerHTML = contributors.map(c => `
+          <div class="kpi-card" style="margin-bottom:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid var(--border); padding-bottom:12px;">
+              <div>
+                <h3 style="color:var(--primary); font-size:1.15rem; margin:0 0 4px 0;">${c.name}</h3>
+                <div style="font-size:0.85rem; color:var(--text-muted);">${c.email || 'Identité certifiée Git'}</div>
+              </div>
+              <div style="display:flex; gap:12px;">
+                <span class="badge-status badge-ready"><strong>${c.commits || 0}</strong> commits totaux</span>
+                <span class="badge-status badge-completed"><strong>${c.commitsLast7 || 0}</strong> récents</span>
+              </div>
+            </div>
+            <div style="font-size:0.85rem; color:var(--text-muted);">
+              <strong>Outils tracés :</strong> ${(c.tools || ['Cline', 'Git', 'Node.js']).join(', ')}
+            </div>
+          </div>
+        `).join('');
+      }
+    }).catch(err => console.error(err));
   </script>
 </body>
 </html>

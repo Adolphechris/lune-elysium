@@ -4,13 +4,13 @@
     "domain": "Infrastructure réelle",
     "level": "high",
     "note": "Infrastructure réelle montre une progression faible (24%). Risque sur jalon.",
-    "when": "2026-09-19T20:54:49.230Z"
+    "when": "2026-09-20T09:38:56.931Z"
   },
   {
     "type": "risk",
     "domain": "Production / pilotage",
     "level": "high",
     "note": "Production / pilotage montre une progression faible (15%). Risque sur jalon.",
-    "when": "2026-09-19T20:54:49.230Z"
+    "when": "2026-09-20T09:38:56.931Z"
   }
 ]

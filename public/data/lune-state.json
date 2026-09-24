@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T20:54:49.230Z",
+  "generatedAt": "2026-09-20T09:38:56.931Z",
   "projectName": "ELLYSIUM — Centre National d’Étude en Ligne (CNEL)",
   "targetProject": "/home/adolphe/CNEL -ELYSIUM/clenel-elysium",
   "overallHealth": 78,
@@ -320,10 +320,44 @@
       {
         "name": "Adolphe",
         "email": "adolphechristopher@gmail.com",
-        "commits": 20,
-        "commitsLast7": 16,
-        "lastCommit": "Sat Sep 19 22:46:07 2026 +0200",
+        "commits": 22,
+        "commitsLast7": 18,
+        "lastCommit": "Sun Sep 20 10:28:45 2026 +0200",
         "recentCommits": [
+          {
+            "hash": "ed20e039b5e3aa81b4e0c39ae3d7619903f6e9a9",
+            "date": "Sun Sep 20 10:28:45 2026 +0200",
+            "message": "feat: migration SYLLABUS→COURS, validation Vague 1 N1+N2, mise à jour doc",
+            "files": [
+              "contenus/00-CADRE-LEGAL-ET-SOURCES.md",
+              "contenus/02-FICHES-MATIERES/ELL-CEB-7-MATH.md",
+              "contenus/02-FICHES-MATIERES/ELL-CEB-7-SPTTIC.md",
+              "contenus/02-FICHES-MATIERES/ELL-CEB-7-SVT.md",
+              "contenus/02-FICHES-MATIERES/ELL-CEB-8-MATH.md",
+              "contenus/02-FICHES-MATIERES/ELL-CEB-8-SPTTIC.md",
+              "contenus/02-FICHES-MATIERES/ELL-CEB-8-SVT.md",
+              "contenus/03-COURS/ELL-CEB-7-MATH.md",
+              "contenus/03-COURS/ELL-CEB-7-SPTTIC.md",
+              "contenus/03-COURS/ELL-CEB-7-SVT.md",
+              "contenus/03-COURS/ELL-CEB-8-MATH.md",
+              "contenus/03-COURS/ELL-CEB-8-SPTTIC.md",
+              "contenus/03-COURS/ELL-CEB-8-SVT.md",
+              "contenus/README.md",
+              "contenus/_tableaux-de-bord/avancement.md",
+              "contenus/_templates/TEMPLATE-N2-COURS.md",
+              "contenus/_templates/TEMPLATE-N3-LECON.md",
+              "contenus/_templates/TEMPLATE-N4-EVALUATION.md",
+              "docs/PLAN-REDACTION-MATIERES.md"
+            ]
+          },
+          {
+            "hash": "aff7d917dee9973439679c91be2c5dfa5d3bf30e",
+            "date": "Sat Sep 19 22:58:36 2026 +0200",
+            "message": "fix(portal): mise à jour du lien satellite vers Cloudflare Tunnel HTTPS stable",
+            "files": [
+              "apps/web-portal/dist/index.html"
+            ]
+          },
           {
             "hash": "d455a75d802708b12162ae2208ec645ee4f51eea",
             "date": "Sat Sep 19 22:46:07 2026 +0200",
@@ -548,98 +582,43 @@
               "tools/generate_all_20_rich_pages.py",
               "tools/verify-corpus.sh"
             ]
-          },
-          {
-            "hash": "846f45d5b24a98234ec1e97461124222c20fc186",
-            "date": "Sat Sep 19 16:46:11 2026 +0200",
-            "message": "feat: Déploiement officiel en ligne sur Google Firebase Hosting (cnel-elysium-rdc.web.app) — 20 landing pages exhaustives et enrichies",
-            "files": [
-              ".firebase/hosting.YXBwcy93ZWItcG9ydGFsL2Rpc3Q.cache",
-              ".firebaserc",
-              "apps/web-portal/dist/assiduite-presence.html",
-              "apps/web-portal/dist/banc-essai-performance.html",
-              "apps/web-portal/dist/bibliotheque-oer.html",
-              "apps/web-portal/dist/bulletin-securise.html",
-              "apps/web-portal/dist/caisse-etanche.html",
-              "apps/web-portal/dist/contact-support.html",
-              "apps/web-portal/dist/curriculum-epst-esu.html",
-              "apps/web-portal/dist/devenir-ecole-pilote.html",
-              "apps/web-portal/dist/ead-universite.html",
-              "apps/web-portal/dist/eleves-etudiants.html",
-              "apps/web-portal/dist/enseignants.html",
-              "apps/web-portal/dist/etablissements.html",
-              "apps/web-portal/dist/gouvernance-asbl.html",
-              "apps/web-portal/dist/index.html",
-              "apps/web-portal/dist/licence-informatique.html",
-              "apps/web-portal/dist/offline-first.html",
-              "apps/web-portal/dist/parents.html",
-              "apps/web-portal/dist/souverainete-cloud.html",
-              "apps/web-portal/dist/styles.css",
-              "apps/web-portal/dist/tuteur-gemini.html",
-              "apps/web-portal/dist/verification-diplomes.html",
-              "firebase.json",
-              "tools/build-all-pages.py",
-              "tools/build_all_rich_pages.py",
-              "tools/generate-enriched-landing-pages.py",
-              "tools/generate_all_20_rich_pages.py"
-            ]
-          },
-          {
-            "hash": "341e587a260de702a4e564d26dd2df32d48e8d64",
-            "date": "Sat Sep 19 16:36:39 2026 +0200",
-            "message": "feat: Site web officiel ELLYSIUM complet — 20 landing pages professionnelles interconnectées, charte régalienne (#0B2545/#D4AF37), responsive et indexées pour Firebase Hosting",
-            "files": [
-              "apps/web-portal/dist/assiduite-presence.html",
-              "apps/web-portal/dist/banc-essai-performance.html",
-              "apps/web-portal/dist/bibliotheque-oer.html",
-              "apps/web-portal/dist/bulletin-securise.html",
-              "apps/web-portal/dist/caisse-etanche.html",
-              "apps/web-portal/dist/contact-support.html",
-              "apps/web-portal/dist/curriculum-epst-esu.html",
-              "apps/web-portal/dist/devenir-ecole-pilote.html",
-              "apps/web-portal/dist/ead-universite.html",
-              "apps/web-portal/dist/eleves-etudiants.html",
-              "apps/web-portal/dist/enseignants.html",
-              "apps/web-portal/dist/etablissements.html",
-              "apps/web-portal/dist/gouvernance-asbl.html",
-              "apps/web-portal/dist/index.html",
-              "apps/web-portal/dist/licence-informatique.html",
-              "apps/web-portal/dist/offline-first.html",
-              "apps/web-portal/dist/parents.html",
-              "apps/web-portal/dist/souverainete-cloud.html",
-              "apps/web-portal/dist/styles.css",
-              "apps/web-portal/dist/tuteur-gemini.html",
-              "apps/web-portal/dist/verification-diplomes.html",
-              "tools/generate-landing-pages.py"
-            ]
           }
         ],
         "recentFiles": [
-          "apps/web-portal/dist/index.html",
-          "contenus/02-FICHES-MATIERES/ELL-HS-1-MATH.md",
-          "README.md",
           "contenus/00-CADRE-LEGAL-ET-SOURCES.md",
-          "contenus/01-REFERENTIELS/_registre-sources.md",
           "contenus/02-FICHES-MATIERES/ELL-CEB-7-MATH.md",
           "contenus/02-FICHES-MATIERES/ELL-CEB-7-SPTTIC.md",
           "contenus/02-FICHES-MATIERES/ELL-CEB-7-SVT.md",
           "contenus/02-FICHES-MATIERES/ELL-CEB-8-MATH.md",
           "contenus/02-FICHES-MATIERES/ELL-CEB-8-SPTTIC.md",
           "contenus/02-FICHES-MATIERES/ELL-CEB-8-SVT.md",
-          "contenus/03-SYLLABUS/ELL-CEB-7-MATH.md",
-          "contenus/03-SYLLABUS/ELL-CEB-7-SPTTIC.md",
-          "contenus/03-SYLLABUS/ELL-CEB-7-SVT.md",
-          "contenus/03-SYLLABUS/ELL-CEB-8-MATH.md",
-          "contenus/03-SYLLABUS/ELL-CEB-8-SPTTIC.md",
-          "contenus/03-SYLLABUS/ELL-CEB-8-SVT.md",
+          "contenus/03-COURS/ELL-CEB-7-MATH.md",
+          "contenus/03-COURS/ELL-CEB-7-SPTTIC.md",
+          "contenus/03-COURS/ELL-CEB-7-SVT.md",
+          "contenus/03-COURS/ELL-CEB-8-MATH.md",
+          "contenus/03-COURS/ELL-CEB-8-SPTTIC.md",
+          "contenus/03-COURS/ELL-CEB-8-SVT.md",
           "contenus/README.md",
           "contenus/_tableaux-de-bord/avancement.md",
-          "contenus/_templates/TEMPLATE-N1-FICHE-MATIERE.md"
+          "contenus/_templates/TEMPLATE-N2-COURS.md",
+          "contenus/_templates/TEMPLATE-N3-LECON.md",
+          "contenus/_templates/TEMPLATE-N4-EVALUATION.md",
+          "docs/PLAN-REDACTION-MATIERES.md",
+          "apps/web-portal/dist/index.html"
         ],
         "tools": [
           "inconnu"
         ],
-        "uncommittedFiles": []
+        "uncommittedFiles": [
+          {
+            "path": "contenus/00-CADRE-LEGAL-ET-SOURCES.md",
+            "mtime": "2026-09-20T08:34:22.693Z"
+          },
+          {
+            "path": "contenus/_tableaux-de-bord/avancement.md",
+            "mtime": "2026-09-20T09:16:32.742Z"
+          }
+        ]
       },
       {
         "name": "VS Code",
@@ -981,14 +960,14 @@
       "domain": "Infrastructure réelle",
       "level": "high",
       "note": "Infrastructure réelle montre une progression faible (24%). Risque sur jalon.",
-      "when": "2026-09-19T20:54:49.230Z"
+      "when": "2026-09-20T09:38:56.931Z"
     },
     {
       "type": "risk",
       "domain": "Production / pilotage",
       "level": "high",
       "note": "Production / pilotage montre une progression faible (15%). Risque sur jalon.",
-      "when": "2026-09-19T20:54:49.230Z"
+      "when": "2026-09-20T09:38:56.931Z"
     }
   ]
 }

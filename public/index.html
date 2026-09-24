@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0B2545">
-  <title>LUNE — Satellite National de Mémoire, d’Audit & de Gouvernance</title>
+  <title>Satellite LUNE · Cockpit Exécutif de Gouvernance</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +14,10 @@
   <!-- BANDEAU SUPÉRIEUR RÉGALIEN -->
   <div class="top-regal-bar">
     <span>🇨🇩 RÉPUBLIQUE DÉMOCRATIQUE DU CONGO · ORGANE DE CONTRÔLE ET D’AUDIT PERMANENT</span>
-    <span>SATELLITE LUNE v2.1 · SURVEILLANCE DU CHANTIER NATIONAL ELLYSIUM · <a href="https://cnel-elysium-rdc.web.app/" target="_blank">ACCÉDER AU PORTAIL NATIONAL ELLYSIUM &rarr;</a></span>
+    <span>SATELLITE LUNE v2.1 · SURVEILLANCE DU CHANTIER NATIONAL ELLYSIUM</span>
   </div>
 
-  <!-- NAVIGATION OFFICIELLE -->
+  <!-- NAVIGATION SIMPLIFIÉE & ÉPURÉE (4 PÔLES) -->
   <header class="main-header">
     <div class="nav-container">
       <a href="index.html" class="brand-logo">
@@ -29,13 +28,10 @@
         </div>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Cockpit Général</a></li>
-        <li><a href="audit-conformite.html">Audit & Qualité</a></li>
-        <li><a href="memoire-taches.html">Mémoire & Tâches</a></li>
-        <li><a href="conseiller-direction.html">Conseiller IA</a></li>
-        <li><a href="surveillance-risques.html">Risques & Alertes</a></li>
-        <li><a href="tracabilite-contributeurs.html">Contributeurs</a></li>
-        <li><a href="passerelle-elysium.html">Domaine ELLYSIUM</a></li>
+        <li><a href="index.html" class="active">📊 Synthèse</a></li>
+        <li><a href="memoire-taches.html">🌳 Explorateur</a></li>
+        <li><a href="audit-conformite.html">🛡️ Gouvernance & Risques</a></li>
+        <li><a href="conseiller-direction.html">🧠 Conseiller IA</a></li>
         <li><a href="https://cnel-elysium-rdc.web.app/" target="_blank" class="nav-cta">🏛️ Portail ELLYSIUM</a></li>
       </ul>
     </div>
@@ -47,12 +43,12 @@
       <div class="page-badge">🛰️ Organe Supérieur d’Audit et de Surveillance Stratégique</div>
       <h1>Cockpit Central de Gouvernance <span>& Vérité du Projet</span></h1>
       <p class="hero-lead">
-        LUNE gravite autour de la plateforme éducative nationale ELLYSIUM. Il observe passivement le code, inventory les modules, contrôle la conformité, détecte les blocages et conserve la mémoire inaltérable du chantier.
+        Surveillance automatisée du chantier national ELLYSIUM. Analyse continue de 429 documents, 1 015 livrables techniques et du niveau de préparation pour le déploiement en production.
       </p>
       <div class="hero-actions">
-        <button class="btn btn-gold" id="btn-re-audit">🔄 Lancer un Audit Immédiat</button>
-        <a href="conseiller-direction.html" class="btn btn-outline">💬 Consulter le Conseiller IA</a>
-        <a href="memoire-taches.html" class="btn btn-outline">📋 Inventaire des Tâches</a>
+        <button class="btn btn-gold" id="btn-re-audit">🔄 Relancer un Scan d’Audit</button>
+        <a href="memoire-taches.html" class="btn btn-outline">🌳 Ouvrir l'Explorateur</a>
+        <a href="conseiller-direction.html" class="btn btn-outline">🧠 Interroger l'Advisor</a>
       </div>
     </div>
   </section>
@@ -60,118 +56,101 @@
   <!-- CORPS PRINCIPAL -->
   <main class="section-wrap">
 
-    <!-- 4 Cartes KPI Nationales -->
-    <div class="grid-4">
+    <!-- KPI STRIP HAUTE (LES CHIFFRES CLÉS EN 5 SECONDES) -->
+    <div class="grid-4" id="kpi-grid">
       <div class="kpi-card">
-        <div class="kpi-num" id="stat-health">--</div>
-        <div class="kpi-label">Indice de Santé Globale</div>
-        <div class="kpi-sub">Calculé sur 5 critères d’évaluation</div>
+        <div class="kpi-num" id="kpi-health" style="color: var(--accent-green);">-- %</div>
+        <div class="kpi-label">Santé Globale du Chantier</div>
+        <div class="kpi-sub">Indice de conformité pondéré</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num" id="stat-tasks">--</div>
-        <div class="kpi-label">Tâches Répertoriées</div>
-        <div class="kpi-sub"><span id="stat-ready-count">--</span> prêtes à l’exécution</div>
+        <div class="kpi-num" id="kpi-tasks-total">1 015</div>
+        <div class="kpi-label">Livrables du Catalogue</div>
+        <div class="kpi-sub"><span style="color:var(--accent-green);">806 faits</span> · <span style="color:var(--accent-amber);">88 en cours</span> · 121 à faire</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num" id="stat-files">--</div>
-        <div class="kpi-label">Fichiers Documentaires & Code</div>
-        <div class="kpi-sub">357 Docs MD · 17 Packages · 6 Apps</div>
+        <div class="kpi-num" id="kpi-risks" style="color: var(--accent-amber);">--</div>
+        <div class="kpi-label">Risques Actifs Surveillés</div>
+        <div class="kpi-sub">Écarts de dépendance détectés</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num" id="stat-alerts" style="color: var(--accent-red);">--</div>
-        <div class="kpi-label">Alertes & Vigilances</div>
-        <div class="kpi-sub">Surveillance d’infrastructure active</div>
+        <div class="kpi-num" id="kpi-tomes">19 / 19</div>
+        <div class="kpi-label">Tomes du Corpus</div>
+        <div class="kpi-sub">Architecture et spécifications</div>
       </div>
     </div>
 
-    <!-- Synthèse Stratégique du Moment -->
-    <div class="kpi-card" style="margin-bottom: 50px; border-left: 6px solid var(--gold);">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;">
-        <span class="section-tag" style="margin-bottom: 0;">ORIENTATION DU SATELLITE</span>
-        <span style="font-size: 0.85rem; color: var(--text-muted);">Dernière capture : <strong id="audit-timestamp">—</strong> · Statut : <strong style="color: var(--accent-green);">Opérationnel</strong></span>
-      </div>
-      <h3 style="color: var(--primary); font-size: 1.35rem; margin-bottom: 10px;" id="advisor-summary">
-        ELLYSIUM est sous surveillance active de LUNE.
-      </h3>
-      <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;" id="advisor-recommendation">
-        Le vrai prochain travail consiste à transformer les plans et l’architecture en livrables techniques réels, en sécurisant les systèmes de production et la mémoire du projet.
-      </p>
-    </div>
-
-    <!-- Les 6 Landing Pages Fonctionnelles -->
+    <!-- PÔLES MAJEURS DE PILOTAGE (3 GRANDES CARTES AU LIEU DE 6 DISPERSÉES) -->
     <div class="section-head">
-      <span class="section-tag">ORGANISATION DU SYSTÈME</span>
-      <h2>Les Pôles d’Expertise du Satellite LUNE</h2>
-      <p>Chaque domaine dispose de son tableau de bord dédié pour une inspection approfondie du chantier.</p>
+      <span class="section-tag">POSTES D'ANALYSE RAPIDE</span>
+      <h2>Les 3 Espaces de Contrôle du Satellite</h2>
+      <p>Accédez directement à la vue correspondant à votre besoin d'arbitrage.</p>
     </div>
 
     <div class="grid-3">
 
-      <!-- 1. Audit & Qualité -->
+      <!-- Pôle 1 : Explorateur & Catalogue -->
       <div class="feature-card">
         <div>
-          <div class="card-icon">⚖️</div>
-          <h3>Audit & Conformité</h3>
-          <p>Évalue la rigueur documentaire, la solidité architecturale et le niveau de préparation à la production nationale.</p>
-        </div>
-        <a href="audit-conformite.html" class="card-btn">Accéder à l'Audit &rarr;</a>
-      </div>
-
-      <!-- 2. Mémoire & Tâches -->
-      <div class="feature-card">
-        <div>
-          <div class="card-icon">📋</div>
-          <h3>Mémoire du Chantier</h3>
-          <p>L’inventaire exhaustif des 1 015 tâches réelles : catalogue complet ou vues dédiées par statut avec journal d'activité.</p>
-          <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px;">
-            <a href="taches-a-faire.html" style="font-size:0.75rem; background:#E0F2FE; color:#0369A1; padding:3px 8px; border-radius:6px; text-decoration:none; font-weight:700;">📋 À Faire</a>
-            <a href="taches-en-cours.html" style="font-size:0.75rem; background:#FEF3C7; color:#92400E; padding:3px 8px; border-radius:6px; text-decoration:none; font-weight:700;">🟠 En Cours</a>
-            <a href="taches-completees.html" style="font-size:0.75rem; background:#DCFCE7; color:#166534; padding:3px 8px; border-radius:6px; text-decoration:none; font-weight:700;">🟢 Complétées</a>
+          <div class="card-icon">🌳</div>
+          <h3>Explorateur du Chantier</h3>
+          <p>Arborescence complète des 19 tomes, des modules 55 à 336 et des 545+ verrous fonctionnels. Filtres instantanés par statut et tiroir de détail latéral.</p>
+          <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px;">
+            <span style="font-size:0.75rem; background:#DCFCE7; color:#166534; padding:3px 8px; border-radius:6px; font-weight:700;">806 Complétés</span>
+            <span style="font-size:0.75rem; background:#FEF3C7; color:#92400E; padding:3px 8px; border-radius:6px; font-weight:700;">88 En Cours</span>
+            <span style="font-size:0.75rem; background:#E0F2FE; color:#0369A1; padding:3px 8px; border-radius:6px; font-weight:700;">121 À Faire</span>
           </div>
         </div>
-        <a href="memoire-taches.html" class="card-btn">Explorer le Catalogue Complet &rarr;</a>
+        <a href="memoire-taches.html" class="card-btn">Ouvrir l'Explorateur &rarr;</a>
       </div>
 
-      <!-- 3. Conseiller Stratégique (Advisor) -->
+      <!-- Pôle 2 : Gouvernance, Audit & Risques -->
+      <div class="feature-card">
+        <div>
+          <div class="card-icon">🛡️</div>
+          <h3>Gouvernance, Qualité & Risques</h3>
+          <p>Tableau de bord unifié : respect de la Constitution (Art. 1 bis, 5, 6), matrice de vigilance active, blocages critiques et traçabilité des intervenants.</p>
+          <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px;">
+            <span style="font-size:0.75rem; background:#F1F5F9; color:var(--text-main); padding:3px 8px; border-radius:6px; font-weight:600;">Conformité</span>
+            <span style="font-size:0.75rem; background:#FEE2E2; color:#991B1B; padding:3px 8px; border-radius:6px; font-weight:600;">Risques</span>
+            <span style="font-size:0.75rem; background:#E0F2FE; color:#0369A1; padding:3px 8px; border-radius:6px; font-weight:600;">Contributeurs</span>
+          </div>
+        </div>
+        <a href="audit-conformite.html" class="card-btn">Examiner la Gouvernance &rarr;</a>
+      </div>
+
+      <!-- Pôle 3 : Conseiller IA -->
       <div class="feature-card">
         <div>
           <div class="card-icon">🧠</div>
-          <h3>Conseiller Stratégique</h3>
-          <p>Un assistant conversationnel intelligent qui répond à vos questions en s'appuyant sur la réalité exacte du dépôt.</p>
+          <h3>Conseiller Stratégique (Advisor)</h3>
+          <p>Assistant conversationnel dédié à la direction. Interrogez en direct l'état exact du code source, des modules et des recommandations de déploiement.</p>
+          <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px;">
+            <span style="font-size:0.75rem; background:#F8FAFC; border:1px solid var(--border); color:var(--text-muted); padding:3px 8px; border-radius:6px;">ChatOps Connecté</span>
+            <span style="font-size:0.75rem; background:#F8FAFC; border:1px solid var(--border); color:var(--text-muted); padding:3px 8px; border-radius:6px;">Données Temps Réel</span>
+          </div>
         </div>
         <a href="conseiller-direction.html" class="card-btn">Consulter l'Advisor &rarr;</a>
       </div>
 
-      <!-- 4. Surveillance & Risques -->
-      <div class="feature-card">
-        <div>
-          <div class="card-icon">🛡️</div>
-          <h3>Risques & Vigilance</h3>
-          <p>Identification proactive des dépendances critiques rompues, des fichiers sensibles et des écarts d'infrastructure.</p>
-        </div>
-        <a href="surveillance-risques.html" class="card-btn">Inspecter les Risques &rarr;</a>
-      </div>
+    </div>
 
-      <!-- 5. Traçabilité des Contributeurs -->
-      <div class="feature-card">
+    <!-- RECOMMANDATION STRATÉGIQUE EN COURS -->
+    <div style="margin-top: 36px; background: #fff; border: 1px solid var(--border); border-left: 6px solid var(--gold); border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm);">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:12px;">
         <div>
-          <div class="card-icon">👥</div>
-          <h3>Contributeurs & Outils</h3>
-          <p>Historique des interventions, cartographie des outils utilisés (IA, éditeurs, scripts) et preuve des travaux.</p>
+          <span style="font-size:0.75rem; font-weight:800; color:var(--gold-dark); text-transform:uppercase; letter-spacing:0.05em;">Avis du Conseiller Stratégique LUNE</span>
+          <h3 style="color:var(--primary); margin:4px 0 0 0; font-size:1.2rem;">Cap Prioritaire : Lancement du MVP PGI & Banc d'Essai</h3>
         </div>
-        <a href="tracabilite-contributeurs.html" class="card-btn">Voir les Contributeurs &rarr;</a>
+        <span class="badge-status badge-in_progress">PHASE 0 LABO</span>
       </div>
-
-      <!-- 6. Passerelle ELLYSIUM -->
-      <div class="feature-card">
-        <div>
-          <div class="card-icon">🏛️</div>
-          <h3>Passerelle ELLYSIUM</h3>
-          <p>Cartographie complète du dépôt source, liens vers les 20 portails déployés et le site national en ligne.</p>
-        </div>
-        <a href="passerelle-elysium.html" class="card-btn">Explorer la Passerelle &rarr;</a>
+      <p style="color:var(--text-muted); line-height:1.6; margin-bottom:16px;" id="advisor-summary-text">
+        Les spécifications du BLOC A sont scellées à 87%. L'effort principal doit maintenant se porter sur la mise en place du MVP PGI (formule de calcul RDC certifiée, bulletins sécurisés et étanchéité de la caisse selon l'Article 5).
+      </p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="memoire-taches.html" class="btn-outline" style="font-size:0.85rem; padding:8px 16px;">Consulter les Tâches du Backlog MVP</a>
+        <a href="https://cnel-elysium-rdc.web.app/" target="_blank" class="btn-gold" style="font-size:0.85rem; padding:8px 16px;">Accéder au Domaine ELLYSIUM &rarr;</a>
       </div>
-
     </div>
 
   </main>
@@ -181,87 +160,57 @@
     <div class="footer-container">
       <div class="footer-col">
         <h4>Satellite LUNE</h4>
-        <p style="color: #94A3B8; margin-bottom: 14px;">Organe de mémoire, d'audit, de surveillance et de gouvernance du projet ELLYSIUM.</p>
-        <div style="font-size: 0.85rem; color: var(--gold-light);">Production active · Port 4173</div>
+        <p style="color: #94A3B8;">Surveillance continue du chantier national ELLYSIUM.</p>
       </div>
       <div class="footer-col">
-        <h4>Modules d'Audit</h4>
+        <h4>Pôles d'Observation</h4>
         <ul>
-          <li><a href="audit-conformite.html">Audit & Conformité</a></li>
-          <li><a href="memoire-taches.html">Mémoire & Tâches</a></li>
-          <li><a href="conseiller-direction.html">Conseiller IA</a></li>
-          <li><a href="surveillance-risques.html">Risques & Alertes</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Traçabilité & Domaine</h4>
-        <ul>
-          <li><a href="tracabilite-contributeurs.html">Contributeurs & Outils</a></li>
-          <li><a href="passerelle-elysium.html">Domaine ELLYSIUM</a></li>
-          <li><a href="https://cnel-elysium-rdc.web.app/" target="_blank">Portail Central ELLYSIUM</a></li>
-          <li><a href="https://lune-elysium.loca.lt" target="_blank">Accès Public LUNE</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Gouvernance RDC</h4>
-        <ul>
-          <li>🇨🇩 République Démocratique du Congo</li>
-          <li>Centre National d'Étude en Ligne (CNEL)</li>
-          <li>Plateforme ELLYSIUM — ASBL Nationale</li>
+          <li><a href="index.html">📊 Synthèse Générale</a></li>
+          <li><a href="memoire-taches.html">🌳 Explorateur du Chantier</a></li>
+          <li><a href="audit-conformite.html">🛡️ Gouvernance & Risques</a></li>
+          <li><a href="conseiller-direction.html">🧠 Conseiller IA</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2026 LUNE · Satellite de Gouvernance ELLYSIUM. Tous droits réservés.</div>
-      <div>Souveraineté Numérique Nationale · Immuabilité & Transparence</div>
+      <div>&copy; 2026 LUNE · Satellite de Gouvernance ELLYSIUM.</div>
+      <div><a href="https://cnel-elysium-rdc.web.app/" target="_blank" style="color: var(--gold);">Portail National ELLYSIUM &rarr;</a></div>
     </div>
   </footer>
 
   <script>
-    function loadState() {
-      fetch('/api/state')
-        .then(r => r.json())
-        .then(state => {
-          document.getElementById('stat-health').textContent = (state.overallHealth || 78) + '/100';
-          const tasks = state.memory?.tasks || [];
-          document.getElementById('stat-tasks').textContent = tasks.length;
-          const readyCount = tasks.filter(t => t.status === 'ready').length;
-          document.getElementById('stat-ready-count').textContent = readyCount;
-          
-          const obs = state.stats || state.snapshot || {};
-          const totalDocs = obs.markdown || 357;
-          document.getElementById('stat-files').textContent = totalDocs;
-          
-          const alerts = state.alerts || [];
-          document.getElementById('stat-alerts').textContent = alerts.length;
-          
-          if (state.advisor) {
-            document.getElementById('advisor-summary').textContent = state.advisor.summary;
-            document.getElementById('advisor-recommendation').textContent = state.advisor.recommendation;
-          }
-          
-          if (state.generatedAt) {
-            const d = new Date(state.generatedAt);
-            document.getElementById('audit-timestamp').textContent = d.toLocaleString('fr-FR');
-          }
-        })
-        .catch(err => console.error(err));
-    }
+    // Chargement dynamique des métriques
+    fetch('/api/state')
+      .then(r => r.json())
+      .then(state => {
+        document.getElementById('kpi-health').textContent = (state.overallHealth || 85) + ' %';
+        document.getElementById('kpi-risks').textContent = (state.risks || []).length;
+        if (state.advisor?.summary) {
+          document.getElementById('advisor-summary-text').textContent = state.advisor.summary;
+        }
+      })
+      .catch(() => {});
 
+    // Bouton de relance du scan
     document.getElementById('btn-re-audit').addEventListener('click', async () => {
       const btn = document.getElementById('btn-re-audit');
-      btn.textContent = '⏳ Audit en cours...';
       btn.disabled = true;
+      btn.textContent = '🔄 Scan en cours...';
       try {
-        await fetch('/api/scan', { method: 'POST' });
-        loadState();
-      } finally {
-        btn.textContent = '🔄 Lancer un Audit Immédiat';
+        const r = await fetch('/api/scan', { method: 'POST' });
+        const d = await r.json();
+        if (d.ok) {
+          btn.textContent = '✅ Scan Terminé !';
+          setTimeout(() => location.reload(), 1500);
+        } else {
+          btn.textContent = '❌ Erreur';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = '❌ Erreur réseau';
         btn.disabled = false;
       }
     });
-
-    loadState();
   </script>
 </body>
 </html>

@@ -1,6 +1,87 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const https = require('https');
+
+// Chargement léger des variables .env sans dépendance externe
+const envPath = path.join(__dirname, '../.env');
+if (fs.existsSync(envPath)) {
+  const envContent = fs.readFileSync(envPath, 'utf8');
+  for (const line of envContent.split('\n')) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+    const eqIdx = trimmed.indexOf('=');
+    if (eqIdx > 0) {
+      const key = trimmed.slice(0, eqIdx).trim();
+      const val = trimmed.slice(eqIdx + 1).trim();
+      if (!process.env[key]) process.env[key] = val;
+    }
+  }
+}
+
+async function callOpenRouter(systemPrompt, userMessage) {
+  const apiKey = process.env.OPENROUTER_API_KEY;
+  if (!apiKey) return null;
+
+  const model = process.env.OPENROUTER_MODEL || 'google/gemini-2.5-pro';
+
+  return new Promise((resolve) => {
+    const payload = JSON.stringify({
+      model,
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: userMessage }
+      ],
+      temperature: 0.3,
+      max_tokens: 2500
+    });
+
+    const req = https.request({
+      hostname: 'openrouter.ai',
+      path: '/api/v1/chat/completions',
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+        'HTTP-Referer': 'https://lune-elysium.loca.lt',
+        'X-Title': 'Satellite LUNE - Conseiller Strategique'
+      },
+      timeout: 30000
+    }, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        if (res.statusCode >= 200 && res.statusCode < 300) {
+          try {
+            const parsed = JSON.parse(data);
+            const content = parsed.choices?.[0]?.message?.content;
+            resolve(content || null);
+          } catch (e) {
+            resolve(null);
+          }
+        } else {
+          console.error('[LUNE OPENROUTER] Erreur HTTP:', res.statusCode, data.slice(0, 200));
+          resolve(null);
+        }
+      });
+    });
+
+    req.on('error', (err) => {
+      console.error('[LUNE OPENROUTER] Erreur réseau:', err.message);
+      resolve(null);
+    });
+
+    req.on('timeout', () => {
+      req.destroy();
+      console.error('[LUNE OPENROUTER] Timeout 30s dépassé');
+      resolve(null);
+    });
+
+    req.write(payload);
+    req.end();
+  });
+}
+
 const { initDb, seedFromSnapshot } = require('./init-lune-v2');
 const { scanProject } = require('./scan-project');
 const { buildState } = require('./build-lune-state');
@@ -363,13 +444,65 @@ app.post('/api/scan', (req, res) => {
   }
 });
 
-// Moteur conversationnel
-app.post('/api/chat', (req, res) => {
-  const message = req.body?.message || '';
+// Moteur conversationnel intelligent alimenté par OpenRouter
+app.post('/api/chat', async (req, res) => {
+  const userMessage = (req.body?.message || '').trim();
   const state = getState();
-  const reply = answerQuestionDynamic(message, state);
+  const observatory = getObservatory();
+  const catalog = safeReadJson(path.join(dataDir, 'tasks-catalog.json')) || {};
+
+  if (!userMessage) {
+    return res.json({
+      reply: "Posez-moi votre question sur la gouvernance, l'architecture, les blocages ou la mise en production du projet ELLYSIUM.",
+      timestamp: new Date().toISOString()
+    });
+  }
+
+  // Préparation du contexte réel complet pour le LLM
+  const systemPrompt = `Tu es le Conseiller Stratégique Supérieur du Satellite LUNE (v2.1), l'organe officiel et régalien d'audit, de mémoire et de gouvernance du projet national ELLYSIUM (Centre National d'Étude en Ligne - CNEL) en République Démocratique du Congo (RDC).
+
+DIRECTIVES FONDATRICES & CONSTITUTION :
+1. Devise : "Rigueur, sérieux et honnêteté sont nos devises".
+2. Infrastructure souveraine exclusive : 100% Google Cloud Platform (Constitution, Article 1 bis). Toute autre infrastructure (AWS, Azure) est nulle et bannie. Chiffrement CMEK/Cloud KMS sous souveraineté exclusive de la RDC.
+3. Étanchéité financière (Article 5) : Séparation absolue entre la caisse financière et la scolarité. Aucun élève ne peut être exclu ou pénalisé pour des raisons financières.
+4. Arbitrage humain sur l'IA (Article 6) : L'IA est un auxiliaire. Aucune décision académique ou disciplinaire finale n'est déléguée à un algorithme.
+5. Formule officielle des notes RDC : Taux = (Somme Points Obtenus / Somme Maxima) * 100.
+6. Division du travail : Piste IA (code, docs, squelettes, tests) vs Piste Humaine (ASBL, agréments ministériels EPST/ESU, partenariats, facturation GCP, labo physique Kinshasa). L'IA ne s'attribue jamais le travail humain.
+
+ÉTAT EN TEMPS RÉEL DU PROJET :
+- Santé globale du projet : ${state.overallHealth || 85}/100.
+- Corpus documentaire : 19 tomes complets, 429 documents Markdown, 336 modules documentaires.
+- BLOC A (Spécifications) : Scellé à 87%. 1 422 verrous fonctionnels VF- balisés.
+- Catalogue de tâches : ${catalog.totalTasks || 1015} livrables répertoriés (Complétés: ${catalog.byStatus?.completed || 806}, En cours: ${catalog.byStatus?.in_progress || 88}, À faire: ${catalog.byStatus?.todo || 121}).
+- Prochain jalon critique : Lancement de la Phase 0 Labo à Kinshasa (50 postes, simulateur 2G dégradé) et développement du MVP PGI (≈ 520 Story Points).
+- Risques actifs surveillés : ${JSON.stringify(state.risks || [])}.
+- Alertes récentes : ${JSON.stringify(getAlerts().slice(0, 5))}.
+
+INSTRUCTIONS DE RÉPONSE :
+- Réponds avec une haute intelligence stratégique, une autorité bienveillante et une maîtrise totale de l'architecture du projet ELLYSIUM.
+- Sois exhaustif, précis, technique et concret (ne sois pas limité artificiellement par le nombre de mots lorsque le sujet nécessite une analyse approfondie).
+- Structure tes réponses avec des titres, des puces claires et des recommandations d'action précises.
+- Tu t'adresses directement au Promoteur / Direction du projet.`;
+
+  try {
+    const aiReply = await callOpenRouter(systemPrompt, userMessage);
+    if (aiReply) {
+      return res.json({
+        reply: aiReply,
+        model: process.env.OPENROUTER_MODEL || 'google/gemini-2.5-pro',
+        source: 'openrouter',
+        timestamp: new Date().toISOString()
+      });
+    }
+  } catch (err) {
+    console.error('[LUNE] Erreur appel OpenRouter:', err.message);
+  }
+
+  // Fallback dynamique local si l'API distante est indisponible
+  const fallbackReply = answerQuestionDynamic(userMessage, state);
   res.json({
-    reply,
+    reply: fallbackReply,
+    source: 'fallback-local',
     timestamp: new Date().toISOString()
   });
 });

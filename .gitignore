@@ -4,3 +4,4 @@ data/history.db-journal
 logs/
 .DS_Store
 *.log
+.env

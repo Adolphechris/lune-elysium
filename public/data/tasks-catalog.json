@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T20:21:28.865Z",
+  "generatedAt": "2026-09-25T20:33:27.865Z",
   "totalTasks": 1094,
   "byStatus": {
     "completed": 982,
@@ -15920,13 +15920,13 @@
     },
     {
       "id": "CONT-007",
-      "title": "Vague 2 — Leçons individuelles opérationnelles (43 leçons actives)",
+      "title": "Vague 2 — Leçons individuelles opérationnelles (239 leçons actives)",
       "category": "Contenus Didactiques — Vague 2",
       "phase": "Contenus",
       "type": "contenu_pedagogique",
       "status": "in_progress",
       "priority": "haute",
-      "detail": "43 leçons rédigées dans contenus/04-LECONS (Maths 7e et SVT 7e) validées par verify-contenus.sh",
+      "detail": "239 leçons rédigées dans contenus/04-LECONS (Maths 7e et SVT 7e) validées par verify-contenus.sh",
       "source": "contenus/04-LECONS/"
     },
     {

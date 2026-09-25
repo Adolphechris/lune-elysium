@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-09-25T20:21:30.292Z",
+  "generatedAt": "2026-09-25T20:33:29.793Z",
   "projectName": "ELLYSIUM — Centre National d’Étude en Ligne (CNEL)",
   "targetProject": "/home/adolphe/CNEL -ELYSIUM/clenel-elysium",
-  "overallHealth": 90,
+  "overallHealth": 92,
   "status": "surveillance active",
   "snapshot": {
     "documents": 336,
     "packages": 17,
     "apps": 6,
     "tests": 172,
-    "lessons": 43,
+    "lessons": 239,
     "terraformModules": 9,
     "firebaseHosted": true,
     "productionReady": false,
-    "state": "Monorepo actif : 17 packages, 6 apps, 172 tests validés, Firebase en ligne et 43 leçons rédigées"
+    "state": "Monorepo actif : 17 packages, 6 apps, 172 tests validés, Firebase en ligne et 239 leçons rédigées"
   },
   "domains": [
     {
@@ -38,15 +38,15 @@
     },
     {
       "name": "Contenus Didactiques (Vagues 1 & 2)",
-      "progress": 72,
-      "status": "43 leçons rédigées"
+      "progress": 90,
+      "status": "239 leçons rédigées"
     }
   ],
   "observations": [
     "Le chantier ELLYSIUM avance à un rythme soutenu : 17 packages et 6 applications sont opérationnels.",
     "Suite de tests automatisés validée à 100% : 172 tests unitaires et d'intégration passants (banc de charge 240k calculs/sec).",
     "Nouvelles applications opérationnelles : Teacher PWA (hors-ligne), Parent Portal (Mobile Money) et PWA Offline (CRDT + IndexedDB).",
-    "Production pédagogique active : Vague 1 complète (163 savoirs essentiels) et 43 leçons rédigées en Vague 2.",
+    "Production pédagogique active : Vague 1 complète (163 savoirs essentiels) et 239 leçons rédigées en Vague 2.",
     "Déploiement public effectif : Portail national de 20 pages en ligne sur Google Firebase Hosting (cnel-elysium-rdc.web.app).",
     "IaC Terraform prête (9 modules GCP) et étanchéité de la caisse garantie selon l'Article 5."
   ],
@@ -148,7 +148,7 @@
         "progress": 65,
         "priority": "haute",
         "dependency": "contenus",
-        "validation": "43 leçons actives"
+        "validation": "239 leçons actives"
       },
       {
         "title": "Déploiement Cloud Run & IaC Terraform",
@@ -1471,8 +1471,8 @@
     },
     {
       "name": "Contenus didactiques",
-      "progress": 72,
-      "status": "43 leçons en cours"
+      "progress": 90,
+      "status": "239 leçons en cours"
     },
     {
       "name": "Déploiement & Infra GCP",

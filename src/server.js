@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const https = require('https');
+const { execSync } = require('child_process');
+
 
 // Chargement léger des variables .env sans dépendance externe
 const envPath = path.join(__dirname, '../.env');
@@ -538,19 +540,84 @@ app.get('*', (req, res) => {
   res.status(404).json({ error: 'Page not found.' });
 });
 
-// Initialisation de la base
+// ─── DÉMARRAGE DU SERVEUR ──────────────────────────────────────────────────────
+
 const bootstrapDb = initDb();
 seedFromSnapshot(bootstrapDb);
 bootstrapDb.close();
 
-// Audit automatique périodique toutes les 5 minutes
-const AUTO_AUDIT_INTERVAL_MS = 5 * 60 * 1000;
-setInterval(() => {
-  console.log(`[LUNE] Lancement du cycle de veille automatique (${new Date().toLocaleTimeString()})...`);
+// ─── WATCHER GIT AUTOMATIQUE ──────────────────────────────────────────────────
+// Surveille le dépôt ELLYSIUM toutes les 2 minutes
+// Si un nouveau commit est détecté → déclenche immédiatement un audit complet
+
+const ELLYSIUM_PATH = process.env.LUNE_TARGET || '/home/adolphe/CNEL -ELYSIUM/clenel-elysium';
+let lastKnownCommit = null;
+
+function getCurrentCommit(repoPath) {
+  try {
+    return execSync('git rev-parse HEAD', { cwd: repoPath, encoding: 'utf8' }).trim();
+  } catch {
+    return null;
+  }
+}
+
+function getCommitInfo(repoPath, hash) {
+  try {
+    return execSync(`git log -1 --pretty=format:"%s (par %an, %ar)" ${hash}`, { cwd: repoPath, encoding: 'utf8' }).trim();
+  } catch {
+    return hash;
+  }
+}
+
+function startGitWatcher() {
+  // Initialiser le commit de référence au démarrage
+  lastKnownCommit = getCurrentCommit(ELLYSIUM_PATH);
+  if (lastKnownCommit) {
+    console.log(`[LUNE] Veille git activée — commit de référence : ${lastKnownCommit.slice(0, 8)}`);
+  }
+
+  // Vérifier toutes les 2 minutes
+  const WATCH_INTERVAL_MS = 2 * 60 * 1000;
+  setInterval(() => {
+    const currentCommit = getCurrentCommit(ELLYSIUM_PATH);
+    if (!currentCommit) return;
+
+    if (lastKnownCommit && currentCommit !== lastKnownCommit) {
+      const info = getCommitInfo(ELLYSIUM_PATH, currentCommit);
+      console.log(`\n[LUNE] 🔔 NOUVEAU COMMIT DÉTECTÉ sur ELLYSIUM`);
+      console.log(`[LUNE]    ${lastKnownCommit.slice(0, 8)} → ${currentCommit.slice(0, 8)}`);
+      console.log(`[LUNE]    "${info}"`);
+      console.log(`[LUNE] Synchronisation automatique en cours...\n`);
+
+      lastKnownCommit = currentCommit;
+
+      // Déclencher l'audit complet
+      const result = runFullAudit();
+      if (result.ok) {
+        console.log(`[LUNE] ✅ Synchronisation terminée — Santé : ${result.state?.overallHealth}% · ${result.catalog?.totalTasks} tâches`);
+      }
+    }
+  }, WATCH_INTERVAL_MS);
+
+  // Audit périodique de fond toutes les 10 minutes (indépendant du watcher)
+  const PERIODIC_AUDIT_MS = 10 * 60 * 1000;
+  setInterval(() => {
+    console.log(`[LUNE] ⏰ Cycle de veille périodique (${new Date().toLocaleTimeString('fr-FR')})...`);
+    runFullAudit();
+  }, PERIODIC_AUDIT_MS);
+}
+
+// Audit initial au démarrage
+console.log('[LUNE] Audit de démarrage en cours...');
+setTimeout(() => {
   runFullAudit();
-}, AUTO_AUDIT_INTERVAL_MS);
+  startGitWatcher();
+  console.log('[LUNE] Veille automatique activée — audit toutes les 2 min si nouveau commit ELLYSIUM.');
+}, 2000);
 
 app.listen(PORT, () => {
-  console.log(`[LUNE] Satellite opérationnel en écoute sur http://localhost:${PORT}`);
-  console.log(`[LUNE] Projet sous surveillance : ${process.env.LUNE_TARGET || '/home/adolphe/CNEL -ELYSIUM/clenel-elysium'}`);
+  console.log(`[LUNE] 🛰️  Satellite opérationnel → http://localhost:${PORT}`);
+  console.log(`[LUNE] 🎯 Projet sous surveillance : ${ELLYSIUM_PATH}`);
+  console.log(`[LUNE] 🔔 Watcher git : synchronisation automatique à chaque commit ELLYSIUM`);
 });
+

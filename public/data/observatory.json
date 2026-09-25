@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-25T20:21:28.927Z",
+  "generatedAt": "2026-09-25T20:33:27.987Z",
   "targetProject": "/home/adolphe/CNEL -ELYSIUM/clenel-elysium",
   "projectName": "ELLYSIUM — Centre National d’Étude en Ligne (CNEL)",
   "mission": "Système éducatif numérique national (RDC)",
   "stats": {
-    "markdown": 401,
+    "markdown": 621,
     "ts": 61,
     "js": 29,
     "json": 48,
@@ -12,8 +12,8 @@
     "apps": 6,
     "docs": 4,
     "tests": 172,
-    "lessons": 43,
-    "contenus": 64,
+    "lessons": 239,
+    "contenus": 284,
     "terraform": 9
   },
   "status": {
@@ -21,7 +21,7 @@
     "code": "actif (17 packages, 6 apps, 172 tests validés)",
     "build": "opérationnel (npm workspaces validés à 100%)",
     "infrastructure": "IaC Terraform prête (9 modules) · Firebase Hosting en ligne (20 pages)",
-    "contenus": "Vague 1 validée · 43 leçons rédigées en Vague 2",
+    "contenus": "Vague 1 validée · 239 leçons rédigées en Vague 2",
     "purpose": "gouvernance et suivi en temps réel du chantier"
   },
   "priorities": [

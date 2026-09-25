@@ -191,24 +191,30 @@
       })
       .catch(() => {});
 
-    // Bouton de relance du scan
+    // Bouton de relance du scan d'audit
     document.getElementById('btn-re-audit').addEventListener('click', async () => {
       const btn = document.getElementById('btn-re-audit');
       btn.disabled = true;
-      btn.textContent = '🔄 Scan en cours...';
+      btn.textContent = '🔄 Audit & Scan en cours...';
       try {
         const r = await fetch('/api/scan', { method: 'POST' });
         const d = await r.json();
-        if (d.ok) {
-          btn.textContent = '✅ Scan Terminé !';
-          setTimeout(() => location.reload(), 1500);
+        if (d.ok || d.success) {
+          btn.textContent = '✅ Audit Terminé (' + (d.overallHealth || 85) + '%) !';
+          setTimeout(() => location.reload(), 1200);
         } else {
-          btn.textContent = '❌ Erreur';
-          btn.disabled = false;
+          btn.textContent = '❌ Erreur : ' + (d.error || 'Échec');
+          setTimeout(() => {
+            btn.disabled = false;
+            btn.textContent = '🔄 Relancer un Scan d’Audit';
+          }, 3500);
         }
-      } catch {
-        btn.textContent = '❌ Erreur réseau';
-        btn.disabled = false;
+      } catch (err) {
+        btn.textContent = '❌ Erreur réseau : ' + err.message;
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.textContent = '🔄 Relancer un Scan d’Audit';
+        }, 3500);
       }
     });
   </script>

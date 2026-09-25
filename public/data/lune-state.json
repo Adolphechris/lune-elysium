@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T06:33:30.544Z",
+  "generatedAt": "2026-09-25T18:04:23.863Z",
   "projectName": "ELLYSIUM — Centre National d’Étude en Ligne (CNEL)",
   "targetProject": "/home/adolphe/CNEL -ELYSIUM/clenel-elysium",
   "overallHealth": 78,
@@ -320,10 +320,18 @@
       {
         "name": "Adolphe",
         "email": "adolphechristopher@gmail.com",
-        "commits": 23,
-        "commitsLast7": 19,
-        "lastCommit": "Thu Sep 24 08:24:46 2026 +0200",
+        "commits": 24,
+        "commitsLast7": 16,
+        "lastCommit": "Fri Sep 25 19:58:30 2026 +0200",
         "recentCommits": [
+          {
+            "hash": "cf1f6763b94895541f57bb6b7ba4129b63a93737",
+            "date": "Fri Sep 25 19:58:30 2026 +0200",
+            "message": "fix(portal): actualisation du lien vers le tunnel Cloudflare actif",
+            "files": [
+              "apps/web-portal/dist/index.html"
+            ]
+          },
           {
             "hash": "5e958112a5071daa639d52f6c79ea23bfdb56366",
             "date": "Thu Sep 24 08:24:46 2026 +0200",
@@ -403,37 +411,6 @@
               "contenus/_templates/TEMPLATE-N4-EVALUATION.md",
               "docs/PLAN-REDACTION-MATIERES.md",
               "tools/verify-contenus.sh",
-              "tools/verify-corpus.sh"
-            ]
-          },
-          {
-            "hash": "4753b750bf837644097e5b2c68445868dce222cb",
-            "date": "Sat Sep 19 17:45:45 2026 +0200",
-            "message": "feat: Professionnalisation complète des 20 landing pages",
-            "files": [
-              "apps/web-portal/dist/assiduite-presence.html",
-              "apps/web-portal/dist/banc-essai-performance.html",
-              "apps/web-portal/dist/bibliotheque-oer.html",
-              "apps/web-portal/dist/bulletin-securise.html",
-              "apps/web-portal/dist/caisse-etanche.html",
-              "apps/web-portal/dist/contact-support.html",
-              "apps/web-portal/dist/curriculum-epst-esu.html",
-              "apps/web-portal/dist/devenir-ecole-pilote.html",
-              "apps/web-portal/dist/ead-universite.html",
-              "apps/web-portal/dist/eleves-etudiants.html",
-              "apps/web-portal/dist/enseignants.html",
-              "apps/web-portal/dist/etablissements.html",
-              "apps/web-portal/dist/gouvernance-asbl.html",
-              "apps/web-portal/dist/index.html",
-              "apps/web-portal/dist/licence-informatique.html",
-              "apps/web-portal/dist/offline-first.html",
-              "apps/web-portal/dist/parents.html",
-              "apps/web-portal/dist/souverainete-cloud.html",
-              "apps/web-portal/dist/styles.css",
-              "apps/web-portal/dist/tuteur-gemini.html",
-              "apps/web-portal/dist/verification-diplomes.html",
-              "tools/enhance-portal.py",
-              "tools/portal-v2.css",
               "tools/verify-corpus.sh"
             ]
           }
@@ -814,14 +791,14 @@
       "domain": "Infrastructure réelle",
       "level": "high",
       "note": "Infrastructure réelle montre une progression faible (24%). Risque sur jalon.",
-      "when": "2026-09-24T06:33:30.544Z"
+      "when": "2026-09-25T18:04:23.863Z"
     },
     {
       "type": "risk",
       "domain": "Production / pilotage",
       "level": "high",
       "note": "Production / pilotage montre une progression faible (15%). Risque sur jalon.",
-      "when": "2026-09-24T06:33:30.544Z"
+      "when": "2026-09-25T18:04:23.863Z"
     }
   ]
 }

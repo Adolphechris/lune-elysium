@@ -434,13 +434,14 @@ app.post('/api/scan', (req, res) => {
   const auditResult = runFullAudit();
   if (auditResult.ok) {
     res.json({
+      ok: true,
       success: true,
       message: 'Audit de surveillance exécuté avec succès.',
       timestamp: auditResult.timestamp,
       overallHealth: auditResult.state.overallHealth
     });
   } else {
-    res.status(500).json({ success: false, error: auditResult.error });
+    res.status(500).json({ ok: false, success: false, error: auditResult.error });
   }
 });
 

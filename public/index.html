@@ -64,9 +64,9 @@
         <div class="kpi-sub">Indice de conformité pondéré</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num" id="kpi-tasks-total">1 015</div>
+        <div class="kpi-num" id="kpi-tasks-total">--</div>
         <div class="kpi-label">Livrables du Catalogue</div>
-        <div class="kpi-sub"><span style="color:var(--accent-green);">806 faits</span> · <span style="color:var(--accent-amber);">88 en cours</span> · 121 à faire</div>
+        <div class="kpi-sub" id="kpi-tasks-sub">Calcul en cours...</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-num" id="kpi-risks" style="color: var(--accent-amber);">--</div>
@@ -94,11 +94,11 @@
         <div>
           <div class="card-icon">🌳</div>
           <h3>Explorateur du Chantier</h3>
-          <p>Arborescence complète des 19 tomes, des modules 55 à 336 et des 545+ verrous fonctionnels. Filtres instantanés par statut et tiroir de détail latéral.</p>
+          <p>Arborescence complète des 19 tomes, des modules 55 à 336 et des 1 680 verrous fonctionnels. Filtres instantanés par statut et tiroir de détail latéral.</p>
           <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px;">
-            <span style="font-size:0.75rem; background:#DCFCE7; color:#166534; padding:3px 8px; border-radius:6px; font-weight:700;">806 Complétés</span>
-            <span style="font-size:0.75rem; background:#FEF3C7; color:#92400E; padding:3px 8px; border-radius:6px; font-weight:700;">88 En Cours</span>
-            <span style="font-size:0.75rem; background:#E0F2FE; color:#0369A1; padding:3px 8px; border-radius:6px; font-weight:700;">121 À Faire</span>
+            <span id="badge-completed" style="font-size:0.75rem; background:#DCFCE7; color:#166534; padding:3px 8px; border-radius:6px; font-weight:700;">Complétés</span>
+            <span id="badge-in_progress" style="font-size:0.75rem; background:#FEF3C7; color:#92400E; padding:3px 8px; border-radius:6px; font-weight:700;">En Cours</span>
+            <span id="badge-todo" style="font-size:0.75rem; background:#E0F2FE; color:#0369A1; padding:3px 8px; border-radius:6px; font-weight:700;">À Faire</span>
           </div>
         </div>
         <a href="memoire-taches.html" class="card-btn">Ouvrir l'Explorateur &rarr;</a>
@@ -180,16 +180,27 @@
 
   <script>
     // Chargement dynamique des métriques
-    fetch('/api/state')
-      .then(r => r.json())
-      .then(state => {
-        document.getElementById('kpi-health').textContent = (state.overallHealth || 85) + ' %';
-        document.getElementById('kpi-risks').textContent = (state.risks || []).length;
-        if (state.advisor?.summary) {
-          document.getElementById('advisor-summary-text').textContent = state.advisor.summary;
-        }
-      })
-      .catch(() => {});
+    Promise.all([
+      fetch('/api/state').then(r => r.json()).catch(() => ({})),
+      fetch('/api/tasks?limit=1').then(r => r.json()).catch(() => ({}))
+    ]).then(([state, taskData]) => {
+      document.getElementById('kpi-health').textContent = (state.overallHealth || 90) + ' %';
+      document.getElementById('kpi-risks').textContent = (state.risks || []).length;
+      if (state.advisor?.summary) {
+        document.getElementById('advisor-summary-text').textContent = state.advisor.summary;
+      }
+      if (taskData && taskData.byStatus) {
+        const total = taskData.catalogTotal || 1094;
+        const done = taskData.byStatus.completed || 0;
+        const inprog = taskData.byStatus.in_progress || 0;
+        const todo = taskData.byStatus.todo || 0;
+        document.getElementById('kpi-tasks-total').textContent = total.toLocaleString('fr-FR');
+        document.getElementById('kpi-tasks-sub').innerHTML = `<span style="color:var(--accent-green); font-weight:700;">${done} faits</span> · <span style="color:var(--accent-amber); font-weight:700;">${inprog} en cours</span> · ${todo} à faire`;
+        document.getElementById('badge-completed').textContent = `${done} Complétés`;
+        document.getElementById('badge-in_progress').textContent = `${inprog} En Cours`;
+        document.getElementById('badge-todo').textContent = `${todo} À Faire`;
+      }
+    });
 
     // Bouton de relance du scan d'audit
     document.getElementById('btn-re-audit').addEventListener('click', async () => {

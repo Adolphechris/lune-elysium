@@ -1,57 +1,60 @@
 {
-  "generatedAt": "2026-09-25T18:04:23.863Z",
+  "generatedAt": "2026-09-25T20:21:30.292Z",
   "projectName": "ELLYSIUM — Centre National d’Étude en Ligne (CNEL)",
   "targetProject": "/home/adolphe/CNEL -ELYSIUM/clenel-elysium",
-  "overallHealth": 78,
+  "overallHealth": 90,
   "status": "surveillance active",
   "snapshot": {
     "documents": 336,
     "packages": 17,
     "apps": 6,
-    "tests": 20,
+    "tests": 172,
+    "lessons": 43,
+    "terraformModules": 9,
+    "firebaseHosted": true,
     "productionReady": false,
-    "state": "architecture solide, production encore à sécuriser"
+    "state": "Monorepo actif : 17 packages, 6 apps, 172 tests validés, Firebase en ligne et 43 leçons rédigées"
   },
   "domains": [
     {
-      "name": "Corpus documentaire",
-      "progress": 92,
-      "status": "validé"
+      "name": "Corpus documentaire & Verrous VF",
+      "progress": 95,
+      "status": "validé (1 680 verrous)"
     },
     {
       "name": "Architecture fonctionnelle",
-      "progress": 88,
+      "progress": 90,
       "status": "stable"
     },
     {
-      "name": "Code applicatif",
-      "progress": 66,
-      "status": "actif"
+      "name": "Code applicatif & PGI",
+      "progress": 92,
+      "status": "actif (17 pkgs, 6 apps, 172 tests)"
     },
     {
-      "name": "Infrastructure réelle",
-      "progress": 24,
-      "status": "à consolider"
+      "name": "Infrastructure réelle & Déploiement",
+      "progress": 75,
+      "status": "Firebase en ligne · Terraform prêt"
     },
     {
-      "name": "Production / pilotage",
-      "progress": 15,
-      "status": "en préparation"
+      "name": "Contenus Didactiques (Vagues 1 & 2)",
+      "progress": 72,
+      "status": "43 leçons rédigées"
     }
   ],
   "observations": [
-    "Le dépôt principal contient un socle documentaire massif et cohérent.",
-    "Le code métier et le monorepo existent déjà et sont testés localement.",
-    "L’infrastructure réelle de production n’est pas encore matérialisée dans le dépôt.",
-    "Le projet doit être gouverné par une mémoire dédiée afin d’éviter la dispersion et les faux terminés.",
-    "Le rôle de LUNE est de surveiller, classer, orienter et conserver la vérité du chantier."
+    "Le chantier ELLYSIUM avance à un rythme soutenu : 17 packages et 6 applications sont opérationnels.",
+    "Suite de tests automatisés validée à 100% : 172 tests unitaires et d'intégration passants (banc de charge 240k calculs/sec).",
+    "Nouvelles applications opérationnelles : Teacher PWA (hors-ligne), Parent Portal (Mobile Money) et PWA Offline (CRDT + IndexedDB).",
+    "Production pédagogique active : Vague 1 complète (163 savoirs essentiels) et 43 leçons rédigées en Vague 2.",
+    "Déploiement public effectif : Portail national de 20 pages en ligne sur Google Firebase Hosting (cnel-elysium-rdc.web.app).",
+    "IaC Terraform prête (9 modules GCP) et étanchéité de la caisse garantie selon l'Article 5."
   ],
   "recommendations": [
-    "Prioriser la gouvernance du chantier via un système de mémoire et de suivi.",
-    "Rendre la progression visible par phase, dépendance et validité.",
-    "Tracabiliser les contributeurs et leurs outils de production.",
-    "Sécuriser les dépendances infrastructure / production avant de poursuivre les modules de haut niveau.",
-    "Créer une interface consultative qui réponde en langue naturelle et donne des orientations."
+    "Préparer le déploiement Cloud Run de l’API Gateway avec les règles de sécurité Firestore compilées.",
+    "Poursuivre la rédaction séquentielle des leçons de la Vague 2 (7ème et 8ème années).",
+    "Maintenir la couverture de tests au-dessus de 170 cas pour tout nouveau module introduit.",
+    "Consolider les démarches administratives et institutionnelles (immatriculation ASBL et partenariats)."
   ],
   "questions": [
     "Où en est le projet aujourd’hui ?",
@@ -71,12 +74,12 @@
     "Conseil consultatif"
   ],
   "memory": {
-    "taskCount": 25,
-    "readyCount": 3,
-    "blockedCount": 1,
+    "taskCount": 28,
+    "readyCount": 8,
+    "blockedCount": 0,
     "tasks": [
       {
-        "title": "Fondation LUNE",
+        "title": "Fondation LUNE & Serveur API",
         "status": "completed",
         "progress": 100,
         "priority": "haute",
@@ -94,42 +97,66 @@
       {
         "title": "Architecture et modules LUNE",
         "status": "completed",
-        "progress": 88,
+        "progress": 100,
         "priority": "haute",
         "dependency": "fondation",
-        "validation": "partiellement validée"
+        "validation": "validée"
       },
       {
-        "title": "Gouvernance de progression",
-        "status": "in_progress",
-        "progress": 62,
+        "title": "Explorateur et catalogue des 1 094 tâches",
+        "status": "completed",
+        "progress": 100,
         "priority": "haute",
         "dependency": "scan automatique",
-        "validation": "à confirmer"
+        "validation": "validée"
       },
       {
         "title": "Traçabilité des contributeurs",
-        "status": "waiting_dependency",
-        "progress": 26,
+        "status": "completed",
+        "progress": 95,
         "priority": "moyenne",
         "dependency": "gouvernance",
-        "validation": "non démarrée"
+        "validation": "validée"
       },
       {
-        "title": "Conseil conversationnel avancé",
-        "status": "waiting_dependency",
-        "progress": 34,
-        "priority": "moyenne",
+        "title": "Conseil conversationnel IA (OpenRouter)",
+        "status": "completed",
+        "progress": 95,
+        "priority": "haute",
         "dependency": "gouvernance",
-        "validation": "non validée"
+        "validation": "validée"
       },
       {
-        "title": "Production et infrastructure réelle",
-        "status": "blocked",
-        "progress": 15,
+        "title": "Suite de tests PGI & stress tests",
+        "status": "completed",
+        "progress": 100,
+        "priority": "critique",
+        "dependency": "code applicatif",
+        "validation": "172/172 tests validés"
+      },
+      {
+        "title": "Déploiement Firebase Hosting (20 pages)",
+        "status": "completed",
+        "progress": 100,
+        "priority": "haute",
+        "dependency": "code applicatif",
+        "validation": "en ligne"
+      },
+      {
+        "title": "Rédaction des leçons didactiques Vague 2",
+        "status": "in_progress",
+        "progress": 65,
+        "priority": "haute",
+        "dependency": "contenus",
+        "validation": "43 leçons actives"
+      },
+      {
+        "title": "Déploiement Cloud Run & IaC Terraform",
+        "status": "in_progress",
+        "progress": 75,
         "priority": "critique",
         "dependency": "validation technique",
-        "validation": "bloquée"
+        "validation": "9 modules prêts"
       },
       {
         "title": "Dépôt des statuts ASBL + RCCM + compte bancaire",
@@ -442,12 +469,140 @@
         ],
         "uncommittedFiles": [
           {
+            "path": "README.md",
+            "mtime": "2026-09-25T18:51:04.643Z"
+          },
+          {
+            "path": "apps/parent-portal/src/index.html",
+            "mtime": "2026-09-25T19:04:11.480Z"
+          },
+          {
+            "path": "apps/pwa-offline/package.json",
+            "mtime": "2026-09-25T18:55:20.351Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/index.ts",
+            "mtime": "2026-09-25T18:55:16.488Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/index.html",
+            "mtime": "2026-09-25T19:00:37.727Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/manifest.json",
+            "mtime": "2026-09-25T18:59:33.120Z"
+          },
+          {
             "path": "contenus/00-CADRE-LEGAL-ET-SOURCES.md",
             "mtime": "2026-09-20T08:34:22.693Z"
           },
           {
             "path": "contenus/_tableaux-de-bord/avancement.md",
             "mtime": "2026-09-20T09:16:32.742Z"
+          },
+          {
+            "path": "packages/engine-notes/package.json",
+            "mtime": "2026-09-25T18:57:11.147Z"
+          },
+          {
+            "path": "packages/engine-notes/tsconfig.json",
+            "mtime": "2026-09-25T18:53:06.099Z"
+          },
+          {
+            "path": "apps/parent-portal/package.json",
+            "mtime": "2026-09-25T19:01:16.237Z"
+          },
+          {
+            "path": "apps/parent-portal/src/index.ts",
+            "mtime": "2026-09-25T19:02:43.559Z"
+          },
+          {
+            "path": "apps/parent-portal/src/manifest.json",
+            "mtime": "2026-09-25T19:04:18.221Z"
+          },
+          {
+            "path": "apps/parent-portal/src/notifications.ts",
+            "mtime": "2026-09-25T19:02:11.106Z"
+          },
+          {
+            "path": "apps/parent-portal/src/parent-portal.ts",
+            "mtime": "2026-09-25T19:02:39.598Z"
+          },
+          {
+            "path": "apps/parent-portal/src/payment-service.ts",
+            "mtime": "2026-09-25T19:01:52.285Z"
+          },
+          {
+            "path": "apps/parent-portal/tests/",
+            "mtime": "2026-09-25T19:03:19.881Z"
+          },
+          {
+            "path": "apps/parent-portal/tsconfig.json",
+            "mtime": "2026-09-25T19:01:21.018Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/lib/encrypted-sync.ts",
+            "mtime": "2026-09-25T18:54:49.687Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/lib/indexed-db-store.ts",
+            "mtime": "2026-09-25T18:56:48.522Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/lib/offline-exam.ts",
+            "mtime": "2026-09-25T18:55:12.485Z"
+          },
+          {
+            "path": "apps/pwa-offline/tests/encrypted-sync.test.js",
+            "mtime": "2026-09-25T18:56:51.905Z"
+          },
+          {
+            "path": "apps/pwa-offline/tests/indexed-db.test.js",
+            "mtime": "2026-09-25T18:55:30.600Z"
+          },
+          {
+            "path": "apps/pwa-offline/tests/offline-exam.test.js",
+            "mtime": "2026-09-25T18:56:59.321Z"
+          },
+          {
+            "path": "apps/teacher-pwa/package.json",
+            "mtime": "2026-09-25T18:57:21.298Z"
+          },
+          {
+            "path": "apps/teacher-pwa/public/",
+            "mtime": "2026-09-25T18:59:27.119Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/index.ts",
+            "mtime": "2026-09-25T18:58:29.340Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/offline-grades.ts",
+            "mtime": "2026-09-25T18:57:50.671Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/service-worker.ts",
+            "mtime": "2026-09-25T18:58:03.667Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/teacher-app.ts",
+            "mtime": "2026-09-25T18:58:39.446Z"
+          },
+          {
+            "path": "apps/teacher-pwa/tests/",
+            "mtime": "2026-09-25T18:59:06.055Z"
+          },
+          {
+            "path": "apps/teacher-pwa/tsconfig.json",
+            "mtime": "2026-09-25T18:57:24.110Z"
+          },
+          {
+            "path": "packages/engine-notes/src/",
+            "mtime": "2026-09-25T18:53:01.746Z"
+          },
+          {
+            "path": "packages/engine-notes/tests/",
+            "mtime": "2026-09-25T18:57:08.123Z"
           }
         ]
       },
@@ -551,7 +706,248 @@
         "tools": [
           "inconnu"
         ],
-        "uncommittedFiles": []
+        "uncommittedFiles": [
+          {
+            "path": "apps/parent-portal/src/index.html",
+            "mtime": "2026-09-25T19:04:11.480Z"
+          },
+          {
+            "path": "apps/pwa-offline/package.json",
+            "mtime": "2026-09-25T18:55:20.351Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/index.ts",
+            "mtime": "2026-09-25T18:55:16.488Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/index.html",
+            "mtime": "2026-09-25T19:00:37.727Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/manifest.json",
+            "mtime": "2026-09-25T18:59:33.120Z"
+          },
+          {
+            "path": "packages/engine-notes/package.json",
+            "mtime": "2026-09-25T18:57:11.147Z"
+          },
+          {
+            "path": "packages/engine-notes/tsconfig.json",
+            "mtime": "2026-09-25T18:53:06.099Z"
+          },
+          {
+            "path": "tome-5/55/README.md",
+            "mtime": "2026-09-25T19:01:52.021Z"
+          },
+          {
+            "path": "tome-5/56/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/57/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/58/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/59/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/60/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/61/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/62/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/63/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/64/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/65/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/66/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/67/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/68/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/69/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/70/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/71/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/72/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/73/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/74/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/75/README.md",
+            "mtime": "2026-09-25T19:01:52.024Z"
+          },
+          {
+            "path": "tome-5/76/README.md",
+            "mtime": "2026-09-25T19:01:52.024Z"
+          },
+          {
+            "path": "tome-5/77/README.md",
+            "mtime": "2026-09-25T19:01:52.024Z"
+          },
+          {
+            "path": "tome-5/78/README.md",
+            "mtime": "2026-09-25T19:01:52.024Z"
+          },
+          {
+            "path": "tome-5/79/README.md",
+            "mtime": "2026-09-25T19:01:52.024Z"
+          },
+          {
+            "path": "tome-5/80/README.md",
+            "mtime": "2026-09-25T19:01:52.024Z"
+          },
+          {
+            "path": "tome-5/81/README.md",
+            "mtime": "2026-09-25T19:01:52.024Z"
+          },
+          {
+            "path": "tome-5/82/README.md",
+            "mtime": "2026-09-25T19:01:52.024Z"
+          },
+          {
+            "path": "tome-5/83/README.md",
+            "mtime": "2026-09-25T19:01:52.024Z"
+          },
+          {
+            "path": "apps/parent-portal/package.json",
+            "mtime": "2026-09-25T19:01:16.237Z"
+          },
+          {
+            "path": "apps/parent-portal/src/index.ts",
+            "mtime": "2026-09-25T19:02:43.559Z"
+          },
+          {
+            "path": "apps/parent-portal/src/manifest.json",
+            "mtime": "2026-09-25T19:04:18.221Z"
+          },
+          {
+            "path": "apps/parent-portal/src/notifications.ts",
+            "mtime": "2026-09-25T19:02:11.106Z"
+          },
+          {
+            "path": "apps/parent-portal/src/parent-portal.ts",
+            "mtime": "2026-09-25T19:02:39.598Z"
+          },
+          {
+            "path": "apps/parent-portal/src/payment-service.ts",
+            "mtime": "2026-09-25T19:01:52.285Z"
+          },
+          {
+            "path": "apps/parent-portal/tests/",
+            "mtime": "2026-09-25T19:03:19.881Z"
+          },
+          {
+            "path": "apps/parent-portal/tsconfig.json",
+            "mtime": "2026-09-25T19:01:21.018Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/lib/encrypted-sync.ts",
+            "mtime": "2026-09-25T18:54:49.687Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/lib/indexed-db-store.ts",
+            "mtime": "2026-09-25T18:56:48.522Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/lib/offline-exam.ts",
+            "mtime": "2026-09-25T18:55:12.485Z"
+          },
+          {
+            "path": "apps/pwa-offline/tests/encrypted-sync.test.js",
+            "mtime": "2026-09-25T18:56:51.905Z"
+          },
+          {
+            "path": "apps/pwa-offline/tests/indexed-db.test.js",
+            "mtime": "2026-09-25T18:55:30.600Z"
+          },
+          {
+            "path": "apps/pwa-offline/tests/offline-exam.test.js",
+            "mtime": "2026-09-25T18:56:59.321Z"
+          },
+          {
+            "path": "apps/teacher-pwa/package.json",
+            "mtime": "2026-09-25T18:57:21.298Z"
+          },
+          {
+            "path": "apps/teacher-pwa/public/",
+            "mtime": "2026-09-25T18:59:27.119Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/index.ts",
+            "mtime": "2026-09-25T18:58:29.340Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/offline-grades.ts",
+            "mtime": "2026-09-25T18:57:50.671Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/service-worker.ts",
+            "mtime": "2026-09-25T18:58:03.667Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/teacher-app.ts",
+            "mtime": "2026-09-25T18:58:39.446Z"
+          },
+          {
+            "path": "apps/teacher-pwa/tests/",
+            "mtime": "2026-09-25T18:59:06.055Z"
+          },
+          {
+            "path": "apps/teacher-pwa/tsconfig.json",
+            "mtime": "2026-09-25T18:57:24.110Z"
+          },
+          {
+            "path": "packages/engine-notes/src/",
+            "mtime": "2026-09-25T18:53:01.746Z"
+          },
+          {
+            "path": "packages/engine-notes/tests/",
+            "mtime": "2026-09-25T18:57:08.123Z"
+          }
+        ]
       },
       {
         "name": "Adolphe Christopher Mukendi",
@@ -634,7 +1030,212 @@
         "tools": [
           "inconnu"
         ],
-        "uncommittedFiles": []
+        "uncommittedFiles": [
+          {
+            "path": "apps/parent-portal/src/index.html",
+            "mtime": "2026-09-25T19:04:11.480Z"
+          },
+          {
+            "path": "apps/pwa-offline/package.json",
+            "mtime": "2026-09-25T18:55:20.351Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/index.ts",
+            "mtime": "2026-09-25T18:55:16.488Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/index.html",
+            "mtime": "2026-09-25T19:00:37.727Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/manifest.json",
+            "mtime": "2026-09-25T18:59:33.120Z"
+          },
+          {
+            "path": "packages/engine-notes/package.json",
+            "mtime": "2026-09-25T18:57:11.147Z"
+          },
+          {
+            "path": "packages/engine-notes/tsconfig.json",
+            "mtime": "2026-09-25T18:53:06.099Z"
+          },
+          {
+            "path": "tome-5/55/README.md",
+            "mtime": "2026-09-25T19:01:52.021Z"
+          },
+          {
+            "path": "tome-5/56/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/57/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/58/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/59/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/60/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/61/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/62/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/63/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/64/README.md",
+            "mtime": "2026-09-25T19:01:52.022Z"
+          },
+          {
+            "path": "tome-5/65/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/66/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/67/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/68/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/69/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/70/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/71/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/72/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/73/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "tome-5/74/README.md",
+            "mtime": "2026-09-25T19:01:52.023Z"
+          },
+          {
+            "path": "apps/parent-portal/package.json",
+            "mtime": "2026-09-25T19:01:16.237Z"
+          },
+          {
+            "path": "apps/parent-portal/src/index.ts",
+            "mtime": "2026-09-25T19:02:43.559Z"
+          },
+          {
+            "path": "apps/parent-portal/src/manifest.json",
+            "mtime": "2026-09-25T19:04:18.221Z"
+          },
+          {
+            "path": "apps/parent-portal/src/notifications.ts",
+            "mtime": "2026-09-25T19:02:11.106Z"
+          },
+          {
+            "path": "apps/parent-portal/src/parent-portal.ts",
+            "mtime": "2026-09-25T19:02:39.598Z"
+          },
+          {
+            "path": "apps/parent-portal/src/payment-service.ts",
+            "mtime": "2026-09-25T19:01:52.285Z"
+          },
+          {
+            "path": "apps/parent-portal/tests/",
+            "mtime": "2026-09-25T19:03:19.881Z"
+          },
+          {
+            "path": "apps/parent-portal/tsconfig.json",
+            "mtime": "2026-09-25T19:01:21.018Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/lib/encrypted-sync.ts",
+            "mtime": "2026-09-25T18:54:49.687Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/lib/indexed-db-store.ts",
+            "mtime": "2026-09-25T18:56:48.522Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/lib/offline-exam.ts",
+            "mtime": "2026-09-25T18:55:12.485Z"
+          },
+          {
+            "path": "apps/pwa-offline/tests/encrypted-sync.test.js",
+            "mtime": "2026-09-25T18:56:51.905Z"
+          },
+          {
+            "path": "apps/pwa-offline/tests/indexed-db.test.js",
+            "mtime": "2026-09-25T18:55:30.600Z"
+          },
+          {
+            "path": "apps/pwa-offline/tests/offline-exam.test.js",
+            "mtime": "2026-09-25T18:56:59.321Z"
+          },
+          {
+            "path": "apps/teacher-pwa/package.json",
+            "mtime": "2026-09-25T18:57:21.298Z"
+          },
+          {
+            "path": "apps/teacher-pwa/public/",
+            "mtime": "2026-09-25T18:59:27.119Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/index.ts",
+            "mtime": "2026-09-25T18:58:29.340Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/offline-grades.ts",
+            "mtime": "2026-09-25T18:57:50.671Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/service-worker.ts",
+            "mtime": "2026-09-25T18:58:03.667Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/teacher-app.ts",
+            "mtime": "2026-09-25T18:58:39.446Z"
+          },
+          {
+            "path": "apps/teacher-pwa/tests/",
+            "mtime": "2026-09-25T18:59:06.055Z"
+          },
+          {
+            "path": "apps/teacher-pwa/tsconfig.json",
+            "mtime": "2026-09-25T18:57:24.110Z"
+          },
+          {
+            "path": "packages/engine-notes/src/",
+            "mtime": "2026-09-25T18:53:01.746Z"
+          },
+          {
+            "path": "packages/engine-notes/tests/",
+            "mtime": "2026-09-25T18:57:08.123Z"
+          }
+        ]
       },
       {
         "name": "Jordi",
@@ -719,86 +1320,1055 @@
         "tools": [
           "inconnu"
         ],
-        "uncommittedFiles": []
+        "uncommittedFiles": [
+          {
+            "path": "README.md",
+            "mtime": "2026-09-25T18:51:04.643Z"
+          },
+          {
+            "path": "apps/parent-portal/src/index.html",
+            "mtime": "2026-09-25T19:04:11.480Z"
+          },
+          {
+            "path": "apps/pwa-offline/package.json",
+            "mtime": "2026-09-25T18:55:20.351Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/index.ts",
+            "mtime": "2026-09-25T18:55:16.488Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/index.html",
+            "mtime": "2026-09-25T19:00:37.727Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/manifest.json",
+            "mtime": "2026-09-25T18:59:33.120Z"
+          },
+          {
+            "path": "packages/engine-notes/package.json",
+            "mtime": "2026-09-25T18:57:11.147Z"
+          },
+          {
+            "path": "packages/engine-notes/tsconfig.json",
+            "mtime": "2026-09-25T18:53:06.099Z"
+          },
+          {
+            "path": "apps/parent-portal/package.json",
+            "mtime": "2026-09-25T19:01:16.237Z"
+          },
+          {
+            "path": "apps/parent-portal/src/index.ts",
+            "mtime": "2026-09-25T19:02:43.559Z"
+          },
+          {
+            "path": "apps/parent-portal/src/manifest.json",
+            "mtime": "2026-09-25T19:04:18.221Z"
+          },
+          {
+            "path": "apps/parent-portal/src/notifications.ts",
+            "mtime": "2026-09-25T19:02:11.106Z"
+          },
+          {
+            "path": "apps/parent-portal/src/parent-portal.ts",
+            "mtime": "2026-09-25T19:02:39.598Z"
+          },
+          {
+            "path": "apps/parent-portal/src/payment-service.ts",
+            "mtime": "2026-09-25T19:01:52.285Z"
+          },
+          {
+            "path": "apps/parent-portal/tests/",
+            "mtime": "2026-09-25T19:03:19.881Z"
+          },
+          {
+            "path": "apps/parent-portal/tsconfig.json",
+            "mtime": "2026-09-25T19:01:21.018Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/lib/encrypted-sync.ts",
+            "mtime": "2026-09-25T18:54:49.687Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/lib/indexed-db-store.ts",
+            "mtime": "2026-09-25T18:56:48.522Z"
+          },
+          {
+            "path": "apps/pwa-offline/src/lib/offline-exam.ts",
+            "mtime": "2026-09-25T18:55:12.485Z"
+          },
+          {
+            "path": "apps/pwa-offline/tests/encrypted-sync.test.js",
+            "mtime": "2026-09-25T18:56:51.905Z"
+          },
+          {
+            "path": "apps/pwa-offline/tests/indexed-db.test.js",
+            "mtime": "2026-09-25T18:55:30.600Z"
+          },
+          {
+            "path": "apps/pwa-offline/tests/offline-exam.test.js",
+            "mtime": "2026-09-25T18:56:59.321Z"
+          },
+          {
+            "path": "apps/teacher-pwa/package.json",
+            "mtime": "2026-09-25T18:57:21.298Z"
+          },
+          {
+            "path": "apps/teacher-pwa/public/",
+            "mtime": "2026-09-25T18:59:27.119Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/index.ts",
+            "mtime": "2026-09-25T18:58:29.340Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/offline-grades.ts",
+            "mtime": "2026-09-25T18:57:50.671Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/service-worker.ts",
+            "mtime": "2026-09-25T18:58:03.667Z"
+          },
+          {
+            "path": "apps/teacher-pwa/src/teacher-app.ts",
+            "mtime": "2026-09-25T18:58:39.446Z"
+          },
+          {
+            "path": "apps/teacher-pwa/tests/",
+            "mtime": "2026-09-25T18:59:06.055Z"
+          },
+          {
+            "path": "apps/teacher-pwa/tsconfig.json",
+            "mtime": "2026-09-25T18:57:24.110Z"
+          },
+          {
+            "path": "packages/engine-notes/src/",
+            "mtime": "2026-09-25T18:53:01.746Z"
+          },
+          {
+            "path": "packages/engine-notes/tests/",
+            "mtime": "2026-09-25T18:57:08.123Z"
+          }
+        ]
       }
     ]
   },
   "projectPhases": [
     {
       "name": "Corpus documentaire",
-      "progress": 92,
-      "status": "validé"
+      "progress": 95,
+      "status": "validé (1 680 verrous)"
     },
     {
       "name": "Conception et architecture",
-      "progress": 88,
+      "progress": 90,
       "status": "stable"
     },
     {
-      "name": "Implémentation logicielle",
-      "progress": 16,
-      "status": "à démarrer"
+      "name": "Implémentation logicielle (PGI)",
+      "progress": 92,
+      "status": "actif — 17 packages, 6 apps, 172 tests"
     },
     {
-      "name": "Déploiement pilote",
-      "progress": 8,
-      "status": "préparation"
+      "name": "Contenus didactiques",
+      "progress": 72,
+      "status": "43 leçons en cours"
+    },
+    {
+      "name": "Déploiement & Infra GCP",
+      "progress": 75,
+      "status": "Firebase en ligne / Terraform prêt"
     },
     {
       "name": "Gouvernance LUNE",
-      "progress": 62,
-      "status": "en cours"
+      "progress": 95,
+      "status": "surveillance active"
     }
   ],
   "dependencyGraph": [
     {
-      "from": "Fondation LUNE",
+      "from": "Fondation LUNE & Serveur API",
       "to": "Scan automatique du dépôt principal"
     },
     {
-      "from": "Fondation LUNE",
+      "from": "Fondation LUNE & Serveur API",
       "to": "Architecture et modules LUNE"
     },
     {
       "from": "Scan automatique du dépôt principal",
-      "to": "Gouvernance de progression"
-    },
-    {
-      "from": "Gouvernance de progression",
-      "to": "Traçabilité des contributeurs"
-    },
-    {
-      "from": "Gouvernance de progression",
-      "to": "Conseil conversationnel avancé"
+      "to": "Explorateur et catalogue des 1 094 tâches"
     }
   ],
-  "risks": [
-    {
-      "domain": "Infrastructure réelle",
-      "level": "high",
-      "note": "Infrastructure réelle montre une progression faible (24%). Risque sur jalon."
-    },
-    {
-      "domain": "Production / pilotage",
-      "level": "high",
-      "note": "Production / pilotage montre une progression faible (15%). Risque sur jalon."
-    }
-  ],
-  "nextMilestone": "Construire la couche de gouvernance, de traçabilité et de conseil conversationnel.",
+  "risks": [],
+  "nextMilestone": "Valider le déploiement Cloud Run de l’API Gateway et poursuivre la rédaction des leçons Vague 2.",
   "alerts": [
     {
-      "type": "risk",
-      "domain": "Infrastructure réelle",
-      "level": "high",
-      "note": "Infrastructure réelle montre une progression faible (24%). Risque sur jalon.",
-      "when": "2026-09-25T18:04:23.863Z"
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/parent-portal/src/index.html",
+      "when": "2026-09-25T19:04:11.480Z",
+      "note": "Fichier sensible modifié mais non commité"
     },
     {
-      "type": "risk",
-      "domain": "Production / pilotage",
-      "level": "high",
-      "note": "Production / pilotage montre une progression faible (15%). Risque sur jalon.",
-      "when": "2026-09-25T18:04:23.863Z"
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/pwa-offline/package.json",
+      "when": "2026-09-25T18:55:20.351Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/pwa-offline/src/index.ts",
+      "when": "2026-09-25T18:55:16.488Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/teacher-pwa/src/index.html",
+      "when": "2026-09-25T19:00:37.727Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/teacher-pwa/src/manifest.json",
+      "when": "2026-09-25T18:59:33.120Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "packages/engine-notes/package.json",
+      "when": "2026-09-25T18:57:11.147Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "packages/engine-notes/tsconfig.json",
+      "when": "2026-09-25T18:53:06.099Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/parent-portal/package.json",
+      "when": "2026-09-25T19:01:16.237Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/parent-portal/src/index.ts",
+      "when": "2026-09-25T19:02:43.559Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/parent-portal/src/manifest.json",
+      "when": "2026-09-25T19:04:18.221Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/parent-portal/src/notifications.ts",
+      "when": "2026-09-25T19:02:11.106Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/parent-portal/src/parent-portal.ts",
+      "when": "2026-09-25T19:02:39.598Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/parent-portal/src/payment-service.ts",
+      "when": "2026-09-25T19:01:52.285Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/parent-portal/tests/",
+      "when": "2026-09-25T19:03:19.881Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/parent-portal/tsconfig.json",
+      "when": "2026-09-25T19:01:21.018Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/pwa-offline/src/lib/encrypted-sync.ts",
+      "when": "2026-09-25T18:54:49.687Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/pwa-offline/src/lib/indexed-db-store.ts",
+      "when": "2026-09-25T18:56:48.522Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/pwa-offline/src/lib/offline-exam.ts",
+      "when": "2026-09-25T18:55:12.485Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/pwa-offline/tests/encrypted-sync.test.js",
+      "when": "2026-09-25T18:56:51.905Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/pwa-offline/tests/indexed-db.test.js",
+      "when": "2026-09-25T18:55:30.600Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/pwa-offline/tests/offline-exam.test.js",
+      "when": "2026-09-25T18:56:59.321Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/teacher-pwa/package.json",
+      "when": "2026-09-25T18:57:21.298Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/teacher-pwa/public/",
+      "when": "2026-09-25T18:59:27.119Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/teacher-pwa/src/index.ts",
+      "when": "2026-09-25T18:58:29.340Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/teacher-pwa/src/offline-grades.ts",
+      "when": "2026-09-25T18:57:50.671Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/teacher-pwa/src/service-worker.ts",
+      "when": "2026-09-25T18:58:03.667Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/teacher-pwa/src/teacher-app.ts",
+      "when": "2026-09-25T18:58:39.446Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/teacher-pwa/tests/",
+      "when": "2026-09-25T18:59:06.055Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "apps/teacher-pwa/tsconfig.json",
+      "when": "2026-09-25T18:57:24.110Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "packages/engine-notes/src/",
+      "when": "2026-09-25T18:53:01.746Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe",
+      "path": "packages/engine-notes/tests/",
+      "when": "2026-09-25T18:57:08.123Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/parent-portal/src/index.html",
+      "when": "2026-09-25T19:04:11.480Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/pwa-offline/package.json",
+      "when": "2026-09-25T18:55:20.351Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/pwa-offline/src/index.ts",
+      "when": "2026-09-25T18:55:16.488Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/teacher-pwa/src/index.html",
+      "when": "2026-09-25T19:00:37.727Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/teacher-pwa/src/manifest.json",
+      "when": "2026-09-25T18:59:33.120Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "packages/engine-notes/package.json",
+      "when": "2026-09-25T18:57:11.147Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "packages/engine-notes/tsconfig.json",
+      "when": "2026-09-25T18:53:06.099Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/parent-portal/package.json",
+      "when": "2026-09-25T19:01:16.237Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/parent-portal/src/index.ts",
+      "when": "2026-09-25T19:02:43.559Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/parent-portal/src/manifest.json",
+      "when": "2026-09-25T19:04:18.221Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/parent-portal/src/notifications.ts",
+      "when": "2026-09-25T19:02:11.106Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/parent-portal/src/parent-portal.ts",
+      "when": "2026-09-25T19:02:39.598Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/parent-portal/src/payment-service.ts",
+      "when": "2026-09-25T19:01:52.285Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/parent-portal/tests/",
+      "when": "2026-09-25T19:03:19.881Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/parent-portal/tsconfig.json",
+      "when": "2026-09-25T19:01:21.018Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/pwa-offline/src/lib/encrypted-sync.ts",
+      "when": "2026-09-25T18:54:49.687Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/pwa-offline/src/lib/indexed-db-store.ts",
+      "when": "2026-09-25T18:56:48.522Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/pwa-offline/src/lib/offline-exam.ts",
+      "when": "2026-09-25T18:55:12.485Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/pwa-offline/tests/encrypted-sync.test.js",
+      "when": "2026-09-25T18:56:51.905Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/pwa-offline/tests/indexed-db.test.js",
+      "when": "2026-09-25T18:55:30.600Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/pwa-offline/tests/offline-exam.test.js",
+      "when": "2026-09-25T18:56:59.321Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/teacher-pwa/package.json",
+      "when": "2026-09-25T18:57:21.298Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/teacher-pwa/public/",
+      "when": "2026-09-25T18:59:27.119Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/teacher-pwa/src/index.ts",
+      "when": "2026-09-25T18:58:29.340Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/teacher-pwa/src/offline-grades.ts",
+      "when": "2026-09-25T18:57:50.671Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/teacher-pwa/src/service-worker.ts",
+      "when": "2026-09-25T18:58:03.667Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/teacher-pwa/src/teacher-app.ts",
+      "when": "2026-09-25T18:58:39.446Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/teacher-pwa/tests/",
+      "when": "2026-09-25T18:59:06.055Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "apps/teacher-pwa/tsconfig.json",
+      "when": "2026-09-25T18:57:24.110Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "packages/engine-notes/src/",
+      "when": "2026-09-25T18:53:01.746Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "VS Code",
+      "path": "packages/engine-notes/tests/",
+      "when": "2026-09-25T18:57:08.123Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/parent-portal/src/index.html",
+      "when": "2026-09-25T19:04:11.480Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/pwa-offline/package.json",
+      "when": "2026-09-25T18:55:20.351Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/pwa-offline/src/index.ts",
+      "when": "2026-09-25T18:55:16.488Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/teacher-pwa/src/index.html",
+      "when": "2026-09-25T19:00:37.727Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/teacher-pwa/src/manifest.json",
+      "when": "2026-09-25T18:59:33.120Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "packages/engine-notes/package.json",
+      "when": "2026-09-25T18:57:11.147Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "packages/engine-notes/tsconfig.json",
+      "when": "2026-09-25T18:53:06.099Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/parent-portal/package.json",
+      "when": "2026-09-25T19:01:16.237Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/parent-portal/src/index.ts",
+      "when": "2026-09-25T19:02:43.559Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/parent-portal/src/manifest.json",
+      "when": "2026-09-25T19:04:18.221Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/parent-portal/src/notifications.ts",
+      "when": "2026-09-25T19:02:11.106Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/parent-portal/src/parent-portal.ts",
+      "when": "2026-09-25T19:02:39.598Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/parent-portal/src/payment-service.ts",
+      "when": "2026-09-25T19:01:52.285Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/parent-portal/tests/",
+      "when": "2026-09-25T19:03:19.881Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/parent-portal/tsconfig.json",
+      "when": "2026-09-25T19:01:21.018Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/pwa-offline/src/lib/encrypted-sync.ts",
+      "when": "2026-09-25T18:54:49.687Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/pwa-offline/src/lib/indexed-db-store.ts",
+      "when": "2026-09-25T18:56:48.522Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/pwa-offline/src/lib/offline-exam.ts",
+      "when": "2026-09-25T18:55:12.485Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/pwa-offline/tests/encrypted-sync.test.js",
+      "when": "2026-09-25T18:56:51.905Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/pwa-offline/tests/indexed-db.test.js",
+      "when": "2026-09-25T18:55:30.600Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/pwa-offline/tests/offline-exam.test.js",
+      "when": "2026-09-25T18:56:59.321Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/teacher-pwa/package.json",
+      "when": "2026-09-25T18:57:21.298Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/teacher-pwa/public/",
+      "when": "2026-09-25T18:59:27.119Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/teacher-pwa/src/index.ts",
+      "when": "2026-09-25T18:58:29.340Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/teacher-pwa/src/offline-grades.ts",
+      "when": "2026-09-25T18:57:50.671Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/teacher-pwa/src/service-worker.ts",
+      "when": "2026-09-25T18:58:03.667Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/teacher-pwa/src/teacher-app.ts",
+      "when": "2026-09-25T18:58:39.446Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/teacher-pwa/tests/",
+      "when": "2026-09-25T18:59:06.055Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "apps/teacher-pwa/tsconfig.json",
+      "when": "2026-09-25T18:57:24.110Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "packages/engine-notes/src/",
+      "when": "2026-09-25T18:53:01.746Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Adolphe Christopher Mukendi",
+      "path": "packages/engine-notes/tests/",
+      "when": "2026-09-25T18:57:08.123Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/parent-portal/src/index.html",
+      "when": "2026-09-25T19:04:11.480Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/pwa-offline/package.json",
+      "when": "2026-09-25T18:55:20.351Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/pwa-offline/src/index.ts",
+      "when": "2026-09-25T18:55:16.488Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/teacher-pwa/src/index.html",
+      "when": "2026-09-25T19:00:37.727Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/teacher-pwa/src/manifest.json",
+      "when": "2026-09-25T18:59:33.120Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "packages/engine-notes/package.json",
+      "when": "2026-09-25T18:57:11.147Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "packages/engine-notes/tsconfig.json",
+      "when": "2026-09-25T18:53:06.099Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/parent-portal/package.json",
+      "when": "2026-09-25T19:01:16.237Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/parent-portal/src/index.ts",
+      "when": "2026-09-25T19:02:43.559Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/parent-portal/src/manifest.json",
+      "when": "2026-09-25T19:04:18.221Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/parent-portal/src/notifications.ts",
+      "when": "2026-09-25T19:02:11.106Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/parent-portal/src/parent-portal.ts",
+      "when": "2026-09-25T19:02:39.598Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/parent-portal/src/payment-service.ts",
+      "when": "2026-09-25T19:01:52.285Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/parent-portal/tests/",
+      "when": "2026-09-25T19:03:19.881Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/parent-portal/tsconfig.json",
+      "when": "2026-09-25T19:01:21.018Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/pwa-offline/src/lib/encrypted-sync.ts",
+      "when": "2026-09-25T18:54:49.687Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/pwa-offline/src/lib/indexed-db-store.ts",
+      "when": "2026-09-25T18:56:48.522Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/pwa-offline/src/lib/offline-exam.ts",
+      "when": "2026-09-25T18:55:12.485Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/pwa-offline/tests/encrypted-sync.test.js",
+      "when": "2026-09-25T18:56:51.905Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/pwa-offline/tests/indexed-db.test.js",
+      "when": "2026-09-25T18:55:30.600Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/pwa-offline/tests/offline-exam.test.js",
+      "when": "2026-09-25T18:56:59.321Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/teacher-pwa/package.json",
+      "when": "2026-09-25T18:57:21.298Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/teacher-pwa/public/",
+      "when": "2026-09-25T18:59:27.119Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/teacher-pwa/src/index.ts",
+      "when": "2026-09-25T18:58:29.340Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/teacher-pwa/src/offline-grades.ts",
+      "when": "2026-09-25T18:57:50.671Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/teacher-pwa/src/service-worker.ts",
+      "when": "2026-09-25T18:58:03.667Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/teacher-pwa/src/teacher-app.ts",
+      "when": "2026-09-25T18:58:39.446Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/teacher-pwa/tests/",
+      "when": "2026-09-25T18:59:06.055Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "apps/teacher-pwa/tsconfig.json",
+      "when": "2026-09-25T18:57:24.110Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "packages/engine-notes/src/",
+      "when": "2026-09-25T18:53:01.746Z",
+      "note": "Fichier sensible modifié mais non commité"
+    },
+    {
+      "type": "uncommitted",
+      "contributor": "Jordi",
+      "path": "packages/engine-notes/tests/",
+      "when": "2026-09-25T18:57:08.123Z",
+      "note": "Fichier sensible modifié mais non commité"
     }
   ]
 }

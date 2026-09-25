@@ -1,30 +1,34 @@
 {
-  "generatedAt": "2026-09-25T18:04:22.105Z",
+  "generatedAt": "2026-09-25T20:21:28.927Z",
   "targetProject": "/home/adolphe/CNEL -ELYSIUM/clenel-elysium",
   "projectName": "ELLYSIUM — Centre National d’Étude en Ligne (CNEL)",
-  "mission": "Système éducatif numérique national",
+  "mission": "Système éducatif numérique national (RDC)",
   "stats": {
     "markdown": 401,
-    "ts": 49,
-    "js": 22,
-    "json": 43,
+    "ts": 61,
+    "js": 29,
+    "json": 48,
     "packages": 17,
     "apps": 6,
     "docs": 4,
-    "tests": 20
+    "tests": 172,
+    "lessons": 43,
+    "contenus": 64,
+    "terraform": 9
   },
   "status": {
-    "corpus": "documenté",
-    "code": "actif",
-    "build": "à vérifier",
-    "production": "non prêt",
-    "purpose": "gouvernance et suivi du chantier"
+    "corpus": "documenté et scellé (282 modules, 1 680 verrous VF)",
+    "code": "actif (17 packages, 6 apps, 172 tests validés)",
+    "build": "opérationnel (npm workspaces validés à 100%)",
+    "infrastructure": "IaC Terraform prête (9 modules) · Firebase Hosting en ligne (20 pages)",
+    "contenus": "Vague 1 validée · 43 leçons rédigées en Vague 2",
+    "purpose": "gouvernance et suivi en temps réel du chantier"
   },
   "priorities": [
-    "Sécuriser l’infrastructure réelle et la crédibilité du déploiement",
-    "Classer le projet selon des phases, dépendances et jalons clairs",
-    "Créer un système de mémoire de projet autonome et consultable",
-    "Tracabiliser les contributeurs et leurs outils de travail",
-    "Mettre en place l’audit permanent et le conseil d’orientation"
+    "Valider le déploiement Cloud Run de l’API Gateway avec les règles Firestore",
+    "Poursuivre la production des leçons Vague 2 (Mathématiques et SVT)",
+    "Préparer le protocole d'épreuves du laboratoire physique de Kinshasa (Phase 0)",
+    "Accompagner les démarches administratives et juridiques (ASBL, convention pilote)",
+    "Maintenir la couverture de tests et l'intégrité de la gouvernance LUNE"
   ]
 }

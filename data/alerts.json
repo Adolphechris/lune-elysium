@@ -1,16 +1,870 @@
 [
   {
-    "type": "risk",
-    "domain": "Infrastructure réelle",
-    "level": "high",
-    "note": "Infrastructure réelle montre une progression faible (24%). Risque sur jalon.",
-    "when": "2026-09-25T18:04:23.863Z"
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/parent-portal/src/index.html",
+    "when": "2026-09-25T19:04:11.480Z",
+    "note": "Fichier sensible modifié mais non commité"
   },
   {
-    "type": "risk",
-    "domain": "Production / pilotage",
-    "level": "high",
-    "note": "Production / pilotage montre une progression faible (15%). Risque sur jalon.",
-    "when": "2026-09-25T18:04:23.863Z"
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/pwa-offline/package.json",
+    "when": "2026-09-25T18:55:20.351Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/pwa-offline/src/index.ts",
+    "when": "2026-09-25T18:55:16.488Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/teacher-pwa/src/index.html",
+    "when": "2026-09-25T19:00:37.727Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/teacher-pwa/src/manifest.json",
+    "when": "2026-09-25T18:59:33.120Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "packages/engine-notes/package.json",
+    "when": "2026-09-25T18:57:11.147Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "packages/engine-notes/tsconfig.json",
+    "when": "2026-09-25T18:53:06.099Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/parent-portal/package.json",
+    "when": "2026-09-25T19:01:16.237Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/parent-portal/src/index.ts",
+    "when": "2026-09-25T19:02:43.559Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/parent-portal/src/manifest.json",
+    "when": "2026-09-25T19:04:18.221Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/parent-portal/src/notifications.ts",
+    "when": "2026-09-25T19:02:11.106Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/parent-portal/src/parent-portal.ts",
+    "when": "2026-09-25T19:02:39.598Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/parent-portal/src/payment-service.ts",
+    "when": "2026-09-25T19:01:52.285Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/parent-portal/tests/",
+    "when": "2026-09-25T19:03:19.881Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/parent-portal/tsconfig.json",
+    "when": "2026-09-25T19:01:21.018Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/pwa-offline/src/lib/encrypted-sync.ts",
+    "when": "2026-09-25T18:54:49.687Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/pwa-offline/src/lib/indexed-db-store.ts",
+    "when": "2026-09-25T18:56:48.522Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/pwa-offline/src/lib/offline-exam.ts",
+    "when": "2026-09-25T18:55:12.485Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/pwa-offline/tests/encrypted-sync.test.js",
+    "when": "2026-09-25T18:56:51.905Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/pwa-offline/tests/indexed-db.test.js",
+    "when": "2026-09-25T18:55:30.600Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/pwa-offline/tests/offline-exam.test.js",
+    "when": "2026-09-25T18:56:59.321Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/teacher-pwa/package.json",
+    "when": "2026-09-25T18:57:21.298Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/teacher-pwa/public/",
+    "when": "2026-09-25T18:59:27.119Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/teacher-pwa/src/index.ts",
+    "when": "2026-09-25T18:58:29.340Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/teacher-pwa/src/offline-grades.ts",
+    "when": "2026-09-25T18:57:50.671Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/teacher-pwa/src/service-worker.ts",
+    "when": "2026-09-25T18:58:03.667Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/teacher-pwa/src/teacher-app.ts",
+    "when": "2026-09-25T18:58:39.446Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/teacher-pwa/tests/",
+    "when": "2026-09-25T18:59:06.055Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "apps/teacher-pwa/tsconfig.json",
+    "when": "2026-09-25T18:57:24.110Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "packages/engine-notes/src/",
+    "when": "2026-09-25T18:53:01.746Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe",
+    "path": "packages/engine-notes/tests/",
+    "when": "2026-09-25T18:57:08.123Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/parent-portal/src/index.html",
+    "when": "2026-09-25T19:04:11.480Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/pwa-offline/package.json",
+    "when": "2026-09-25T18:55:20.351Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/pwa-offline/src/index.ts",
+    "when": "2026-09-25T18:55:16.488Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/teacher-pwa/src/index.html",
+    "when": "2026-09-25T19:00:37.727Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/teacher-pwa/src/manifest.json",
+    "when": "2026-09-25T18:59:33.120Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "packages/engine-notes/package.json",
+    "when": "2026-09-25T18:57:11.147Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "packages/engine-notes/tsconfig.json",
+    "when": "2026-09-25T18:53:06.099Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/parent-portal/package.json",
+    "when": "2026-09-25T19:01:16.237Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/parent-portal/src/index.ts",
+    "when": "2026-09-25T19:02:43.559Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/parent-portal/src/manifest.json",
+    "when": "2026-09-25T19:04:18.221Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/parent-portal/src/notifications.ts",
+    "when": "2026-09-25T19:02:11.106Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/parent-portal/src/parent-portal.ts",
+    "when": "2026-09-25T19:02:39.598Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/parent-portal/src/payment-service.ts",
+    "when": "2026-09-25T19:01:52.285Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/parent-portal/tests/",
+    "when": "2026-09-25T19:03:19.881Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/parent-portal/tsconfig.json",
+    "when": "2026-09-25T19:01:21.018Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/pwa-offline/src/lib/encrypted-sync.ts",
+    "when": "2026-09-25T18:54:49.687Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/pwa-offline/src/lib/indexed-db-store.ts",
+    "when": "2026-09-25T18:56:48.522Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/pwa-offline/src/lib/offline-exam.ts",
+    "when": "2026-09-25T18:55:12.485Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/pwa-offline/tests/encrypted-sync.test.js",
+    "when": "2026-09-25T18:56:51.905Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/pwa-offline/tests/indexed-db.test.js",
+    "when": "2026-09-25T18:55:30.600Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/pwa-offline/tests/offline-exam.test.js",
+    "when": "2026-09-25T18:56:59.321Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/teacher-pwa/package.json",
+    "when": "2026-09-25T18:57:21.298Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/teacher-pwa/public/",
+    "when": "2026-09-25T18:59:27.119Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/teacher-pwa/src/index.ts",
+    "when": "2026-09-25T18:58:29.340Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/teacher-pwa/src/offline-grades.ts",
+    "when": "2026-09-25T18:57:50.671Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/teacher-pwa/src/service-worker.ts",
+    "when": "2026-09-25T18:58:03.667Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/teacher-pwa/src/teacher-app.ts",
+    "when": "2026-09-25T18:58:39.446Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/teacher-pwa/tests/",
+    "when": "2026-09-25T18:59:06.055Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "apps/teacher-pwa/tsconfig.json",
+    "when": "2026-09-25T18:57:24.110Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "packages/engine-notes/src/",
+    "when": "2026-09-25T18:53:01.746Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "VS Code",
+    "path": "packages/engine-notes/tests/",
+    "when": "2026-09-25T18:57:08.123Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/parent-portal/src/index.html",
+    "when": "2026-09-25T19:04:11.480Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/pwa-offline/package.json",
+    "when": "2026-09-25T18:55:20.351Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/pwa-offline/src/index.ts",
+    "when": "2026-09-25T18:55:16.488Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/teacher-pwa/src/index.html",
+    "when": "2026-09-25T19:00:37.727Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/teacher-pwa/src/manifest.json",
+    "when": "2026-09-25T18:59:33.120Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "packages/engine-notes/package.json",
+    "when": "2026-09-25T18:57:11.147Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "packages/engine-notes/tsconfig.json",
+    "when": "2026-09-25T18:53:06.099Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/parent-portal/package.json",
+    "when": "2026-09-25T19:01:16.237Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/parent-portal/src/index.ts",
+    "when": "2026-09-25T19:02:43.559Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/parent-portal/src/manifest.json",
+    "when": "2026-09-25T19:04:18.221Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/parent-portal/src/notifications.ts",
+    "when": "2026-09-25T19:02:11.106Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/parent-portal/src/parent-portal.ts",
+    "when": "2026-09-25T19:02:39.598Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/parent-portal/src/payment-service.ts",
+    "when": "2026-09-25T19:01:52.285Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/parent-portal/tests/",
+    "when": "2026-09-25T19:03:19.881Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/parent-portal/tsconfig.json",
+    "when": "2026-09-25T19:01:21.018Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/pwa-offline/src/lib/encrypted-sync.ts",
+    "when": "2026-09-25T18:54:49.687Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/pwa-offline/src/lib/indexed-db-store.ts",
+    "when": "2026-09-25T18:56:48.522Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/pwa-offline/src/lib/offline-exam.ts",
+    "when": "2026-09-25T18:55:12.485Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/pwa-offline/tests/encrypted-sync.test.js",
+    "when": "2026-09-25T18:56:51.905Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/pwa-offline/tests/indexed-db.test.js",
+    "when": "2026-09-25T18:55:30.600Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/pwa-offline/tests/offline-exam.test.js",
+    "when": "2026-09-25T18:56:59.321Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/teacher-pwa/package.json",
+    "when": "2026-09-25T18:57:21.298Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/teacher-pwa/public/",
+    "when": "2026-09-25T18:59:27.119Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/teacher-pwa/src/index.ts",
+    "when": "2026-09-25T18:58:29.340Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/teacher-pwa/src/offline-grades.ts",
+    "when": "2026-09-25T18:57:50.671Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/teacher-pwa/src/service-worker.ts",
+    "when": "2026-09-25T18:58:03.667Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/teacher-pwa/src/teacher-app.ts",
+    "when": "2026-09-25T18:58:39.446Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/teacher-pwa/tests/",
+    "when": "2026-09-25T18:59:06.055Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "apps/teacher-pwa/tsconfig.json",
+    "when": "2026-09-25T18:57:24.110Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "packages/engine-notes/src/",
+    "when": "2026-09-25T18:53:01.746Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Adolphe Christopher Mukendi",
+    "path": "packages/engine-notes/tests/",
+    "when": "2026-09-25T18:57:08.123Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/parent-portal/src/index.html",
+    "when": "2026-09-25T19:04:11.480Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/pwa-offline/package.json",
+    "when": "2026-09-25T18:55:20.351Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/pwa-offline/src/index.ts",
+    "when": "2026-09-25T18:55:16.488Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/teacher-pwa/src/index.html",
+    "when": "2026-09-25T19:00:37.727Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/teacher-pwa/src/manifest.json",
+    "when": "2026-09-25T18:59:33.120Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "packages/engine-notes/package.json",
+    "when": "2026-09-25T18:57:11.147Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "packages/engine-notes/tsconfig.json",
+    "when": "2026-09-25T18:53:06.099Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/parent-portal/package.json",
+    "when": "2026-09-25T19:01:16.237Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/parent-portal/src/index.ts",
+    "when": "2026-09-25T19:02:43.559Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/parent-portal/src/manifest.json",
+    "when": "2026-09-25T19:04:18.221Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/parent-portal/src/notifications.ts",
+    "when": "2026-09-25T19:02:11.106Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/parent-portal/src/parent-portal.ts",
+    "when": "2026-09-25T19:02:39.598Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/parent-portal/src/payment-service.ts",
+    "when": "2026-09-25T19:01:52.285Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/parent-portal/tests/",
+    "when": "2026-09-25T19:03:19.881Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/parent-portal/tsconfig.json",
+    "when": "2026-09-25T19:01:21.018Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/pwa-offline/src/lib/encrypted-sync.ts",
+    "when": "2026-09-25T18:54:49.687Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/pwa-offline/src/lib/indexed-db-store.ts",
+    "when": "2026-09-25T18:56:48.522Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/pwa-offline/src/lib/offline-exam.ts",
+    "when": "2026-09-25T18:55:12.485Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/pwa-offline/tests/encrypted-sync.test.js",
+    "when": "2026-09-25T18:56:51.905Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/pwa-offline/tests/indexed-db.test.js",
+    "when": "2026-09-25T18:55:30.600Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/pwa-offline/tests/offline-exam.test.js",
+    "when": "2026-09-25T18:56:59.321Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/teacher-pwa/package.json",
+    "when": "2026-09-25T18:57:21.298Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/teacher-pwa/public/",
+    "when": "2026-09-25T18:59:27.119Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/teacher-pwa/src/index.ts",
+    "when": "2026-09-25T18:58:29.340Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/teacher-pwa/src/offline-grades.ts",
+    "when": "2026-09-25T18:57:50.671Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/teacher-pwa/src/service-worker.ts",
+    "when": "2026-09-25T18:58:03.667Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/teacher-pwa/src/teacher-app.ts",
+    "when": "2026-09-25T18:58:39.446Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/teacher-pwa/tests/",
+    "when": "2026-09-25T18:59:06.055Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "apps/teacher-pwa/tsconfig.json",
+    "when": "2026-09-25T18:57:24.110Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "packages/engine-notes/src/",
+    "when": "2026-09-25T18:53:01.746Z",
+    "note": "Fichier sensible modifié mais non commité"
+  },
+  {
+    "type": "uncommitted",
+    "contributor": "Jordi",
+    "path": "packages/engine-notes/tests/",
+    "when": "2026-09-25T18:57:08.123Z",
+    "note": "Fichier sensible modifié mais non commité"
   }
 ]
